@@ -14,7 +14,23 @@
         </li><a href="/link" class="header1__collection-link">Link</a><a href="/link"
           class="header1__collection-link">Link</a>
       </ul>
-      <div class="header1__logo"><a href="/link">Company</a></div>
+      <div class="header1__logo">
+        <a href="{{ routes.root_url }}">
+          {%- if section.settings.logo != blank -%}
+            {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
+            <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
+              src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+              loading="lazy"
+              class="header__heading-logo"
+              width="{{ section.settings.logo.width }}"
+              height="{{ section.settings.logo.height }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+          {{ shop.name }}
+          {%- endif -%}
+        </a>
+      </div>
       <ul class="header1__collections-nav"><a href="/link" class="header1__collection-link">Link</a>
         <li class="header1__collection-link"><a href="/link">Link
             <i class="fas fa-chevron-down"></i>
