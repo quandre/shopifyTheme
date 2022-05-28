@@ -16,7 +16,6 @@
     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
   {%- endif -%}
   
-
 <div class="hero1__content-container">
   <div class="hero1__info">
     {%- for block in section.blocks -%}
@@ -25,13 +24,9 @@
         <h1 class="hero1__title">
           {{ block.settings.heading | escape }}
         </h1>
-        {%- when 'caption' -%}
-        <p class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
-          {{ block.shopify_attributes }}>{{ block.settings.caption | escape }}</p>
         {%- when 'paragraph' -%}
         <p class="hero1__paragraph">I
-          {{
-            block.settings.text }}
+          {{ block.settings.paragraph }}
         </p>
         {%- when 'button' -%}
         {%- if block.settings.button_label != blank -%}
@@ -182,12 +177,12 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
       "name": "Paragraph",
       "limit": 1,
       "settings": [
-      {
-        "type": "textarea",
-        "id": "paragraph",
-        "label": "Paragraph",
-        "default": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
-      }
+        {
+          "type": "textarea",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
+        }
       ]
     },
     {
