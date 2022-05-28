@@ -6,13 +6,13 @@
         "1653762981661c4e19-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text"
+            "title": ""
           }
         },
-        "1653762981661c4e19-1": {
-          "type": "text",
+        "b81a2aef-cf91-4143-b1b2-5c1f12917550": {
+          "type": "paragraph",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juiaace ramps irony succulents."
           }
         },
         "1653762981661c4e19-2": {
@@ -25,13 +25,12 @@
       },
       "block_order": [
         "1653762981661c4e19-0",
-        "1653762981661c4e19-1",
+        "b81a2aef-cf91-4143-b1b2-5c1f12917550",
         "1653762981661c4e19-2"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/man-on-new-york-city-bridge.jpg",
         "title": "Title",
-        "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents.",
         "button_link": "",
         "info_alignment": "right"
       }
