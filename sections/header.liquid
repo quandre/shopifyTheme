@@ -4,26 +4,24 @@
         <ul class="header1__collections-nav">
           {%- if section.settings.menu != blank -%}
             {%- for link in section.settings.menu.links -%}
-              {%- if link.links != blank -%}
+              {%- if link.links == blank -%}
                 <li class="header1__collection-link">
-                  <a href="{{ link.url}}">{{ link.title | escape }}</a>
+                  <a href="{{ link.url }}">{{ link.title | escape }}</a>
                 </li>
               {%- else -%}  
-              <li class="header1__collection-link"><a href="/link">Link
+              <li class="header1__collection-link">
+                <a href="/link">Link
                   <i class="fas fa-chevron-down"></i>
                 </a>
                 <ul class="collection-link__sub-links">
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
+                  {%- for childlink in link.links -%}
+                    <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                  {%- endfor -%}
                 </ul>
               </li>
-              <a href="/link" class="header1__collection-link">Link</a><a href="/link"
-                class="header1__collection-link">Link</a>
-          {% endif%}
-        {% endfor %}
-      {% endif %}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
     </ul>
     
       <div class="header1__logo">
