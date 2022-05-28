@@ -29,8 +29,11 @@
         "1653762981661c4e19-2"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "layout": "image_first"
+        "image": "shopify:\/\/shop_images\/man-on-new-york-city-bridge.jpg",
+        "title": "Title",
+        "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents.",
+        "button_link": "",
+        "info_alignment": "right"
       }
     }
   },
