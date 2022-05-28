@@ -64,17 +64,147 @@
         <a href="/cart">
           <i class="fas fa-shopping-cart"></i>
         </a>
-        <a href="/cart">
+        {%- if shop.customer_accounts_enabled -%}
+          <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
+            {% render 'icon-account' %}
+            {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+          </a>
+        {%- endif -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
           <i class="fas fa-user"></i>
         </a>
       </ul>
     </header>
   {% when 'header2' %}
+    <header class="header header2">
+      <div class="header2__logo">
+        <a href="{{ routes.root_url }}">
+          {%- if section.settings.logo != blank -%}
+            {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
+            <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
+              src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+              loading="lazy"
+              class="header__heading-logo"
+              width="{{ section.settings.logo.width }}"
+              height="{{ section.settings.logo.height }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+          {{ shop.name }}
+          {%- endif -%}
+        </a>
+      </div>
+      <ul class="header2__collections-nav">
+        {%- if section.settings.menu != blank -%}
+          {%- for link in section.settings.menu.links -%}
+            {%- if link.links == blank -%}
+              <li class="header2__collection-link">
+                <a href="{{ link.url }}">{{ link.title | escape }}</a>
+              </li>
+            {%- else -%}  
+              <li class="header2__collection-link">
+                <a href="{{ link.url }}">{{ link.title | escape }}
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="collection-link__sub-links">
+                  {%- for childlink in link.links -%}
+                    <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                  {%- endfor -%}
+                </ul>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </ul>
+      <div class="header2__collections-nav">
+        <a href="/cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+        {%- if shop.customer_accounts_enabled -%}
+          <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
+            {% render 'icon-account' %}
+            {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+          </a>
+        {%- endif -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+          <i class="fas fa-user"></i>
+        </a>
+    </header>
 
   {% when 'header3' %}
+    <header class="header header3">
+      <div class="header3__logo">
+        <a href="{{ routes.root_url }}">
+          {%- if section.settings.logo != blank -%}
+            {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
+            <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
+              src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+              loading="lazy"
+              class="header__heading-logo"
+              width="{{ section.settings.logo.width }}"
+              height="{{ section.settings.logo.height }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+          {{ shop.name }}
+          {%- endif -%}
+        </a>
+      </div>
+      <ul class="header3__collections-nav">
+        {%- if section.settings.menu != blank -%}
+          {%- for link in section.settings.menu.links -%}
+            {%- if link.links == blank -%}
+              <li class="header3__collection-link">
+                <a href="{{ link.url }}">{{ link.title | escape }}</a>
+              </li>
+            {%- else -%}  
+              <li class="header3__collection-link">
+                <a href="{{ link.url }}">{{ link.title | escape }}
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="collection-link__sub-links">
+                  {%- for childlink in link.links -%}
+                    <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                  {%- endfor -%}
+                </ul>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </ul>
+      <a href="/cart">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      {%- if shop.customer_accounts_enabled -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
+          {% render 'icon-account' %}
+          {%- liquid
+            if customer
+              echo 'customer.account_fallback' | t
+            else
+              echo 'customer.log_in' | t
+            endif
+          -%}
+        </a>
+      {%- endif -%}
+      <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+        <i class="fas fa-user"></i>
+      </a>
+    </header>
 
 {% endcase %}
-
 
 {% schema %}
 {
