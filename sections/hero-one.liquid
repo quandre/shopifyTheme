@@ -16,7 +16,7 @@
     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
   {%- endif -%}
   
-<div class="hero1__content-container" style=" background-color: {{ section.settings.background }}; background: {{ section.settings.Linear-background }}">
+<div class="hero1__content-container" style="background: {{ section.settings.background }}">
   <div class="hero1__info">
     {%- for block in section.blocks -%}
       {% case block.type %}
@@ -88,18 +88,11 @@
       "label": "Info Alignment"
     },
     {
-      "type": "color",
-      "id": "background",
-      "label": "Background color",
-      "default": "#000000"
-    },
-    {
       "type": "color_background",
-      "id": "Linear-background",
-      "label": "Linear Gradient Background",
-      "default": "000000"
+      "id": "background",
+      "label": "Background Color",
+      "default": "rgba(0, 0, 0, 0.5)"
     }
-    
   ],
   "blocks": [
     {
