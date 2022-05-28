@@ -122,7 +122,6 @@
           "header_type": "header1",
           "color_scheme": "background-1",
           "logo_width": 90,
-          "logo_position": "middle-left",
           "menu": "main-menu",
           "menu_two": "main-menu",
           "menu_type_desktop": "dropdown",
