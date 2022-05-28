@@ -41,8 +41,8 @@
         </a>
       </div>
       <ul class="header1__collections-nav">
-        {%- if section.settings.menu2 != blank -%}
-          {%- for link in section.settings.menu2.links -%}
+        {%- if section.settings.menu_two != blank -%}
+          {%- for link in section.settings.menu_two.links -%}
             {%- if link.links == blank -%}
               <li class="header1__collection-link">
                 <a href="{{ link.url }}">{{ link.title | escape }}</a>
@@ -61,8 +61,12 @@
             {%- endif -%}
           {%- endfor -%}
         {%- endif -%}
-        <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
-        <a href="/cart"><i class="fas fa-user"></i></a>
+        <a href="/cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+        <a href="/cart">
+          <i class="fas fa-user"></i>
+        </a>
       </ul>
     </header>
   {% when 'header2' %}
@@ -170,8 +174,8 @@
     },
     {
       "type": "link_list",
-      "id": "menu2",
-      "default": "main-menu-2",
+      "id": "menu_two",
+      "default": "main-menu",
       "label": "Alternate Menu"
     },
     {
