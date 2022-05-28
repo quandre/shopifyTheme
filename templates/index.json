@@ -1,54 +1,40 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "16537629811c4876a7": {
+      "type": "hero-one",
       "blocks": {
-        "heading": {
+        "1653762981661c4e19-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "heading": "Image with text"
           }
         },
-        "text": {
+        "1653762981661c4e19-1": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
           }
         },
-        "button": {
-          "type": "buttons",
+        "1653762981661c4e19-2": {
+          "type": "button",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label": "Button label",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "1653762981661c4e19-0",
+        "1653762981661c4e19-1",
+        "1653762981661c4e19-2"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "layout": "image_first"
       }
     }
   },
   "order": [
-    "image_banner"
+    "16537629811c4876a7"
   ]
 }
