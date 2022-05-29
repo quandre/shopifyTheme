@@ -317,6 +317,18 @@ table {
   position: relative;
   margin-bottom: 50px;
 }
+.hero1--25vh {
+  height: 25vh;
+}
+.hero1--50vh {
+  height: 50vh;
+}
+.hero1--75vh {
+  height: 75vh;
+}
+.hero1--100vh {
+  height: 100vh;
+}
 .hero1--aligned-center .hero1__content-container {
   justify-content: center;
 }
@@ -382,6 +394,18 @@ table {
   position: relative;
   display: flex;
   margin-bottom: 50px;
+}
+.hero2--25vh {
+  height: 25vh;
+}
+.hero2--50vh {
+  height: 50vh;
+}
+.hero2--75vh {
+  height: 75vh;
+}
+.hero2--100vh {
+  height: 100vh;
 }
 .hero2 .hero2__collection1 {
   width: 50%;
