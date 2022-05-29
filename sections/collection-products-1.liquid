@@ -24,8 +24,14 @@
             {%- endif -%}
           </div>
           <div class="collection1__product-info">
-            <div class="collection1__product-details"><span class="collection1__product-title">{{ product.title }}</span><span
-                class="collection1__product-price">${{ product.price }}</span></div>
+            <div class="collection1__product-details">
+              {%- if section.settings.show_title == true -%}
+                <span class="collection1__product-title">{{ product.title }}</span>
+              {% endif%}
+              {%- if section.settings.show_price == true -%}
+                <span class="collection1__product-price">${{ product.price }}</span>
+              {% endif%}
+            </div>
             <div class="collection1__colors">
               <div class="collection1__color collection1__color--blue"></div>
               <div class="collection1__color collection1__color--black"></div>
@@ -130,25 +136,17 @@ hero1--{{ section.settings.hero_height }}">
       "label": "Product Image Fit"
     },
     {
-      "type": "select",
-      "id": "info_alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "right",
-          "label": "Right"
-        }
-      ],
-      "default": "right",
-      "label": "Info Alignment"
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
     },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show Price",
+      "default": true
+    },       
     {
       "type": "color_background",
       "id": "background",
@@ -156,91 +154,9 @@ hero1--{{ section.settings.hero_height }}">
       "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
     }
   ],
-  "blocks": [
-    {
-      "type": "heading",
-      "name": "Heading",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "Title"
-        },
-        {
-          "type": "select",
-          "id": "title__size",
-          "options": [
-            {
-              "value": "sm",
-              "label": "Small"
-            },
-            {
-              "value": "md",
-              "label": "Middle"
-            },
-            {
-              "value": "lg",
-              "label": "Large"
-            },
-            {
-              "value": "xl",
-              "label": "Extra Large"
-            }
-          ],
-          "default": "md",
-          "label": "Font Size"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "name": "Paragraph",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "paragraph",
-          "label": "Paragraph",
-          "default": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
-        }
-      ]
-    },
-    {
-      "type": "button",
-      "name": "t:sections.image-with-text.blocks.button.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "button_label",
-          "default": "View More",
-          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
-          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link",
-          "label": "Link"
-        }
-      ]
-    }
-  ],
   "presets": [
     {
-      "name": "Collection Products 1",
-      "blocks": [
-        {
-          "type": "heading"
-        },
-        {
-          "type": "paragraph"
-        },
-        {
-          "type": "button"
-        }
-      ]
+      "name": "Collection Products 1"
     }
   ]
 }
