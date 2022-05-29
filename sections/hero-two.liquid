@@ -1,20 +1,19 @@
 <div class="hero hero2">
   <div class="hero2__collection1">
     {%- if section.settings.image1 != blank -%}
-      <img srcset="{%- if section.settings.image1.width >= 165 -%}{{ section.settings.image1 | image_url: '165x' }} 165w,{%- endif -%}
-        {%- if section.settings.image1.width >= 360 -%}{{ section.settings.image1 | image_url: '360x' }} 360w,{%- endif -%}
-        {%- if section.settings.image1.width >= 535 -%}{{ section.settings.image1 | image_url: '535x' }} 535w,{%- endif -%}
-        {%- if section.settings.image1.width >= 720 -%}{{ section.settings.image1 | image_url: '720x' }} 720w,{%- endif -%}
-        {%- if section.settings.image1.width >= 940 -%}{{ section.settings.image1 | image_url: '940x' }} 940w,{%- endif -%}
-        {%- if section.settings.image1.width >= 1070 -%}{{ section.settings.image1 | image_url: '2000x' }} 2000w{%- endif -%}"
-        src="{{ section.settings.image1 | image_url: '533x' }}"
+      <img srcset="{%- if section.settings.image1.width >= 165 -%}{{ section.settings.image1 | image_url: width: 165 }} 165w,{%- endif -%}
+        {%- if section.settings.image1.width >= 360 -%}{{ section.settings.image1 | image_url: width: 360 }} 360w,{%- endif -%}
+        {%- if section.settings.image1.width >= 535 -%}{{ section.settings.image1 | image_url: width: 535 }} 535w,{%- endif -%}
+        {%- if section.settings.image1.width >= 750 -%}{{ section.settings.image1 | image_url: width: 750 }} 750w,{%- endif -%}
+        {%- if section.settings.image1.width >= 1070 -%}{{ section.settings.image1 | image_url: width: 1070 }} 1070w,{%- endif -%}
+        {%- if section.settings.image1.width >= 1500 -%}{{ section.settings.image1 | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {{ section.settings.image1 | image_url }} {{ section.settings.image1.width }}w"
+        src="{{ section.settings.image1 | image_url: width: 1500 }}"
         sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
         alt="{{ section.settings.image1.alt | escape }}"
         loading="lazy"
         width="{{ section.settings.image1.width }}"
-        height="{{ section.settings.image1.height }}"
-        class="hero2__bg"
-      >
+        height="{{ section.settings.image1.height }} class=hero2__bg">
     {%- else -%}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
@@ -36,20 +35,19 @@
 
   <div class="hero2__collection2">
     {%- if section.settings.image2 != blank -%}
-    <img srcset="{%- if section.settings.image2.width >= 165 -%}{{ section.settings.image2 | image_url: '165x' }} 165w,{%- endif -%}
-    {%- if section.settings.image2.width >= 360 -%}{{ section.settings.image2 | image_url: '360x' }} 360w,{%- endif -%}
-    {%- if section.settings.image2.width >= 535 -%}{{ section.settings.image2 | image_url: '535x' }} 535w,{%- endif -%}
-    {%- if section.settings.image2.width >= 720 -%}{{ section.settings.image2 | image_url: '720x' }} 720w,{%- endif -%}
-    {%- if section.settings.image2.width >= 940 -%}{{ section.settings.image2 | image_url: '940x' }} 940w,{%- endif -%}
-    {%- if section.settings.image2.width >= 1070 -%}{{ section.settings.image2 | image_url: '2000x' }} 2000w{%- endif -%}"
-    src="{{ section.settings.image2 | image_url: '533x' }}"
-    sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-    alt="{{ section.settings.image2.alt | escape }}"
-    loading="lazy"
-    width="{{ section.settings.image2.width }}"
-    height="{{ section.settings.image2.height }}"
-    class="hero2__bg"
-  >
+      <img srcset="{%- if section.settings.image2.width >= 165 -%}{{ section.settings.image2 | image_url: width: 165 }} 165w,{%- endif -%}
+        {%- if section.settings.image2.width >= 360 -%}{{ section.settings.image2 | image_url: width: 360 }} 360w,{%- endif -%}
+        {%- if section.settings.image2.width >= 535 -%}{{ section.settings.image2 | image_url: width: 535 }} 535w,{%- endif -%}
+        {%- if section.settings.image2.width >= 750 -%}{{ section.settings.image2 | image_url: width: 750 }} 750w,{%- endif -%}
+        {%- if section.settings.image2.width >= 1070 -%}{{ section.settings.image2 | image_url: width: 1070 }} 1070w,{%- endif -%}
+        {%- if section.settings.image2.width >= 1500 -%}{{ section.settings.image2 | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {{ section.settings.image2 | image_url }} {{ section.settings.image2.width }}w"
+        src="{{ section.settings.image2 | image_url: width: 1500 }}"
+        sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ section.settings.image2.alt | escape }}"
+        loading="lazy"
+        width="{{ section.settings.image2.width }}"
+        height="{{ section.settings.image2.height }} class=hero2__bg">
     {%- else -%}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
