@@ -1,4 +1,4 @@
-<div class="hero hero2 hero2--aligned-{{ section.settings.info_alignment }}">
+<div class="hero hero2">
   <div class="hero2__collection1">
     {%- if section.settings.image1 != blank -%}
       <img srcset="{%- if section.settings.image1.width >= 165 -%}{{ section.settings.image1 | image_url: width: 165 }} 165w,{%- endif -%}
@@ -18,21 +18,16 @@
     {%- endif -%}
     <div class=hero2__content-container" style="background: {{ section.settings.background1 }}">
       <div class=hero2__info">
-        {%- for section in section.settings -%}
-          {% case section.type %}
-            {%- when 'button' -%}
-              {%- if section.settings.button_label != blank -%}
-                <a {% if section.settings.button_link == blank %} role="link" aria-disabled="true" 
-                  {% else %}
-                    href="{{ section.settings.button_link }}" 
-                {% endif %}
-                class=hero2__button"
-                {{ section.shopify_attributes }} >
-                  {{ section.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
-          {%- endcase -%}
-        {%- endfor -%}
+        {%- if section.settings.button_label != blank -%}
+          <a {% if section.settings.button_link == blank %} role="link" aria-disabled="true" 
+            {% else %}
+              href="{{ section.settings.button_link }}" 
+          {% endif %}
+          class=hero2__button"
+          {{ section.shopify_attributes }} >
+            {{ section.settings.button_label | escape }}
+          </a>
+        {%- endif -%}
       </div>
     </div>
   </div>
@@ -56,21 +51,16 @@
     {%- endif -%}
     <div class=hero2__content-container" style="background: {{ section.settings.background2 }}">
       <div class=hero2__info">
-        {%- for section in section.settings -%}
-          {% case section.type %}
-            {%- when 'button' -%}
-              {%- if section.settings.button_label != blank -%}
-                <a {% if section.settings.button_link == blank %} role="link" aria-disabled="true" 
-                  {% else %}
-                    href="{{ section.settings.button_link }}" 
-                {% endif %}
-                class=hero2__button"
-                {{ section.shopify_attributes }} >
-                  {{ section.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
-          {%- endcase -%}
-        {%- endfor -%}
+        {%- if section.settings.button_label != blank -%}
+          <a {% if section.settings.button_link == blank %} role="link" aria-disabled="true" 
+            {% else %}
+              href="{{ section.settings.button_link2 }}" 
+          {% endif %}
+          class=hero2__button"
+          {{ section.shopify_attributes }} >
+            {{ section.settings.button_label | escape }}
+          </a>
+        {%- endif -%}
       </div>
     </div>
   </div>
@@ -93,6 +83,11 @@
       "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
     },
     {
+      "type": "url",
+      "id": "button_link1",
+      "label": "Button link"
+    },
+    {
       "type": "image_picker",
       "id": "image2",
       "label": "Right Image"
@@ -102,7 +97,13 @@
       "id": "background2",
       "label": "Right Background Color",
       "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+    },
+    {
+      "type": "url",
+      "id": "button_link2",
+      "label": "Button link"
     }
+    
   ],
   "presets": [
     {
