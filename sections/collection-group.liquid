@@ -1,7 +1,7 @@
 <div class="collection collection1">
   <div class="container">
     <div class="row">
-      {%- for product in section.settings.collection_list.products limit: section.settings.products_to_show -%}
+      {%- for product in section.settings.collection_list.products -%}
         <div class="col-md-4">
           <div class="collection1__collection-item">
             <div class="collection1__product-img">
@@ -103,16 +103,8 @@ hero1--{{ section.settings.hero_height }}">
     {
       "type": "collection_list",
       "id": "collection_list",
-      "label": "Featured Collection"
-    },
-    {
-      "type": "range",
-      "id": "products_to_show",
-      "min": 2,
-      "max": 12,
-      "step": 1,
-      "default": 3,
-      "label": "t:sections.featured-collection.settings.products_to_show.label"
+      "label": "Featured Collection",
+      "limit" "9"
     },
     {
       "type": "image_picker",
