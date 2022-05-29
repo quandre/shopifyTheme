@@ -1,7 +1,7 @@
 <div class="collection collection1">
   <div class="container">
     <div class="row">
-      {%- for collections in section.settings.collection_list limit: section.settings.total_products -%}
+      {%- for collections in section.settings.collection limit: section.settings.total_products -%}
         <div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
           <div class="collection1__collection-item">
             <div class="collection1__product-img collection1__product-img--{{ section.settings.image_fit }} collection1__product-img--{{ section.settings.container_shape}}" style="background: {{ section.settings.background }};">
@@ -34,7 +34,7 @@
             <div class="collection1__product-info">
               <div class="collection1__product-details">
                 {%- if section.settings.show_title == true -%}
-                  <span class="collection1__product-title">{{ collection_list.title }}</span>
+                  <span class="collection1__product-title">{{ collection.title }}</span>
                 {% endif%}
               </div>
               <div class="collection1__colors">
@@ -56,7 +56,7 @@
     "settings": [
     {
       "type": "collection_list",
-      "id": "collection_list",
+      "id": "collection",
       "label": "Collections"
     },    
     {
