@@ -16,7 +16,7 @@
     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
 
-    <div class="hero2__content-container" style="background-color: {{ section.settings.background1 }}">
+    <div class="hero2__content-container" style="background: {{ section.settings.background1 }}">
       <div class="hero2__info">
         {%- if section.settings.button_label1 != blank -%}
         <a href="{{ section.settings.button_link1 }}" class="hero2__button" {{ section.shopify_attributes }}>
@@ -45,7 +45,7 @@
     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
   
-    <div class="hero2__content-container" style="background-color: {{ section.settings.background2 }}">
+    <div class="hero2__content-container" style="background: {{ section.settings.background2 }}">
       <div class="hero2__info">
         {%- if section.settings.button_label2 != blank -%}
         <a href="{{ section.settings.button_link2 }}" class="hero2__button" {{ section.shopify_attributes }}>
