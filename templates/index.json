@@ -1,39 +1,5 @@
 {
   "sections": {
-    "16537629811c4876a7": {
-      "type": "hero-one",
-      "blocks": {
-        "1653762981661c4e19-0": {
-          "type": "heading",
-          "settings": {
-            "title": "title"
-          }
-        },
-        "b81a2aef-cf91-4143-b1b2-5c1f12917550": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juiaace ramps irony succulents."
-          }
-        },
-        "1653762981661c4e19-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "View More",
-            "button_link": "shopify:\/\/collections\/adidas"
-          }
-        }
-      },
-      "block_order": [
-        "1653762981661c4e19-0",
-        "b81a2aef-cf91-4143-b1b2-5c1f12917550",
-        "1653762981661c4e19-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/man-on-new-york-city-bridge.jpg",
-        "info_alignment": "right",
-        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
-      }
-    },
     "1653783330ada74c39": {
       "type": "hero-two",
       "blocks": {
@@ -69,7 +35,6 @@
     }
   },
   "order": [
-    "16537629811c4876a7",
     "1653783330ada74c39"
   ]
 }
