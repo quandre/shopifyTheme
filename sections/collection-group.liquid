@@ -1,25 +1,25 @@
 <div class="collection collection1">
   <div class="container">
     <div class="row">
-      {%- for product in section.blocks -%}
+      {%- for collections in section.settings.collection_list limit: section.settings.total_products -%}
         <div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
           <div class="collection1__collection-item">
             <div class="collection1__product-img collection1__product-img--{{ section.settings.image_fit }} collection1__product-img--{{ section.settings.container_shape}}" style="background: {{ section.settings.background }};">
               <div class="collection1__heart"><i class="far fa-heart"></i></div>
-              {%- if product.images[0] != blank -%}
-              <a href="{{ product.url }}" class="img-link">
-                <img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if product.images[0].width >= 360 -%}{{ product.images[0] | image_url: width: 360 }} 360w,{%- endif -%}
-                {%- if product.images[0].width >= 535 -%}{{ product.images[0] | image_url: width: 535 }} 535w,{%- endif -%}
-                {%- if product.images[0].width >= 750 -%}{{ product.images[0] | image_url: width: 750 }} 750w,{%- endif -%}
-                {%- if product.images[0].width >= 1070 -%}{{ product.images[0] | image_url: width: 1070 }} 1070w,{%- endif -%}
-                {%- if product.images[0].width >= 1500 -%}{{ product.images[0] | image_url: width: 1500 }} 1500w,{%- endif -%}
-                {%- if product.images[0].width >= 2000 -%}{{ product.images[0] | image_url: width: 2000 }} 2000w,{%- endif -%}
-                {{ product.images[0] | image_url }} {{ product.images[0].width }}w"
-                  src="{{ product.images[0] | image_url: width: 1500 }}"
+              {%- if section.settings.collection.image != blank -%}
+              <a href="{{ collection.url }}" class="img-link">
+                <img srcset="{%- if section.settings.collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if section.settings.collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if section.settings.collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if section.settings.collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if section.settings.collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                {%- if section.settings.collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if section.settings.collection.image.width >= 2000 -%}{{ collection.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {{ collection.image | image_url }} {{ section.settings.collection.image.width }}w"
+                  src="{{ collection.image | image_url: width: 1500 }}"
                   sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                  alt="{{ product.images[0].alt | escape }}" loading="lazy" width="{{ product.images[0].width }}"
-                  height="{{ product.images[0].height }}" class="hero1__bg">
+                  alt="{{ section.settings.collection.image.alt | escape }}" loading="lazy" width="{{ section.settings.collection.image.width }}"
+                  height="{{ section.settings.collection.image.height }}" class="hero1__bg">
               </a>
               {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -28,10 +28,7 @@
             <div class="collection1__product-info">
               <div class="collection1__product-details">
                 {%- if section.settings.show_title == true -%}
-                  <span class="collection1__product-title">{{ product.title }}</span>
-                {% endif%}
-                {%- if section.settings.show_price == true -%}
-                  <span class="collection1__product-price">${{ product.price }}</span>
+                  <span class="collection1__product-title">{{ collection.title }}</span>
                 {% endif%}
               </div>
               <div class="collection1__colors">
@@ -51,6 +48,11 @@
     "name": "Collection Group",
     "class": "spaced-section spaced-section--full-width",
     "settings": [
+    {
+      "type": "collection_list",
+      "id": "collection_list",
+      "label": "Collections"
+    },    
     {
 			"type": "range",
 			"id": "total_products",
@@ -228,19 +230,6 @@
       "id": "show_price",
       "label": "Show Price",
       "default": true
-    }
-  ],
-  "blocks": [
-    {
-      "type": "featured_collection",
-      "name": "t:sections.collection-list.blocks.featured_collection.name",
-      "settings": [
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
-        }
-      ]
     }
   ],
   "presets": [
