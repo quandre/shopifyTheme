@@ -1,0 +1,201 @@
+
+
+<div class="hero hero2">
+  <div class="hero2__collection1"><img
+      src="https://images.pexels.com/photos/2057477/pexels-photo-2057477.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260"
+      class="hero2__bg">
+    <div class="hero2__content-container">
+      <div class="hero2__info"><a href="#" class="hero2__button">Men</a></div>
+    </div>
+  </div>
+
+  <div class="hero2__collection2"><img
+      src="https://images.pexels.com/photos/7625122/pexels-photo-7625122.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260"
+      class="hero2__bg">
+    <div class="hero2__content-container">
+      <div class="hero2__info"><a href="#" class="hero2__button">Woman</a></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="hero hero2 hero2--aligned-{{ section.settings.info_alignment }}">
+  <div class="hero2__collection1">
+    {%- if section.settings.image != blank -%}
+      <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+        {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+        {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+        {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+        {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+        {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+        {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+        src="{{ section.settings.image | image_url: width: 1500 }}"
+        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}" class=hero2__bg">
+    {%- else -%}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+    <div class=hero2__content-container" style="background: {{ section.settings.background }}">
+      <div class=hero2__info">
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'button' -%}
+              {%- if block.settings.button_label != blank -%}
+                <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true" 
+                  {% else %}
+                    href="{{ block.settings.button_link }}" 
+                {% endif %}
+                class=hero2__button"
+                {{ block.shopify_attributes }} >
+                  {{ block.settings.button_label | escape }}
+                </a>
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="hero2__collection2">
+    {%- if section.settings.image != blank -%}
+      <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+        {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+        {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+        {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+        {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+        {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+        {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+        src="{{ section.settings.image | image_url: width: 1500 }}"
+        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}" class=hero2__bg">
+    {%- else -%}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+    <div class=hero2__content-container" style="background: {{ section.settings.background }}">
+      <div class=hero2__info">
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'button' -%}
+              {%- if block.settings.button_label != blank -%}
+                <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true" 
+                  {% else %}
+                    href="{{ block.settings.button_link }}" 
+                {% endif %}
+                class=hero2__button"
+                {{ block.shopify_attributes }} >
+                  {{ block.settings.button_label | escape }}
+                </a>
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero two",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "info_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right",
+      "label": "Info Alignment"
+    },
+    {
+      "type": "color_background",
+      "id": "background",
+      "label": "Background Color",
+      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.image-with-text.blocks.button.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "View More",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero two",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
