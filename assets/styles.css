@@ -523,7 +523,7 @@ table {
   cursor: pointer;
   overflow: hidden;
 }
-.collection1__product-img img-link {
+.collection1__product-img .img-link {
   display: block;
   width: 70%;
   height: 100%;
