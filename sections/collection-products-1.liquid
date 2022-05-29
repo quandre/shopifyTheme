@@ -25,7 +25,7 @@
           </div>
           <div class="collection1__product-info">
             <div class="collection1__product-details"><span class="collection1__product-title">{{ product.title }}</span><span
-                class="collection1__product-price">{{ product.price }}</span></div>
+                class="collection1__product-price">${{ product.price }}</span></div>
             <div class="collection1__colors">
               <div class="collection1__color collection1__color--blue"></div>
               <div class="collection1__color collection1__color--black"></div>
@@ -72,7 +72,7 @@ hero1--{{ section.settings.hero_height }}">
 
 {% schema %}
   {
-    "name": "Collection Group single",
+    "name": "Collection Products 1",
     "class": "spaced-section spaced-section--full-width",
     "settings": [
     {
@@ -229,7 +229,7 @@ hero1--{{ section.settings.hero_height }}">
   ],
   "presets": [
     {
-      "name": "Collection Group single",
+      "name": "Collection Products 1",
       "blocks": [
         {
           "type": "heading"
