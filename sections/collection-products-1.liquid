@@ -7,18 +7,20 @@
           <div class="collection1__product-img collection1__product-img--{{ section.settings.image_fit }}">
             <div class="collection1__heart"><i class="far fa-heart"></i></div>
             {%- if product.images[0] != blank -%}
-            <img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | image_url: width: 165 }} 165w,{%- endif -%}
-            {%- if product.images[0].width >= 360 -%}{{ product.images[0] | image_url: width: 360 }} 360w,{%- endif -%}
-            {%- if product.images[0].width >= 535 -%}{{ product.images[0] | image_url: width: 535 }} 535w,{%- endif -%}
-            {%- if product.images[0].width >= 750 -%}{{ product.images[0] | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if product.images[0].width >= 1070 -%}{{ product.images[0] | image_url: width: 1070 }} 1070w,{%- endif -%}
-            {%- if product.images[0].width >= 1500 -%}{{ product.images[0] | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {%- if product.images[0].width >= 2000 -%}{{ product.images[0] | image_url: width: 2000 }} 2000w,{%- endif -%}
-            {{ product.images[0] | image_url }} {{ product.images[0].width }}w"
-              src="{{ product.images[0] | image_url: width: 1500 }}"
-              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="{{ product.images[0].alt | escape }}" loading="lazy" width="{{ product.images[0].width }}"
-              height="{{ product.images[0].height }}" class="hero1__bg">
+            <a href="{{ product.url }}" class="img-link">
+              <img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if product.images[0].width >= 360 -%}{{ product.images[0] | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if product.images[0].width >= 535 -%}{{ product.images[0] | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if product.images[0].width >= 750 -%}{{ product.images[0] | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if product.images[0].width >= 1070 -%}{{ product.images[0] | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if product.images[0].width >= 1500 -%}{{ product.images[0] | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {%- if product.images[0].width >= 2000 -%}{{ product.images[0] | image_url: width: 2000 }} 2000w,{%- endif -%}
+              {{ product.images[0] | image_url }} {{ product.images[0].width }}w"
+                src="{{ product.images[0] | image_url: width: 1500 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ product.images[0].alt | escape }}" loading="lazy" width="{{ product.images[0].width }}"
+                height="{{ product.images[0].height }}" class="hero1__bg">
+            </a>
             {%- else -%}
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
@@ -104,6 +106,12 @@
       "label": "Product Image Fit"
     },
     {
+      "type": "color_background",
+      "id": "background",
+      "label": "Background Color",
+      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+    },
+    {
       "type": "checkbox",
       "id": "show_title",
       "label": "Show Title",
@@ -114,12 +122,6 @@
       "id": "show_price",
       "label": "Show Price",
       "default": true
-    },       
-    {
-      "type": "color_background",
-      "id": "background",
-      "label": "Background Color",
-      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
     }
   ],
   "presets": [

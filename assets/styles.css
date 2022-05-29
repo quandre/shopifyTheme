@@ -523,6 +523,11 @@ table {
   cursor: pointer;
   overflow: hidden;
 }
+.collection1__product-img img-link {
+  display: block;
+  width: 70%;
+  height: 100%;
+}
 .collection1__product-img--cover img {
   -o-object-fit: cover;
   object-fit: cover;
