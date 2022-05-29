@@ -3,6 +3,7 @@
     "165378836722d6ab55": {
       "type": "hero-two",
       "settings": {
+        "hero_height": "100vh",
         "image1": "shopify:\/\/shop_images\/h1.jpg",
         "button_label1": "Button label",
         "button_link1": "",
@@ -12,9 +13,45 @@
         "button_link2": "",
         "background2": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
       }
+    },
+    "1653804585eee96687": {
+      "type": "hero-one",
+      "blocks": {
+        "165380458597dfb3e4-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Title",
+            "title_size": "md"
+          }
+        },
+        "165380458597dfb3e4-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
+          }
+        },
+        "165380458597dfb3e4-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "View More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "165380458597dfb3e4-0",
+        "165380458597dfb3e4-1",
+        "165380458597dfb3e4-2"
+      ],
+      "settings": {
+        "hero_height": "100vh",
+        "info_alignment": "right",
+        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+      }
     }
   },
   "order": [
-    "165378836722d6ab55"
+    "165378836722d6ab55",
+    "1653804585eee96687"
   ]
 }
