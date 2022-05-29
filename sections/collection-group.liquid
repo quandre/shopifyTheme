@@ -34,7 +34,7 @@
             <div class="collection1__product-info">
               <div class="collection1__product-details">
                 {%- if section.settings.show_title == true -%}
-                  <span class="collection1__product-title">{{ collection.title }}</span>
+                  <span class="collection1__product-title">{{ collection_list.title }}</span>
                 {% endif%}
               </div>
               <div class="collection1__colors">
@@ -229,12 +229,6 @@
       "type": "checkbox",
       "id": "show_title",
       "label": "Show Title",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_price",
-      "label": "Show Price",
       "default": true
     }
   ],
