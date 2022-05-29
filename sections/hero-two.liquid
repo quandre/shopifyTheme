@@ -2,11 +2,7 @@
   <div class="hero2__collection1">
     {%- if section.settings.image1 != blank -%}
       <img srcset="{%- if section.settings.image1.width >= 165 -%}{{ section.settings.image1 | image_url: width: 165 }} 165w,{%- endif -%}
-        {%- if section.settings.image1.width >= 360 -%}{{ section.settings.image1 | image_url: width: 360 }} 360w,{%- endif -%}
-        {%- if section.settings.image1.width >= 535 -%}{{ section.settings.image1 | image_url: width: 535 }} 535w,{%- endif -%}
-        {%- if section.settings.image1.width >= 750 -%}{{ section.settings.image1 | image_url: width: 750 }} 750w,{%- endif -%}
-        {%- if section.settings.image1.width >= 1070 -%}{{ section.settings.image1 | image_url: width: 1070 }} 1070w,{%- endif -%}
-        {%- if section.settings.image1.width >= 1500 -%}{{ section.settings.image1 | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {%- if section.settings.image1.width >= 360 -%}{{ section.settings.image1 | image_url: width: 360 }} 360w,{%- endif -%} 
         {{ section.settings.image1 | image_url }} {{ section.settings.image1.width }}w"
         src="{{ section.settings.image1 | image_url: width: 1500 }}"
         sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
