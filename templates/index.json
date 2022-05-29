@@ -3,8 +3,14 @@
     "1653783330ada74c39": {
       "type": "hero-two",
       "settings": {
-        "image": "shopify:\/\/shop_images\/h1.jpg",
-        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+        "image1": "shopify:\/\/shop_images\/h1.jpg",
+        "button_label1": "Button label",
+        "button_link1": "",
+        "background1": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+        "image2": "shopify:\/\/shop_images\/h2.jpg",
+        "button_label2": "Button label",
+        "button_link2": "",
+        "background2": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
       }
     }
   },
