@@ -52,13 +52,17 @@
     "1653857933ece2e895": {
       "type": "collection-products-1",
       "settings": {
-        "hero_height": "100vh",
         "collection": "men",
-        "products_to_show": 6,
+        "total_products": 16,
         "image_fit": "contain",
+        "xxl_col": "col-xxl-2",
+        "xl_col": "col-xl-2",
+        "lg_col": "col-lg-2",
+        "md_col": "col-md-2",
+        "sm_col": "col-sm-2",
+        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
         "show_title": true,
-        "show_price": true,
-        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+        "show_price": true
       }
     }
   },
