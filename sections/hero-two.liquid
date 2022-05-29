@@ -1,22 +1,22 @@
 <div class="hero hero2 hero2--aligned-{{ section.settings.info_alignment }}">
   <div class="hero2__collection1">
-    {%- if section.settings.image != blank -%}
-      <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-        {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-        {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
-        {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-        {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-        {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-        {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
-        {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
-        src="{{ section.settings.image | image_url: width: 1500 }}"
+    {%- if section.settings.image1 != blank -%}
+      <img srcset="{%- if section.settings.image1.width >= 165 -%}{{ section.settings.image1 | image_url: width: 165 }} 165w,{%- endif -%}
+        {%- if section.settings.image1.width >= 360 -%}{{ section.settings.image1 | image_url: width: 360 }} 360w,{%- endif -%}
+        {%- if section.settings.image1.width >= 535 -%}{{ section.settings.image1 | image_url: width: 535 }} 535w,{%- endif -%}
+        {%- if section.settings.image1.width >= 750 -%}{{ section.settings.image1 | image_url: width: 750 }} 750w,{%- endif -%}
+        {%- if section.settings.image1.width >= 1070 -%}{{ section.settings.image1 | image_url: width: 1070 }} 1070w,{%- endif -%}
+        {%- if section.settings.image1.width >= 1500 -%}{{ section.settings.image1 | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {%- if section.settings.image1.width >= 2000 -%}{{ section.settings.image1 | image_url: width: 2000 }} 2000w,{%- endif -%}
+        {{ section.settings.image1 | image_url }} {{ section.settings.image1.width }}w"
+        src="{{ section.settings.image1 | image_url: width: 1500 }}"
         sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-        alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
-        height="{{ section.settings.image.height }}" class=hero2__bg">
+        alt="{{ section.settings.image1.alt | escape }}" loading="lazy" width="{{ section.settings.image1.width }}"
+        height="{{ section.settings.image1.height }}" class=hero2__bg">
     {%- else -%}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
-    <div class=hero2__content-container" style="background: {{ section.settings.background }}">
+    <div class=hero2__content-container" style="background: {{ section.settings.background1 }}">
       <div class=hero2__info">
         {%- for section in section.settings -%}
           {% case section.type %}
@@ -38,23 +38,23 @@
   </div>
 
   <div class="hero2__collection2">
-    {%- if section.settings.image != blank -%}
-      <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-        {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-        {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
-        {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-        {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-        {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-        {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
-        {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
-        src="{{ section.settings.image | image_url: width: 1500 }}"
+    {%- if section.settings.image2 != blank -%}
+      <img srcset="{%- if section.settings.image2.width >= 165 -%}{{ section.settings.image2 | image_url: width: 165 }} 165w,{%- endif -%}
+        {%- if section.settings.image2.width >= 360 -%}{{ section.settings.image2 | image_url: width: 360 }} 360w,{%- endif -%}
+        {%- if section.settings.image2.width >= 535 -%}{{ section.settings.image2 | image_url: width: 535 }} 535w,{%- endif -%}
+        {%- if section.settings.image2.width >= 750 -%}{{ section.settings.image2 | image_url: width: 750 }} 750w,{%- endif -%}
+        {%- if section.settings.image2.width >= 1070 -%}{{ section.settings.image2 | image_url: width: 1070 }} 1070w,{%- endif -%}
+        {%- if section.settings.image2.width >= 1500 -%}{{ section.settings.image2 | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {%- if section.settings.image2.width >= 2000 -%}{{ section.settings.image2 | image_url: width: 2000 }} 2000w,{%- endif -%}
+        {{ section.settings.image2 | image_url }} {{ section.settings.image2.width }}w"
+        src="{{ section.settings.image2 | image_url: width: 1500 }}"
         sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-        alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
-        height="{{ section.settings.image.height }}" class=hero2__bg">
+        alt="{{ section.settings.image2.alt | escape }}" loading="lazy" width="{{ section.settings.imag2.width }}"
+        height="{{ section.settings.image2.height }}" class=hero2__bg">
     {%- else -%}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
-    <div class=hero2__content-container" style="background: {{ section.settings.background }}">
+    <div class=hero2__content-container" style="background: {{ section.settings.background2 }}">
       <div class=hero2__info">
         {%- for section in section.settings -%}
           {% case section.type %}
@@ -83,12 +83,23 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "image",
+      "id": "image1",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
       "type": "color_background",
-      "id": "background",
+      "id": "background1",
+      "label": "Background Color",
+      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+    },
+    {
+      "type": "color_background",
+      "id": "background2",
       "label": "Background Color",
       "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
     }
