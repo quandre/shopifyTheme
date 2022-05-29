@@ -13,16 +13,17 @@
     loading="lazy"
     width="{{ section.settings.image1.width }}"
     height="{{ section.settings.image1.height }}"
-    class="hero2__bg"
-  >
+    class="hero2__bg">
+    {%- else -%}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
+
     <div class=hero2__content-container" style="background: {{ section.settings.background1 }}">
       <div class=hero2__info">
         {%- if section.settings.button_label != blank -%}
-          <a {% if section.settings.button_link == blank %} role="link" aria-disabled="true" 
+          <a {% if section.settings.button_link1 == blank %} role="link" aria-disabled="true" 
             {% else %}
-              href="{{ section.settings.button_link }}" 
+              href="{{ section.settings.button_link1 }}" 
           {% endif %}
           class=hero2__button"
           {{ section.shopify_attributes }} >
@@ -51,16 +52,17 @@
     {%- else -%}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
+
     <div class=hero2__content-container" style="background: {{ section.settings.background2 }}">
       <div class=hero2__info">
-        {%- if section.settings.button_label != blank -%}
-          <a {% if section.settings.button_link == blank %} role="link" aria-disabled="true" 
+        {%- if section.settings.button_label2 != blank -%}
+          <a {% if section.settings.button_link2 == blank %} role="link" aria-disabled="true" 
             {% else %}
               href="{{ section.settings.button_link2 }}" 
           {% endif %}
           class=hero2__button"
           {{ section.shopify_attributes }} >
-            {{ section.settings.button_label | escape }}
+            {{ section.settings.button_label2 | escape }}
           </a>
         {%- endif -%}
       </div>
@@ -79,15 +81,22 @@
       "label": "Left Image"
     },
     {
-      "type": "color_background",
-      "id": "background1",
-      "label": "Left Background Color",
-      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
-    },
+			"type": "text",
+			"id": "button_label1",
+			"default": "Button label",
+			"label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+			"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+		},
     {
       "type": "url",
       "id": "button_link1",
       "label": "Left Button link"
+    },
+    {
+      "type": "color_background",
+      "id": "background1",
+      "label": "Left Background Color",
+      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
     },
     {
       "type": "image_picker",
@@ -95,17 +104,23 @@
       "label": "Right Image"
     },
     {
-      "type": "color_background",
-      "id": "background2",
-      "label": "Right Background Color",
-      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
-    },
+			"type": "text",
+			"id": "button_label2",
+			"default": "Button label",
+			"label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+			"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+		},
     {
       "type": "url",
       "id": "button_link2",
       "label": "Right Button link"
+    },
+    {
+      "type": "color_background",
+      "id": "background2",
+      "label": "Right Background Color",
+      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
     }
-    
   ],
   "presets": [
     {
