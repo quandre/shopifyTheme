@@ -1,7 +1,7 @@
 <div class="collection collection1">
   <div class="container">
     <div class="row">
-      {%- for product in section.settings.collection.products limit: {{ section.setting.products_to_show }} -%}
+      {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
       <div class="col-md-4">
         <div class="collection1__collection-item">
           <div class="collection1__product-img">
