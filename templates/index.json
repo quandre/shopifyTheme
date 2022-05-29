@@ -69,6 +69,13 @@
     "1653866115dc17b350": {
       "type": "collection-group",
       "settings": {
+        "collection_list": [
+          "adidas",
+          "asics-tiger",
+          "converse",
+          "dr-martens",
+          "flex-fit"
+        ],
         "total_products": 16,
         "container_shape": "rectangle",
         "image_fit": "contain",
