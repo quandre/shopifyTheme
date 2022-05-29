@@ -16,24 +16,8 @@
     {%- else -%}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
-    <div class=hero2__content-container" style="background: {{ section.settings.background }}">
-      <div class=hero2__info">
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'button' -%}
-              {%- if block.settings.button_label != blank -%}
-                <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true" 
-                  {% else %}
-                    href="{{ block.settings.button_link }}" 
-                {% endif %}
-                class=hero2__button"
-                {{ block.shopify_attributes }} >
-                  {{ block.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
-          {%- endcase -%}
-        {%- endfor -%}
-      </div>
+    <div class="hero2__content-container">
+      <div class="hero2__info"><a href="#" class="hero2__button">Woman</a></div>
     </div>
   </div>
 
@@ -54,24 +38,25 @@
     {%- else -%}
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
-    <div class=hero2__content-container" style="background: {{ section.settings.background }}">
-      <div class=hero2__info">
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'button' -%}
-              {%- if block.settings.button_label != blank -%}
-                <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true" 
-                  {% else %}
-                    href="{{ block.settings.button_link }}" 
-                {% endif %}
-                class=hero2__button"
-                {{ block.shopify_attributes }} >
-                  {{ block.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
-          {%- endcase -%}
-        {%- endfor -%}
-      </div>
+    <div class="hero2__content-container">
+      <div class="hero2__info"><a href="#" class="hero2__button">Woman</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="hero hero2">
+  <div class="hero2__collection1"><img
+      src="https://images.pexels.com/photos/2057477/pexels-photo-2057477.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260"
+      class="hero2__bg">
+    <div class="hero2__content-container">
+      <div class="hero2__info"><a href="#" class="hero2__button">Men</a></div>
+    </div>
+  </div>
+  <div class="hero2__collection2"><img
+      src="https://images.pexels.com/photos/7625122/pexels-photo-7625122.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260"
+      class="hero2__bg">
+    <div class="hero2__content-container">
+      <div class="hero2__info"><a href="#" class="hero2__button">Woman</a></div>
     </div>
   </div>
 </div>
@@ -92,15 +77,10 @@
       "label": "Background Color",
       "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
     }
-  ]
+  ],
   "presets": [
     {
-      "name": "Hero two",
-      "blocks": [
-        {
-          "type": "button"
-        }
-      ]
+      "name": "Hero two"
     }
   ]
 }
