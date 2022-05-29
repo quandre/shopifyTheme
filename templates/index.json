@@ -60,7 +60,7 @@
         "lg_col": "col-lg-2",
         "md_col": "col-md-2",
         "sm_col": "col-sm-2",
-        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 100%)",
         "show_title": true,
         "show_price": true
       }
