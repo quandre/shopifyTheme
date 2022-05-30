@@ -90,8 +90,11 @@
     <div class="row">
       <div class="col-md-12">
         <div class="footer__bottom">
-          <div class="footer__copyright">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name }} StoreName, All Rights Reserved</div>
-          <div class="footer__extra-links"><a href="#">Link</a><a href="#">Link</a><a href="#">Link</a></div>
+          <div class="footer__copyright">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name }}, All Rights Reserved</div>
+          <div class="footer__extra-links">
+            {%- for link in section.settings.footer_bottom_menu -%}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {%- endfor -%}
         </div>
       </div>
     </div>
@@ -210,6 +213,13 @@
       "id": "show_social",
       "default": false,
       "label": "t:sections.footer.settings.show_social.label"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_bottom_menu",
+      "default": "Footer Menu",
+      "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+      "info": "t:sections.footer.blocks.link_list.settings.menu.info"
     }
   ],
   "default": {
