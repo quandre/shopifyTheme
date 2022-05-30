@@ -70,14 +70,7 @@
       "type": "collection-group",
       "settings": {
         "collection": [
-          "adidas",
-          "asics-tiger",
-          "converse",
-          "dr-martens",
-          "flex-fit",
-          "herschel",
-          "kid",
-          "men"
+
         ],
         "container_shape": "rectangle",
         "image_fit": "contain",
