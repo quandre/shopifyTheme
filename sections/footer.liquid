@@ -90,7 +90,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="footer__bottom">
-          <div class="footer__copyright">© 2021 StoreName, LLC All Rights Reserved</div>
+          <div class="footer__copyright">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }} StoreName, All Rights Reserved</div>
           <div class="footer__extra-links"><a href="#">Link</a><a href="#">Link</a><a href="#">Link</a></div>
         </div>
       </div>
