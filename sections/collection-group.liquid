@@ -1,24 +1,30 @@
 <div class="collection collection1">
   <div class="container">
     <div class="row">
-      {%- for collection in section.settings.collection -%}
+      {%- for collection in collections -%}
         <div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
           <div class="collection1__collection-item">
             <div class="collection1__product-img collection1__product-img--{{ section.settings.image_fit }} collection1__product-img--{{ section.settings.container_shape}}" style="background: {{ section.settings.background }};">
-              {%- if section.settings.collection.image != blank -%}
-                <a href="{{ routes.collections_url }}" class="img-link">
-                  <img srcset="{%- if section.settings.collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if section.settings.collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if section.settings.collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
-                  {%- if section.settings.collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
-                  {%- if section.settings.collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-                  {%- if section.settings.collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                  {%- if section.settings.collection.image.width >= 2000 -%}{{ collection.image | image_url: width: 2000 }} 2000w,{%- endif -%}
-                  {{ collection.image | image_url }} {{ section.settings.collection.image.width }}w"
+                {%- if collection.image != blank -%}
+                {% if collection.image %}
+                {{ collection.image | image_url: width: 450, height: 450 | image_tag: collection.image.alt }}
+                {% else %}
+                {% assign alt = collection.title | escape %}
+                {{ collection.products.first.image | image_url: width: 450, height: 450 | image_tag: alt }}
+                {% endif %}
+                <a href="{{ collection_url }}" class="img-link">
+                  <img srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+                  {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                  {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if collection.image.width >= 2000 -%}{{ collection.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                  {{ collection.image | image_url }} {{ collection.image.width }}w"
                     src="{{ collection.image | image_url: width: 1500 }}"
                     sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                    alt="{{ section.settings.collection.image.alt | escape }}" loading="lazy" width="{{ section.settings.collection.image.width }}"
-                    height="{{ section.settings.collection.image.height }}" class="hero1__bg">
+                    alt="{{ collection.image.alt | escape }}" loading="lazy" width="{{ collection.image.width }}"
+                    height="{{ collection.image.height }}" class="hero1__bg">
                 </a>
               {%- else -%}
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
