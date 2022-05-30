@@ -2,12 +2,15 @@
   <div class="container">
     <div class="row">
       {%- for collection in collections -%}
-        <div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
-          <div class="collection1__collection-item">
-            <div class="collection1__product-img collection1__product-img--{{ section.settings.image_fit }} collection1__product-img--{{ section.settings.container_shape}}" style="background: {{ section.settings.background }};">
-                {%- if collection.image != blank -%}
-                <a href="{{ collection.url }}" class="img-link">
-                  <img srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+      <div
+        class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
+        <div class="collection1__collection-item">
+          <div
+            class="collection1__product-img collection1__product-img--{{ section.settings.image_fit }} collection1__product-img--{{ section.settings.container_shape}}"
+            style="background: {{ section.settings.background }};">
+            {%- if collection.image != blank -%}
+            <a href="{{ collection.url }}" class="img-link">
+              <img srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
                   {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
                   {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
                   {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
@@ -15,28 +18,30 @@
                   {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
                   {%- if collection.image.width >= 2000 -%}{{ collection.image | image_url: width: 2000 }} 2000w,{%- endif -%}
                   {{ collection.image | image_url }} {{ collection.image.width }}w"
-                    src="{{ collection.image | image_url: width: 1500 }}"
-                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                    alt="{{ collection.image.alt | escape }}" loading="lazy" width="{{ collection.image.width }}"
-                    height="{{ collection.image.height }}" class="hero1__bg">
-                </a>
-              {%- else -%}
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- endif -%}
+                src="{{ collection.image | image_url: width: 1500 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ collection.image.alt | escape }}" loading="lazy" width="{{ collection.image.width }}"
+                height="{{ collection.image.height }}" class="hero1__bg">
+            </a>
+            {%- elsif collection.products.first and collection.products.first.images != empty -%}
+            {%- assign collection_image = collection.products.first.featured_image -%}
+            {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+          <div class="collection1__product-info">
+            <div class="collection1__product-details">
+              {%- if section.settings.show_title == true -%}
+              <span class="collection1__product-title">{{ collection.title }}</span>
+              {% endif%}
             </div>
-            <div class="collection1__product-info">
-              <div class="collection1__product-details">
-                {%- if section.settings.show_title == true -%}
-                  <span class="collection1__product-title">{{ collection.title }}</span>
-                {% endif%}
-              </div>
-              <div class="collection1__colors">
-                <div class="collection1__color collection1__color--blue"></div>
-                <div class="collection1__color collection1__color--black"></div>
-              </div>
+            <div class="collection1__colors">
+              <div class="collection1__color collection1__color--blue"></div>
+              <div class="collection1__color collection1__color--black"></div>
             </div>
           </div>
         </div>
+      </div>
       {% endfor%}
     </div>
   </div>
