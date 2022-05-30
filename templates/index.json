@@ -69,14 +69,17 @@
     "1653866115dc17b350": {
       "type": "collection-group",
       "settings": {
-        "collection_list": [
+        "collection": [
           "adidas",
           "asics-tiger",
           "converse",
           "dr-martens",
-          "flex-fit"
+          "flex-fit",
+          "herschel",
+          "frontpage",
+          "kid",
+          "men"
         ],
-        "total_products": 16,
         "container_shape": "rectangle",
         "image_fit": "contain",
         "xxl_col": "col-xxl-3",
@@ -85,8 +88,7 @@
         "md_col": "col-md-3",
         "sm_col": "col-sm-6",
         "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-        "show_title": true,
-        "show_price": true
+        "show_title": true
       }
     }
   },
