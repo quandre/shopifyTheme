@@ -65,29 +65,11 @@
         "show_title": true,
         "show_price": true
       }
-    },
-    "1653866115dc17b350": {
-      "type": "collection-group",
-      "settings": {
-        "collection": [
-
-        ],
-        "container_shape": "rectangle",
-        "image_fit": "contain",
-        "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-4",
-        "lg_col": "col-lg-4",
-        "md_col": "col-md-4",
-        "sm_col": "col-sm-4",
-        "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-        "show_title": true
-      }
     }
   },
   "order": [
     "165378836722d6ab55",
     "1653804585eee96687",
-    "1653863304b5bdddd5",
-    "1653866115dc17b350"
+    "1653863304b5bdddd5"
   ]
 }
