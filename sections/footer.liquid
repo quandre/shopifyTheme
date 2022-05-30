@@ -36,16 +36,12 @@
         </div>
       </div>
       <div class="col-md-3">
-        <div class="footer__extra"><span class="footer__column-title">Sign Up For Newsletter</span><input type="text"
-            name="email_newsletter" class="" placeholder="">
-
-
+        <div class="footer__extra"><span class="footer__column-title">Sign Up For Newsletter</span>
             {%- form 'customer' -%}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="newsletter-form__field-wrapper">
                 <div class="field">
                   <input
-                    id="NewsletterForm--{{ section.id }}"
                     type="email"
                     name="contact[email]"
                     class="footer__input"
@@ -63,11 +59,10 @@
                     {% endif %}
                     placeholder="youremail@company.com"
                     required
+                    style="width: 100%"
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
-                  </label>
-                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                  
+                  <button type="submit" name="commit"style="width: 100%; font-size: 1rem; padding: 20px 40px; text-align: center;" aria-label="{{ 'newsletter.button_label' | t }}">
                     {% render 'icon-arrow' %}
                   </button>
                 </div>
