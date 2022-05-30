@@ -23,8 +23,6 @@
                 alt="{{ collection.image.alt | escape }}" loading="lazy" width="{{ collection.image.width }}"
                 height="{{ collection.image.height }}" class="hero1__bg">
             </a>
-            {%- elsif collection.products.first and collection.products.first.images != empty -%}
-            {%- assign collection_image = collection.products.first.featured_image -%}
             {%- else -%}
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
