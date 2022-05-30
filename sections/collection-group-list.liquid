@@ -1,0 +1,229 @@
+<div class="collection collection1">
+  <div class="container">
+    <div class="row">
+      {%- for collection in collections -%}
+      <div
+        class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
+        <div class="collection1__collection-item">
+          <div
+            class="collection1__product-img collection1__product-img--{{ section.settings.image_fit }} collection1__product-img--{{ section.settings.container_shape}}"
+            style="background: {{ section.settings.background }};">
+            {%- if collection.image != blank -%}
+            <a href="{{ collection.url }}" class="img-link">
+              <img srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+                  {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                  {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if collection.image.width >= 2000 -%}{{ collection.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                  {{ collection.image | image_url }} {{ collection.image.width }}w"
+                src="{{ collection.image | image_url: width: 1500 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ collection.image.alt | escape }}" loading="lazy" width="{{ collection.image.width }}"
+                height="{{ collection.image.height }}" class="hero1__bg">
+            </a>
+            {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+          <div class="collection1__product-info">
+            <div class="collection1__product-details">
+              {%- if section.settings.show_title == true -%}
+              <span class="collection1__product-title">{{ collection.title }}</span>
+              {% endif%}
+            </div>
+            <div class="collection1__colors">
+              <div class="collection1__color collection1__color--blue"></div>
+              <div class="collection1__color collection1__color--black"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collection Group List",
+    "class": "spaced-section spaced-section--full-width",
+    "settings": [
+    {
+      "type": "collection_list",
+      "id": "collection",
+      "label": "Collections",
+      "limit": 20
+    },
+    {
+      "type": "select",
+      "id": "container_shape",
+      "options": [
+        {
+          "value": "rectangle",
+          "label": "Rectangle"
+        },
+        {
+          "value": "square",
+          "label": "square"
+        },
+        {
+          "value": "circle",
+          "label": "circle"
+        }
+      ],
+      "default": "rectangle",
+      "label": "Product Shape"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "options": [
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "contain",
+          "label": "Contain"
+        }
+      ],
+      "default": "contain",
+      "label": "Product Image Fit"
+    },
+    {
+			"type": "select",
+			"id": "xxl_col",
+			"options": [{
+					"value": "col-xxl-6",
+					"label": "2 Columns"
+				},
+				{
+					"value": "col-xxl-4",
+					"label": "3 Columns"
+				},
+				{
+					"value": "col-xxl-3",
+					"label": "4 Columns"
+				},
+				{
+					"value": "col-xxl-2",
+					"label": "6 Column"
+				}
+			],
+			"default": "col-xxl-3",
+			"label": "XXL Devices"
+		},
+		{
+			"type": "select",
+			"id": "xl_col",
+			"options": [{
+					"value": "col-xl-6",
+					"label": "2 Columns"
+				},
+				{
+					"value": "col-xl-4",
+					"label": "3 Columns"
+				},
+				{
+					"value": "col-xl-3",
+					"label": "4 Columns"
+				},
+				{
+					"value": "col-xl-2",
+					"label": "6 Column"
+				}
+			],
+			"default": "col-xl-3",
+			"label": "Extra Large Devices"
+		},
+		{
+			"type": "select",
+			"id": "lg_col",
+			"options": [{
+					"value": "col-lg-6",
+					"label": "2 Columns"
+				},
+				{
+					"value": "col-lg-4",
+					"label": "3 Columns"
+				},
+				{
+					"value": "col-lg-3",
+					"label": "4 Columns"
+				},
+				{
+					"value": "col-lg-2",
+					"label": "6 Column"
+				}
+			],
+			"default": "col-lg-3",
+			"label": "Large Devices"
+		},
+		{
+			"type": "select",
+			"id": "md_col",
+			"options": [{
+					"value": "col-md-6",
+					"label": "2 Columns"
+				},
+				{
+					"value": "col-md-4",
+					"label": "3 Columns"
+				},
+				{
+					"value": "col-md-3",
+					"label": "4 Columns"
+				},
+				{
+					"value": "col-md-2",
+					"label": "6 Column"
+				}
+			],
+			"default": "col-md-3",
+			"label": "Medium Devices"
+		},
+		{
+			"type": "select",
+			"id": "sm_col",
+			"options": [{
+					"value": "col-sm-6",
+					"label": "2 Columns"
+				},
+				{
+					"value": "col-sm-4",
+					"label": "3 Columns"
+				},
+				{
+					"value": "col-sm-3",
+					"label": "4 Columns"
+				},
+				{
+					"value": "col-sm-2",
+					"label": "6 Column"
+				}
+			],
+			"default": "col-sm-6",
+			"label": "Small Devices"
+		},
+    {
+      "type": "color_background",
+      "id": "background",
+      "label": "Background Color",
+      "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Group List"
+    }
+  ]
+}
+{% endschema %}
