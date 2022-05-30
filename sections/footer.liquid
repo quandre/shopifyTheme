@@ -27,7 +27,6 @@
               {%- endfor -%}
               </div>
             </div>
-            
           {%- endfor -%}
           
           
@@ -83,23 +82,22 @@
           {% if section.settings.show_social != false %}
           <div class="footer__social-icons">
             {%- if settings.social_facebook_link != blank -%}
-            <a href="{{ settings.social_facebook_link }}" class="footer__social-link"><i
-                class="fab fa-facebook-f"></i></a>
+            <a href="{{ settings.social_facebook_link }}" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
             {%- endif -%}
-            
+            {%- if settings.social_instagram_link != blank -%}
+            <a href="{{ settings.social_instagram_link }}" class="footer__social-link"><i class="fa-brands fa-instagram"></i></a>
+            {%- endif -%}
             {%- if settings.social_twitter_link != blank -%}
             <a href="{{ settings.social_twitter_link }}" class="footer__social-link">
-                <i
-                class="fab fa-twitter"></i></a>
+              <i class="fab fa-twitter"></i></a>
             {%- endif -%}
             {%- if settings.social_youtube_link != blank -%}
-            <a href="{{ settings.social_youtube_link }}" class="footer__social-link"><i
-                class="fab fa-youtube"></i></a>
+            <a href="{{ settings.social_youtube_link }}" class="footer__social-link"><i class="fab fa-youtube"></i></a>
             {%- endif -%}
             {%- if settings.social_tiktok_link != blank -%}
             <a href="{{settings.social_tiktok_link }}" class="footer__social-link"><i class="fab fa-tiktok"></i></a>
             {%- endif -%}
-          </div>
+            </div>
           {% endif %}
         </div>
       </div>
