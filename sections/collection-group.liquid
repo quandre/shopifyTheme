@@ -5,14 +5,8 @@
         <div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
           <div class="collection1__collection-item">
             <div class="collection1__product-img collection1__product-img--{{ section.settings.image_fit }} collection1__product-img--{{ section.settings.container_shape}}" style="background: {{ section.settings.background }};">
-                {%- if collection.image != blank -%}
-                {% if collection.image %}
-                {{ collection.image | image_url: width: 450, height: 450 | image_tag: collection.image.alt }}
-                {% else %}
-                {% assign alt = collection.title | escape %}
-                {{ collection.products.first.image | image_url: width: 450, height: 450 | image_tag: alt }}
-                {% endif %}
-                <a href="{{ collection_url }}" class="img-link">
+                
+                <a href="{{ routes.collections_url }}" class="img-link">
                   <img srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
                   {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
                   {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
