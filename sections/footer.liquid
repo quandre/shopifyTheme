@@ -90,17 +90,17 @@
     <div class="row">
       <div class="col-md-12">
         <div class="footer__bottom">
-          <div class="footer__copyright">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name }}, All Rights Reserved</div>
+          <div class="footer__copyright">© {{ 'now' | date: "%Y" }}, {{ shop.name }} All Rights Reserved</div>
           <div class="footer__extra-links">
-            {%- for link in section.settings.footer_bottom_menu -%}
-            <a href="{{ link.url }}">{{ link.title }}</a>
-          {%- endfor -%}
+            {%- for link in section.settings.footer_bottom_menu.links -%}
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            {%- endfor -%}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </footer>
-
 {% schema %}
 {
   "name": "t:sections.footer.name",
