@@ -13,6 +13,105 @@
 <noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="footer__links"><span class="footer__column-title">Get Help</span><a href="#"
+                class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#"
+                class="footer__link">Link</a></div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer__links"><span class="footer__column-title">Get Help</span><a href="#"
+                class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#"
+                class="footer__link">Link</a></div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer__links"><span class="footer__column-title">Get Help</span><a href="#"
+                class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#"
+                class="footer__link">Link</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footer__extra"><span class="footer__column-title">Sign Up For Newsletter</span><input type="text"
+            name="email_newsletter" class="" placeholder="">
+
+
+            {%- form 'customer' -%}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="newsletter-form__field-wrapper">
+                <div class="field">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    class="footer__input"
+                    value="{{ form.email }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    {% if form.errors %}
+                      autofocus
+                      aria-invalid="true"
+                      aria-describedby="ContactFooter-error"
+                    {% elsif form.posted_successfully? %}
+                      aria-describedby="ContactFooter-success"
+                    {% endif %}
+                    placeholder="youremail@company.com"
+                    required
+                  >
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                    {{ 'newsletter.label' | t }}
+                  </label>
+                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                    {% render 'icon-arrow' %}
+                  </button>
+                </div>
+                {%- if form.errors -%}
+                  <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                {%- endif -%}
+              </div>
+              {%- if form.posted_successfully? -%}
+                <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+              {%- endif -%}
+            {%- endform -%}
+
+
+
+
+          <p>I
+            <!-- -->'
+            <!-- -->m baby viral XOXO jean shorts bushwick lyft. Pour-over man braid distillery, vegan vice meditation
+            brunch cronut. Hella 3 wolf moon kogi, man braid quinoa tumeric umami meggings. Butcher church-key cray,
+            synth vice listicle master cleanse tote bag disrupt semiotics chillwave typewriter post-ironic. Lo-fi
+            franzen hexagon paleo, sriracha heirloom bicycle rights locavore edison bulb subway tile keytar bushwick
+            banh mi chartreuse. Artisan woke street art tilde, sriracha tote bag hoodie 90
+            <!-- -->'
+            <!-- -->s glossier chambray semiotics selvage kogi man braid taiyaki.
+            <!-- -->
+          </p>
+          <div class="footer__social-icons"><a href="#" class="footer__social-link"><i
+                class="fab fa-facebook-f"></i></a><a href="#" class="footer__social-link"><i
+                class="fab fa-twitter"></i></a><a href="#" class="footer__social-link"><i
+                class="fab fa-youtube"></i></a><a href="#" class="footer__social-link"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer__bottom">
+          <div class="footer__copyright">© 2021 StoreName, LLC All Rights Reserved</div>
+          <div class="footer__extra-links"><a href="#">Link</a><a href="#">Link</a><a href="#">Link</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 {%- style -%}
   .footer {
