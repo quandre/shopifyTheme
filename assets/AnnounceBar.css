@@ -1,0 +1,10 @@
+.announce-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  background: #605e7d;
+  color: #fff;
+  font-weight: 700;
+}
