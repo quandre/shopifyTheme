@@ -4,7 +4,7 @@
   align-items: center;
   padding: 15px 0;
   font-size: 1.2rem;
-  background: #605e7d;
+  background: var(--announcement-bar-default);
   color: #fff;
   font-weight: 700;
 }
