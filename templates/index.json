@@ -1,53 +1,109 @@
 {
   "sections": {
-    "1653957142df4ecf67": {
-      "type": "image-banner",
+    "1653957862b68a7fed": {
+      "type": "hero-one",
       "blocks": {
-        "1653957142e394e79a-0": {
+        "16539578622eb4c2ac-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "title": "Title",
+            "title__size": "md"
           }
         },
-        "1653957142e394e79a-1": {
-          "type": "text",
+        "16539578622eb4c2ac-1": {
+          "type": "paragraph",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
           }
         },
-        "1653957142e394e79a-2": {
-          "type": "buttons",
+        "16539578622eb4c2ac-2": {
+          "type": "button",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label": "View More",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "1653957142e394e79a-0",
-        "1653957142e394e79a-1",
-        "1653957142e394e79a-2"
+        "16539578622eb4c2ac-0",
+        "16539578622eb4c2ac-1",
+        "16539578622eb4c2ac-2"
       ],
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "hero_height": "100vh",
+        "info_alignment": "right",
+        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
       }
     },
-    "1653957114578fcfbd": {
+    "1653957864ccdf2cfb": {
+      "type": "collection-group",
+      "blocks": {
+        "1653957864581e112c-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "1653957864581e112c-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "1653957864581e112c-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "1653957864581e112c-0",
+        "1653957864581e112c-1",
+        "1653957864581e112c-2"
+      ],
+      "settings": {
+        "container_shape": "square",
+        "image_fit": "contain",
+        "xxl_col": "col-xxl-4",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-4",
+        "sm_col": "col-sm-2",
+        "background": "#FFFFFF",
+        "show_title": true
+      }
+    },
+    "1653957887d5a3aee4": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "100vh",
+        "button_label1": "Button label",
+        "button_link1": "",
+        "background1": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+        "button_label2": "Button label",
+        "button_link2": "",
+        "background2": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+      }
+    },
+    "1653957890782de035": {
+      "type": "collection-products-1",
+      "settings": {
+        "collection": "",
+        "total_products": 16,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6",
+        "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
+        "show_title": true,
+        "show_price": true
+      }
+    },
+    "1653957959103f6b8e": {
       "type": "featured-collection",
       "settings": {
         "title": "Featured collection",
@@ -73,45 +129,13 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1653957174616a3a88": {
-      "type": "image-with-text",
-      "blocks": {
-        "16539571740f945e78-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text"
-          }
-        },
-        "16539571740f945e78-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        },
-        "16539571740f945e78-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16539571740f945e78-0",
-        "16539571740f945e78-1",
-        "16539571740f945e78-2"
-      ],
-      "settings": {
-        "height": "adapt",
-        "color_scheme": "background-1",
-        "layout": "image_first"
-      }
     }
   },
   "order": [
-    "1653957142df4ecf67",
-    "1653957114578fcfbd",
-    "1653957174616a3a88"
+    "1653957862b68a7fed",
+    "1653957864ccdf2cfb",
+    "1653957887d5a3aee4",
+    "1653957890782de035",
+    "1653957959103f6b8e"
   ]
 }
