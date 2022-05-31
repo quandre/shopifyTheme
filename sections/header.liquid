@@ -60,7 +60,7 @@
       {%- endfor -%}
       {%- endif -%}
       <a href="{{ routes.cart_url }}">
-        <i class="fas fa-shopping-cart"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
       </a>
       {%- if shop.customer_accounts_enabled -%}
       <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -122,7 +122,7 @@
     </ul>
     <div class="header2__collections-nav">
       <a href="{{ routes.cart_url }}">
-        <i class="fas fa-shopping-cart"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
       </a>
       {%- if shop.customer_accounts_enabled -%}
       <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -182,7 +182,7 @@
         {%- endif -%}
     
         <a href="{{ routes.cart_url }}">
-          <i class="fas fa-shopping-cart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
         </a>
         {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
