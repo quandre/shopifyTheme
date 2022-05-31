@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 55px;
   padding: 15px 0;
   font-size: 1.2rem;
+  font-weight: 700;
   background: var(--announcement-bar-default);
   color: #fff;
-  font-weight: 700;
 }
