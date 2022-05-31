@@ -59,7 +59,7 @@
       {%- endif -%}
       {%- endfor -%}
       {%- endif -%}
-      <a href="/cart">
+      <a href="{{ routes.cart_url }}">
         <i class="fas fa-shopping-cart"></i>
       </a>
       {%- if shop.customer_accounts_enabled -%}
@@ -121,7 +121,7 @@
       {%- endif -%}
     </ul>
     <div class="header2__collections-nav">
-      <a href="/cart">
+      <a href="{{ routes.cart_url }}">
         <i class="fas fa-shopping-cart"></i>
       </a>
       {%- if shop.customer_accounts_enabled -%}
@@ -181,7 +181,7 @@
         {%- endfor -%}
         {%- endif -%}
     
-        <a href="/cart">
+        <a href="{{ routes.cart_url }}">
           <i class="fas fa-shopping-cart"></i>
         </a>
         {%- if shop.customer_accounts_enabled -%}
