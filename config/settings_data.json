@@ -99,6 +99,20 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "db067742-6c9c-4f62-8be2-93c4dff20838": {
+            "type": "announcement",
+            "settings": {
+              "text": "Welcome to our store",
+              "background_color": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+              "announcement_text_color": "#ffffff",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "db067742-6c9c-4f62-8be2-93c4dff20838"
+        ],
         "settings": {
         }
       },
