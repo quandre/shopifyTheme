@@ -95,8 +95,8 @@
     },
     methods: {
 			addToCart() {
-        fetch('{{product_url}}.js', {
-          method: 'POST/cart/add.js',
+        fetch('/cart/add.js', {
+          method: 'POST',
           header: {
             'Content-Type': 'application/json'
           },
