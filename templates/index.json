@@ -20,7 +20,7 @@
           "type": "button",
           "settings": {
             "button_label": "Add To Cart",
-            "button_link": ""
+            "button_link": "shopify:\/\/products\/adidas-classic-backpack"
           }
         }
       },
