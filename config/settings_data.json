@@ -1,5 +1,7 @@
 {
   "current": {
+    "header_sticky": true,
+    "header_transparent": true,
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -105,7 +107,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_type": "header1",
+          "header_type": "header3",
           "logo_width": 90,
           "menu": "main-menu",
           "menu_two": "main-menu"
