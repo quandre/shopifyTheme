@@ -95,6 +95,28 @@
     },
     methods: {
 			addToCart() {
+        fetch('{{product_url}}.js', {
+          method: 'POST',
+          header: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id: this.product_id,
+            quantity: 1
+          })
+        })
+        .then((res) => {
+          if(res.ok) {
+            console.log("success")
+            return  res.json()
+          } else {
+            console.log("error")
+          }
+        })
+        .then(data => {
+          this.product_id = data.id
+          console.log(this.product_id)
+      })
 				console.log('clicked Button to add to cart')
       }
     },
