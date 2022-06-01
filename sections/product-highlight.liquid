@@ -89,35 +89,31 @@
       fetch('{{product_url}}.js')
       .then(res => res.json())
       .then(data => {
-        this.product_id = data.id
+        this.product_id = data.variants[0].id
         console.log(this.product_id)
       })
     },
     methods: {
 			addToCart() {
+        console.log('clicked Button to add to cart')
         fetch('/cart/add.js', {
-          method: 'POST',
-          header: {
-            'Content-Type': 'application/json'
-          },
           body: JSON.stringify({
             id: this.product_id,
             quantity: 1
-          })
-        })
-        .then((res) => {
-          if(res.ok) {
-            console.log("success")
-            return  res.json()
-          } else {
-            console.log("error")
-          }
-        })
-        .then(data => {
-          this.product_id = data.id
-          console.log(this.product_id)
-      })
-				console.log('clicked Button to add to cart')
+          }),
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'xmlhttprequest'
+          },
+          method: 'POST'
+        }).then(function (response) {
+          return response.json()
+        }).them(function (json) {
+          console.log(json)
+        }).catch(function (error) {
+          console.log(error)
+        });
       }
     },
     data() {
