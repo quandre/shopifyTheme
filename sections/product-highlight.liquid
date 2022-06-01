@@ -33,7 +33,7 @@
 <div class="product-highlight">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         {%- if section.settings.image != blank -%}
         <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
           {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -51,7 +51,7 @@
         {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
       </div>
-      <div class="col-md-8">
+      <div class="col-md-4">
         <div class="product-highlight__info-container">
           {%- for block in section.blocks -%}
           {% case block.type %}
