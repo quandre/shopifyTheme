@@ -205,7 +205,7 @@
 {% endcase %}
 
 
-<script>
+<!-- <script>
   const bodyTag = document.getElementsByTagName('body')[0];
   const headerWrapper = document.getElementById('shopify-section-header');
 
@@ -227,8 +227,35 @@
     }
     window.addEventListener('scroll', onScroll)
   }
-</script>
+</script> -->
 
+<script src="{{ 'zepto.min.js' | asset_url }}"></script>
+
+<script>
+   const bodyTag = $('body');
+  const headerWrapper = $('#shopify-section-header');
+
+  if(bodyTag.hasClass('fixed-nav')) {
+ 
+    headerWrapper.css('position', 'fixed');
+    headerWrapper.css('top', 0);
+    headerWrapper.css('left', 0);
+    headerWrapper.css('width', '100%');
+    headerWrapper.css('zIndex', '7');
+    
+    if (bodyTag.hasClass('transparent-nav')) {
+      const onScroll = () => {
+        const scrollLocation = document.documentElement.scrollTop;
+        if (scrollLocation > 5) {
+          bodyTag.classList.removeClass('transparent-nav')
+        } else {
+          bodyTag.classList.addClass('transparent-nav')
+        }
+      }
+      window.addEventListener('scroll', onScroll)
+    }
+  }
+</script>
 
 {% schema %}
 {
