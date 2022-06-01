@@ -105,7 +105,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_type": "header1",
+          "header_type": "header3",
           "logo_width": 90,
           "menu": "main-menu",
           "menu_two": "main-menu"
