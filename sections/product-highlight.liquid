@@ -1,4 +1,7 @@
-{{ 'Hero1.css' | asset_url | stylesheet_tag }}
+<!-- dev -->
+<script src="{{ 'vue.js' | asset_url }}"></script>
+<!-- Production -->
+<!-- <script src="{{ 'vue.min.js' | asset_url }}"></script> -->
 
 <style>
   .product-highlight {
@@ -65,7 +68,10 @@
           </p>
           {%- when 'button' -%}
           {%- if block.settings.button_label != blank -%}
-          <button class="product-highlight__button">{{ block.settings.button_label | escape }}</button>
+          <button class="product-highlight__button">
+            {% assign button_title = block.settings.button_label | escape %}
+            ${ button_title }
+          </button>
           </a>
           {%- endif -%}
           {%- endcase -%}
@@ -75,6 +81,18 @@
     </div>
   </div>
 </div>
+
+<script>
+  const productHighlight = vue.createApp({
+    delimiters: ['${','}'],
+    data() {
+      return {
+        button_title: '{{ button_title }}'
+      }
+    }
+  }).mount('.product-highlight')
+</script>
+
 
 {% schema %}
 {
