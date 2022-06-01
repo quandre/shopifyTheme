@@ -32,7 +32,7 @@
       "settings": {
         "hero_height": "100vh",
         "image": "shopify:\/\/shop_images\/retail-shopping-package.jpg",
-        "info_alignment": "right",
+        "info_alignment": "left",
         "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
       }
     },
