@@ -104,16 +104,16 @@
           credentials: 'same-origin',
           headers: {
             'Content-Type': 'application/json',
-            'X-Requested-With': 'xmlhttprequest'
+						'X-Requested-With': 'xmlhttprequest'
           },
           method: 'POST'
-        }).then(function (response) {
-          return response.json()
-        }).them(function (json) {
-          console.log(json)
-        }).catch(function (error) {
-          console.log(error)
-        });
+				}).then(function (response) {
+					return response.json();
+				}).then(function (json) {
+					console.log(json)
+				}).catch(function (err) {
+					console.error(err)
+				});
       }
     },
     data() {
