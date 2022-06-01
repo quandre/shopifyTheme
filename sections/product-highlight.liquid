@@ -5,24 +5,28 @@
     background: #000000;
     padding: 100px 0;
   }
+
   .product-highlight__img {
     width: 100%;
     height: auto;
   }
+
   .product-highlight__info-container h2 {
     font-size: 2rem;
     background: #ffffff;
   }
-  .product-highlight__info-container p {
+
+  .product-highlight__paragraph {
     font-size: 1.2rem;
-    line-height: 1.4 ;
+    line-height: 1.4;
     background: #ffffff;
-  } 
-  .product-highlight__info-container button {
+  }
+
+  .product-highlight__button {
     background: #ffffff;
     border: none;
     padding: 15px 40px;
-  } 
+  }
 </style>
 
 
@@ -52,58 +56,28 @@
           <h2>Title</h2>
           <p>Description</p>
           <button class="product-highlight__button"></button>
+
+          {%- for block in section.blocks -%}
+          {% case block.type %}
+          {%- when 'heading' -%}
+          <h2 class="product-highlight__title product-highlight__title--{{- block.settings.title__size -}}">
+            {{ block.settings.title | escape }}
+          </h2>
+          {%- when 'paragraph' -%}
+          <p class="product-highlight__paragraph">I
+            {{ block.settings.paragraph }}
+          </p>
+          {%- when 'button' -%}
+          {%- if block.settings.button_label != blank -%}
+          <button class="product-highlight__button">{{ block.settings.button_label | escape }}</button>
+          </a>
+          {%- endif -%}
+          {%- endcase -%}
+          {%- endfor -%}
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="hero hero1 hero1--aligned-{{ section.settings.info_alignment }}
-hero1--{{ section.settings.hero_height }}">
-  {%- if section.settings.image != blank -%}
-    <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-      {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-      {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
-      {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-      {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-      {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-      {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
-      {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
-      src="{{ section.settings.image | image_url: width: 1500 }}"
-      sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-      alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
-      height="{{ section.settings.image.height }}" class="hero1__bg">
-  {%- else -%}
-    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-  {%- endif -%}
-  
-<div class="hero1__content-container" style="background: {{ section.settings.background }}">
-  <div class="hero1__info">
-    {%- for block in section.blocks -%}
-      {% case block.type %}
-        {%- when 'heading' -%}
-          <h1 class="hero1__title hero1__title--{{- block.settings.title__size -}}">
-            {{ block.settings.title | escape }}
-          </h1>
-        {%- when 'paragraph' -%}
-          <p class="hero1__paragraph">I
-            {{ block.settings.paragraph }}
-          </p>
-        {%- when 'button' -%}
-          {%- if block.settings.button_label != blank -%}
-            <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true" 
-              {% else %}
-                href="{{ block.settings.button_link }}" 
-            {% endif %}
-            class="hero1__button"
-            {{ block.shopify_attributes }} >
-              {{ block.settings.button_label | escape }}
-            </a>
-          {%- endif -%}
-      {%- endcase -%}
-    {%- endfor -%}
-  </div>
-</div>
 </div>
 
 {% schema %}
