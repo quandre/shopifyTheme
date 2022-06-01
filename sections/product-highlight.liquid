@@ -70,9 +70,8 @@
           {%- if block.settings.button_label != blank -%}
           <button @click="addToCart" class="product-highlight__button">
             {% assign button_title = block.settings.button_label | escape %}
-            ${ button_title } 
+            ${ button_title }
           </button>
-          </a>
           {%- endif -%}
           {%- endcase -%}
           {%- endfor -%}
@@ -86,13 +85,13 @@
   const productHighlight = vue.createApp({
     delimiters: ['${', '}'],
     methods: {
-      addToCart() {
-        console.log('Clicked')
+			addToCart() {
+				console.log('clicked Button to add to cart')
       }
     },
     data() {
-      return {
-        button_title: '{{ button_title }}'
+			return {
+				button_title: '{{ button_title }}'
       }
     }
   }).mount('.product-highlight')
