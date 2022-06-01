@@ -232,28 +232,31 @@
 <script src="{{ 'zepto.min.js' | asset_url }}"></script>
 
 <script>
-   const bodyTag = $('body');
+  // Get body element
+  const bodyTag = $('body');
   const headerWrapper = $('#shopify-section-header');
-
+  // check for class fixed-nav
   if(bodyTag.hasClass('fixed-nav')) {
- 
-    headerWrapper.css('position', 'fixed');
+    // change styles of header wrapper
+    headerWrapper.css('position','fixed')
     headerWrapper.css('top', 0);
     headerWrapper.css('left', 0);
     headerWrapper.css('width', '100%');
-    headerWrapper.css('zIndex', '7');
+    headerWrapper.css('z-index', '7');
     
-    if (bodyTag.hasClass('transparent-nav')) {
+    if(bodyTag.hasClass('transparent-nav')) {
+      // remove class of transparent bg when scrolled
       const onScroll = () => {
         const scrollLocation = document.documentElement.scrollTop;
-        if (scrollLocation > 5) {
-          bodyTag.classList.removeClass('transparent-nav')
+        if(scrollLocation > 5) {
+          bodyTag.removeClass('transparent-nav')
         } else {
-          bodyTag.classList.addClass('transparent-nav')
+          bodyTag.addClass('transparent-nav')
         }
       }
       window.addEventListener('scroll', onScroll)
     }
+    
   }
 </script>
 
