@@ -1,11 +1,11 @@
 .header1 {
+  background: #fcfcfc;
+  color: #1b1b1b;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 84px; 
   padding: 0 10px;
-  background: #fcfcfc;
-  color: #1b1b1b;
+  height: 84px;
   transition: all 0.3s ease-in-out;
 }
 .header1 a {
