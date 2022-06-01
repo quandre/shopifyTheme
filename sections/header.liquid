@@ -206,25 +206,25 @@
 
 
 <script>
-  const bodyTag = document.querySelector('body')
+  const bodyTag = document.getElementsByTagName('body')[0];
+  const headerWrapper = document.getElementById('shopify-section-header');
 
-  if (bodyTag.classList.contains('fixed-nav')) {
-    headerWrapper.style.position = "fixed";
+  if(bodyTag.classList.contains('fixed-nav') && bodyTag.classList.contains('transparent-nav')) {
+ 
+    headerWrapper.style.position = 'fixed'
     headerWrapper.style.top = 0;
     headerWrapper.style.left = 0;
     headerWrapper.style.width = '100%';
     headerWrapper.style.zIndex = '7';
-
+    
     const onScroll = () => {
       const scrollLocation = document.documentElement.scrollTop;
-
-      if (scrollLocation > 50) {
+      if(scrollLocation > 50) {
         bodyTag.classList.remove('transparent-nav')
       } else {
         bodyTag.classList.add('transparent-nav')
       }
     }
-
     window.addEventListener('scroll', onScroll)
   }
 </script>
