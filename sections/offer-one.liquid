@@ -20,23 +20,32 @@
 {%- endif -%}
   <div className="offer1__text-box">
     <div className="offer1__text-box-text">
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'heading' -%}
       {%- if block.settings.title != blank -%}
-      <span className="offer1__text-box-header" style="color: {{ block.settings.offer_header-color }}"> {{ block.settings.title }}</span>
+      <span className="offer1__text-box-header" style="color: {{ block.settings.offer_header-color }}"> {{
+        block.settings.title }}</span>
       {%- endif -%}
+      {%- when 'paragraph' -%}
       {%- if block.settings.paragraph != blank -%}
-      <p className="offer1__text-box-text" style="color: {{ block.settings.offer_text-color }}">{{ block.settings.paragraph }}</p>
+      <p className="offer1__text-box-text" style="color: {{ block.settings.offer_text-color }}">{{
+        block.settings.paragraph }}</p>
       {%- endif -%}
+      {%- endcase -%}
+      {%- endfor -%}
     </div>
+    {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'button' -%}
     {%- if block.settings.button_label != blank -%}
-            <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true" 
-              {% else %}
-                href="{{ block.settings.button_link }}" 
-            {% endif %}
-            class="offer1__text-box-button"
-            {{ block.shopify_attributes }} >
-              {{ block.settings.button_label | escape }}
-            </a>
-          {%- endif -%}
+    <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true" {% else %}
+      href="{{ block.settings.button_link }}" {% endif %} class="offer1__text-box-button" {{ block.shopify_attributes }}>
+      {{ block.settings.button_label | escape }}
+    </a>
+    {%- endif -%}
+    {%- endcase -%}
+      {%- endfor -%}
   </div>
 </div>
 
