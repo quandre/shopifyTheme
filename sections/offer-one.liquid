@@ -20,16 +20,23 @@
 {%- endif -%}
   <div className="offer1__text-box">
     <div className="offer1__text-box-text">
-      {%- if block.settings.text != blank -%}
-      <span className="offer1__text-box-header" style="color: {{ block.settings.offer_header-color }}"> Special Offer</span>
+      {%- if block.settings.title != blank -%}
+      <span className="offer1__text-box-header" style="color: {{ block.settings.offer_header-color }}"> {{ block.settings.title }}</span>
       {%- endif -%}
       {%- if block.settings.paragraph != blank -%}
-      <p className="offer1__text-box-text" style="color: {{ block.settings.offer_text-color }}">Get The Perfect Gift</p>
+      <p className="offer1__text-box-text" style="color: {{ block.settings.offer_text-color }}">{{ block.settings.paragraph }}</p>
       {%- endif -%}
     </div>
-    {%- if block.settings.link != blank -%}
-    <a href="{{ block.settings.link }}" className="offer1__text-box-button">{{ block.settings.text | escape }}</a>
-    {%- endif -%}
+    {%- if block.settings.button_label != blank -%}
+            <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true" 
+              {% else %}
+                href="{{ block.settings.button_link }}" 
+            {% endif %}
+            class="offer1__text-box-button"
+            {{ block.shopify_attributes }} >
+              {{ block.settings.button_label | escape }}
+            </a>
+          {%- endif -%}
   </div>
 </div>
 
