@@ -1,5 +1,39 @@
 {
   "sections": {
+    "16548151285c740e9d": {
+      "type": "offer-one",
+      "blocks": {
+        "16548151282b8badec-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Special Offer",
+            "offer_header_color": "#4b0081"
+          }
+        },
+        "16548151282b8badec-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "Get The Perfect Gift",
+            "offer_text_color": "#ffffff"
+          }
+        },
+        "16548151282b8badec-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16548151282b8badec-0",
+        "16548151282b8badec-1",
+        "16548151282b8badec-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/man-on-new-york-city-bridge.jpg"
+      }
+    },
     "16548085102c4ef8da": {
       "type": "hero-three",
       "settings": {
@@ -244,6 +278,7 @@
     }
   },
   "order": [
+    "16548151285c740e9d",
     "16548085102c4ef8da",
     "1654048897b4e08509",
     "1653957862b68a7fed",
