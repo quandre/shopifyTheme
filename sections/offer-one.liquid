@@ -42,7 +42,7 @@
     {%- when 'button' -%}
     {%- if block.settings.button_label != blank -%}
     <a {% if block.settings.button_link==blank %} role="link" aria-disabled="true" {% else %}
-      href="{{ block.settings.button_link }}" {% endif %} class="offer1__text-box-button" {{ block.shopify_attributes
+      href="{{ block.settings.button_link }}" {% endif %} class="offer1__text-box-button" style="color: {{ block.settings.button_text_color }}" {{ block.shopify_attributes
       }}>
       {{ block.settings.button_label | escape }}
     </a>
@@ -80,7 +80,7 @@
           "id": "offer_header_color",
           "label": "Header Color",
           "default": "#4b0081"
-          }
+        }
       ]
     },
     {
@@ -113,6 +113,12 @@
 					"default": "Button label",
 					"label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
 					"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "text Color",
+          "default": "#4b0081"
         },
         {
           "type": "url",
