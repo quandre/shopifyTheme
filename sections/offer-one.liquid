@@ -1,0 +1,123 @@
+{{ 'OfferBar.css' | asset_url | stylesheet_tag }}
+
+<div className="offer1">
+  <img
+  {%- if section.settings.image != blank -%}
+  <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+    {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+    {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+    {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+    {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+    {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+    {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+    {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+    src="{{ section.settings.image | image_url: width: 1500 }}"
+    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+    alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
+    height="{{ section.settings.image.height }}" class="offer1__img">
+{%- else -%}
+  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+{%- endif -%}
+  <div className="offer1__text-box">
+    <div className="offer1__text-box-text">
+      {%- if block.settings.text != blank -%}
+      <span className="offer1__text-box-header" style="color: {{ block.settings.offer_header-color }}"> Special Offer</span>
+      {%- endif -%}
+      {%- if block.settings.paragraph != blank -%}
+      <p className="offer1__text-box-text" style="color: {{ block.settings.offer_text-color }}">Get The Perfect Gift</p>
+      {%- endif -%}
+    </div>
+    {%- if block.settings.link != blank -%}
+    <a href="{{ block.settings.link }}" className="offer1__text-box-button">{{ block.settings.text | escape }}</a>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Offer Banner",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+			"name": "t:sections.image-with-text.blocks.heading.name",
+			"limit": 1,
+			"settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Header",
+          "default": "Special Offer"
+        },
+        {
+          "type": "color",
+          "id": "offer_header_color",
+          "label": "Header Color",
+          "default": "#4b0081"
+          }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph",
+          "label": "Text",
+          "default": "Get The Perfect Gift"
+        },
+        {
+        "type": "color",
+        "id": "offer_text_color",
+        "label": "Text Color",
+        "default": "#ffffff"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.image-with-text.blocks.button.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+					"id": "button_label",
+					"default": "Button label",
+					"label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+					"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Offer Banner",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
