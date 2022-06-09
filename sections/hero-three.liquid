@@ -1,0 +1,131 @@
+{{ 'hero3.css' |  asset_url | stylesheet_tag}}
+
+<div class="hero hero3 hero3--100vh">
+  <div class="hero3__item"><img
+      src="https://i.etsystatic.com/33165178/r/il/933ef6/3658987591/il_1588xN.3658987591_kbxt.jpg"
+      class="hero3__item-img" alt="">
+    <div class="hero3__item-text">
+      <div class="hero3__item-inner-text">
+        <h3>Specialty Candles</h3><a href="#">Shop Now
+          <!-- --><span>+</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero3__item"><img src="https://www.personalizationmall.com/cat_image/2000/18962-42784-220315144800.jpg"
+      class="hero3__item-img" alt="">
+    <div class="hero3__item-text">
+      <div class="hero3__item-inner-text">
+        <h3>Personalized Candles</h3><a href="#">Shop Now
+          <!-- --><span>+</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero3__item"><img
+      src="https://cdn.shopify.com/s/files/1/0379/0490/8421/products/4A4A3810_1800x1800.jpg?v=1595229691"
+      class="hero3__item-img" alt="">
+    <div class="hero3__item-text">
+      <div class="hero3__item-inner-text">
+        <h3>Mini Candles</h3><a href="#">Shop Now
+          <!-- --><span>+</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero3__item"><img
+      src="https://cdn.shopify.com/s/files/1/0250/0322/9287/products/konzuk-candles-diffusers-black-xl-orbis-3-wick-concrete-candle-design-milk-shop-15624258191463_2000x.jpg?v=1597376150"
+      class="hero3__item-img" alt="">
+    <div class="hero3__item-text">
+      <div class="hero3__item-inner-text">
+        <h3>Large Candles</h3><a href="#">Shop Now
+          <!-- --><span>+</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero tree",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "select",
+      "id": "hero_height",
+      "options": [
+        {
+          "value": "25vh",
+          "label": "25%"
+        },
+        {
+          "value": "50vh",
+          "label": "50%"
+        },
+        {
+          "value": "75vh",
+          "label": "75%"
+        },
+        {
+          "value": "100vh",
+          "label": "100%"
+        }
+      ],
+      "default": "100vh",
+      "label": "Height"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Left Image"
+    },
+    {
+			"type": "text",
+			"id": "button_label1",
+			"default": "Button label",
+			"label": "Left Label",
+			"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+		},
+    {
+      "type": "url",
+      "id": "button_link1",
+      "label": "Left Button link"
+    },
+    {
+      "type": "color_background",
+      "id": "background1",
+      "label": "Left Background Color",
+      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Right Image"
+    },
+    {
+			"type": "text",
+			"id": "button_label2",
+			"default": "Button label",
+			"label": "Right Label",
+			"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+		},
+    {
+      "type": "url",
+      "id": "button_link2",
+      "label": "Right Button link"
+    },
+    {
+      "type": "color_background",
+      "id": "background2",
+      "label": "Right Background Color",
+      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero three"
+    }
+  ]
+}
+{% endschema %}
