@@ -1,6 +1,6 @@
 {{ 'OfferBar.css' | asset_url | stylesheet_tag }}
 
-<div className="offer1">
+<div class="offer1">
   <img
   {%- if section.settings.image != blank -%}
   <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -18,18 +18,18 @@
 {%- else -%}
   {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
 {%- endif -%}
-  <div className="offer1__text-box">
-    <div className="offer1__text-box-text">
+  <div class="offer1__text-box">
+    <div class="offer1__text-box-text">
       {%- for block in section.blocks -%}
       {% case block.type %}
       {%- when 'heading' -%}
       {%- if block.settings.title != blank -%}
-      <span className="offer1__text-box-header" style="color: {{ block.settings.offer_header-color }}"> {{
+      <span class="offer1__text-box-header" style="color: {{ block.settings.offer_header-color }}"> {{
         block.settings.title }}</span>
       {%- endif -%}
       {%- when 'paragraph' -%}
       {%- if block.settings.paragraph != blank -%}
-      <p className="offer1__text-box-text" style="color: {{ block.settings.offer_text-color }}">{{
+      <p class="offer1__text-box-text" style="color: {{ block.settings.offer_text-color }}">{{
         block.settings.paragraph }}</p>
       {%- endif -%}
       {%- endcase -%}
