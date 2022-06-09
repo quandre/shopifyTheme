@@ -21,6 +21,7 @@
           "type": "button",
           "settings": {
             "button_label": "Button label",
+            "button_text_color": "#0d0513",
             "button_link": ""
           }
         }
@@ -31,6 +32,7 @@
         "16548151282b8badec-2"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/retail-shopping-package.jpg"
       }
     },
     "16548085102c4ef8da": {
