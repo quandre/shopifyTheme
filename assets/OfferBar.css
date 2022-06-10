@@ -1,10 +1,17 @@
 .offer1 {
   position: relative;
   margin: 0 auto;
-  width: 100%;
+  width: 900px;
   height: 150px;
   border-radius: 5px;
   overflow: hidden;
+}
+.offer1--border {
+  border: 1px solid;
+  border-color: #fff;
+}
+.offer1__text-box-button {
+  background-color: #fff;
 }
 .offer1__img {
   position: absolute;
@@ -12,8 +19,6 @@
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  object-position: center;
-  -o-object-position: center;
   z-index: 1;
 }
 .offer1__text-box {
@@ -43,7 +48,4 @@
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-}
-.offer1__text-box .offer1__text-box-button:hover {
-  color: rgba(75, 0, 130, 0.86);
 }

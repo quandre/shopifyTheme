@@ -42,7 +42,7 @@
     {%- when 'button' -%}
     {%- if block.settings.button_label != blank -%}
     <a {% if block.settings.button_link==blank %} role="link" aria-disabled="true" {% else %}
-      href="{{ block.settings.button_link }}" {% endif %} class="offer1__text-box-button" style="color: {{ block.settings.button_text_color }}" {{ block.shopify_attributes
+      href="{{ block.settings.button_link }}" {% endif %} class="offer1__text-box-button" style="color: {{ block.settings.button_text_color }}; border-color: {{ block.settings.border_color }}; background-color: {{ block.settings.background }};" {{ block.shopify_attributes
       }}>
       {{ block.settings.button_label | escape }}
     </a>
@@ -89,7 +89,7 @@
       "limit": 1,
       "settings": [
         {
-          "type": "textarea",
+          "type": "text",
           "id": "paragraph",
           "label": "Text",
           "default": "Get The Perfect Gift"
@@ -120,6 +120,24 @@
           "label": "text Color",
           "default": "#4b0081"
         },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border Color",
+          "default": "#4b0081"
+        },
+        {
+          "type": "color",
+          "id": "hover_color",
+          "label": "Hover text Color",
+          "default": "#4b0081"
+        },
+        {
+          "type": "color_background",
+          "id": "background",
+          "label": "Background color",
+          "default": "linear-gradient(90deg, rgba(45,130,141,0) 100%, rgba(45,130,141,0) 100%)"
+        }
         {
           "type": "url",
           "id": "button_link",
