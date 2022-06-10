@@ -42,7 +42,7 @@
     {%- when 'button' -%}
     {%- if block.settings.button_label != blank -%}
     <a {% if block.settings.button_link==blank %} role="link" aria-disabled="true" {% else %}
-      href="{{ block.settings.button_link }}" {% endif %} class="offer1__text-box-button" style="color: {{ block.settings.button_text_color }}; border-color: {{ block.settings.border_color }}; background-color: {{ block.settings.background }};" {{ block.shopify_attributes
+      href="{{ block.settings.button_link }}" {% endif %} class="offer1__text-box-button" style="color: {{ block.settings.button_text_color }}; border-color: {{ block.settings.border_color }}; background: {{ block.settings.background }};" {{ block.shopify_attributes
       }}>
       {{ block.settings.button_label | escape }}
     </a>
