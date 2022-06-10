@@ -1,5 +1,6 @@
 .box-collection1 {
   width: 100%;
+  padding: 30px 0;
 }
 .box-collection1--aligned-center .box-collection1__box {
   justify-content: center;
@@ -49,13 +50,9 @@
   overflow: hidden;
   z-index: 1;
 }
-.box-collection1__collection img {
+.box-collection1__img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
 }
 .box-collection1__collection .box-collection1__box {
   display: flex;
