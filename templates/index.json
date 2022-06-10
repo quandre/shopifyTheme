@@ -66,10 +66,12 @@
       ],
       "settings": {
         "image_fit": "contain",
-        "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-4",
-        "lg_col": "col-lg-4",
-        "md_col": "col-md-4",
+        "image_alignment": "center",
+        "info_alignment": "center",
+        "xxl_col": "col-xxl-2",
+        "xl_col": "col-xl-2",
+        "lg_col": "col-lg-2",
+        "md_col": "col-md-2",
         "sm_col": "col-sm-2",
         "background": "#FFFFFF"
       }
