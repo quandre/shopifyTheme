@@ -22,8 +22,7 @@
           "settings": {
             "button_label": "Button label",
             "button_text_color": "#4b0081",
-            "border_color": "#4b0081",
-            "hover_color": "#4b0081",
+            "border_color": "#ffffff",
             "background": "linear-gradient(90deg, rgba(8, 24, 25, 0.99) 100%, rgba(45, 130, 141, 0) 100%)",
             "button_link": ""
           }
