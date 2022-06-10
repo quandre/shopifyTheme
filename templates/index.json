@@ -36,9 +36,47 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/pic.jpg"
       }
+    },
+    "16548768177caf12c1": {
+      "type": "box-collection-one",
+      "blocks": {
+        "165487681745ddb4db-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "165487681745ddb4db-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "165487681745ddb4db-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "165487681745ddb4db-0",
+        "165487681745ddb4db-1",
+        "165487681745ddb4db-2"
+      ],
+      "settings": {
+        "image_fit": "contain",
+        "xxl_col": "col-xxl-4",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-4",
+        "sm_col": "col-sm-2",
+        "background": "#FFFFFF"
+      }
     }
   },
   "order": [
-    "16548250373f27fa3a"
+    "16548250373f27fa3a",
+    "16548768177caf12c1"
   ]
 }
