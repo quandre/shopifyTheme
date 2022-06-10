@@ -68,7 +68,7 @@
         "image_fit": "contain",
         "image_alignment": "center",
         "info_alignment": "center",
-        "xxl_col": "col-xxl-4",
+        "xxl_col": "col-xxl-2",
         "xl_col": "col-xl-2",
         "lg_col": "col-lg-2",
         "md_col": "col-md-2",
