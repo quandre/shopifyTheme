@@ -93,7 +93,7 @@
         "73643eba-4bef-4d38-af10-d4cf465aa281"
       ],
       "settings": {
-        "image_fit": "cover",
+        "image_fit": "contain",
         "image_alignment": "right",
         "info_alignment": "center",
         "xxl_col": "col-xxl-6",
