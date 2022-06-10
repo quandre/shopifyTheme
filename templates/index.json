@@ -94,7 +94,7 @@
       ],
       "settings": {
         "image_fit": "cover",
-        "image_alignment": "center",
+        "image_alignment": "right",
         "info_alignment": "center",
         "xxl_col": "col-xxl-2",
         "xl_col": "col-xl-6",
