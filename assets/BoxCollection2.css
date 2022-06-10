@@ -33,6 +33,16 @@
   -o-object-position: right;
   object-position: right;
 }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .box-collection2__collection {
   display: flex;
   align-items: center;

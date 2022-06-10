@@ -38,6 +38,11 @@
   justify-content: center;
   align-items: center;
 }
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .box-collection1__collection {
   display: flex;
   align-items: center;
