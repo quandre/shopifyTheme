@@ -96,11 +96,11 @@
         "image_fit": "cover",
         "image_alignment": "right",
         "info_alignment": "center",
-        "xxl_col": "col-xxl-2",
+        "xxl_col": "col-xxl-6",
         "xl_col": "col-xl-6",
         "lg_col": "col-lg-6",
-        "md_col": "col-md-2",
-        "sm_col": "col-sm-2",
+        "md_col": "col-md-6",
+        "sm_col": "col-sm-6",
         "background": "#FFFFFF"
       }
     }
