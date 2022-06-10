@@ -33,6 +33,11 @@
   -o-object-position: right;
   object-position: right;
 }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .box-collection1__collection {
   display: flex;
   align-items: center;
@@ -51,14 +56,14 @@
   display: flex;
   align-items: center;
   position: absolute;
-  width: 300px;
+  width: 200px;
   z-index: 2;
 }
 .box-collection1__collection .box-collection1__box span {
-  font-size: 20px;
+  font-size: 16px;
 }
 .box-collection1__collection .box-collection1__box p {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
 }
 .box-collection1__collection .box-collection1__box button {
