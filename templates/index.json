@@ -57,12 +57,40 @@
           "settings": {
             "collection": ""
           }
+        },
+        "42a5e8f9-4260-4bdf-86d0-9f2ef6a3c15f": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "e01629c4-b80a-403a-9ef0-4869edfadda2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "9e9cb0cc-5dce-42d4-ab11-417894725578": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "73643eba-4bef-4d38-af10-d4cf465aa281": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
         }
       },
       "block_order": [
         "1654883857847b5a4d-0",
         "1654883857847b5a4d-1",
-        "1654883857847b5a4d-2"
+        "1654883857847b5a4d-2",
+        "42a5e8f9-4260-4bdf-86d0-9f2ef6a3c15f",
+        "e01629c4-b80a-403a-9ef0-4869edfadda2",
+        "9e9cb0cc-5dce-42d4-ab11-417894725578",
+        "73643eba-4bef-4d38-af10-d4cf465aa281"
       ],
       "settings": {
         "image_fit": "contain",
