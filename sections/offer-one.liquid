@@ -14,7 +14,7 @@
       src="{{ section.settings.image | image_url: width: 1500 }}"
       sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
       alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
-      height="{{ section.settings.image.height }}" class="offer1__img" style="width: {{ section.settings.img_width }}%;">
+      height="{{ section.settings.image.height }}" class="offer1__img" style="width: {{ section.settings.img_width }}%; object-position: {{ section.settings.img_x-axis }}% {{ section.settings.img_y-axis }}%; transform: scale( {{ section.settings.img_scale }}%)">
 
     {%- else -%}
     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -65,16 +65,6 @@
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
-      "type": "range",
-      "id": "img_width",
-      "min": 10,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "Image size",
-      "default": 100
-    },
-    {
 			"type": "select",
 			"id": "image_fit",
 			"options": [{
@@ -89,6 +79,45 @@
 			"default": "cover",
 			"label": "Image Fit"
 		},
+    {
+      "type": "range",
+      "id": "img_width",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image size",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "img_scale",
+      "min": 10,
+      "max": 700,
+      "step": 10,
+      "label": "Zoom Image In and Out",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "img_y-axis",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Top To Bottom   *Cover Only",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "img_x-axis",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Left To Right   *Contain Only",
+      "default": 50
+    },
     {
       "type": "color_background",
       "id": "background",

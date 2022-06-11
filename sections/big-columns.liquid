@@ -1,0 +1,141 @@
+{{ 'BoxCollection3.css' | asset_url | stylesheet_tag }}
+
+<div class="box-collection3">
+  <div class="box-collection3__container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box-collection3__item" style="background: {{ section.settings.background1 }}">
+          {%- if section.settings.image1 != blank -%}
+          <img
+            srcset="{%- if section.settings.image1.width >= 165 -%}{{ section.settings.image1 | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if section.settings.image1.width >= 360 -%}{{ section.settings.image1 | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if section.settings.image1.width >= 535 -%}{{ section.settings.image1 | img_url: '535x' }} 535w,{%- endif -%}
+            {%- if section.settings.image1.width >= 720 -%}{{ section.settings.image1 | img_url: '720x' }} 720w,{%- endif -%}
+            {%- if section.settings.image1.width >= 940 -%}{{ section.settings.image1 | img_url: '940x' }} 940w,{%- endif -%}
+            {%- if section.settings.image1.width >= 1070 -%}{{ section.settings.image1 | img_url: '2000x' }} 2000w{%- endif -%}"
+            src="{{ section.settings.image1 | img_url: '533x' }}"
+            sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ section.settings.image1.alt | escape }}" loading="lazy" width="{{ section.settings.image1.width }}"
+            height="{{ section.settings.image1.height }}" class="box-collection3__item-img">
+          {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+          <div class="box-collection3__box">
+            <p class="box-collection3__header">{{ section.settings.header_text1 | escape}}</p>
+            <p class="box-collection3__sub-text">{{ section.settings.sub_text1 | escape}}</p>
+            <a {% if section.settings.button_link1 == blank %} role="link" aria-disabled="true" {% else %}
+              href="{{ section.settings.button_link1 }}" {% endif %} class="box-collection3__button">{{
+              section.settings.button_text1 | escape}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="box-collection3__item" style="background: {{ section.settings.background1 }}">
+          {%- if section.settings.image2 != blank -%}
+          <img
+            srcset="{%- if section.settings.image2.width >= 165 -%}{{ section.settings.image2 | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if section.settings.image2.width >= 360 -%}{{ section.settings.image2 | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if section.settings.image2.width >= 535 -%}{{ section.settings.image2 | img_url: '535x' }} 535w,{%- endif -%}
+            {%- if section.settings.image2.width >= 720 -%}{{ section.settings.image2 | img_url: '720x' }} 720w,{%- endif -%}
+            {%- if section.settings.image2.width >= 940 -%}{{ section.settings.image2 | img_url: '940x' }} 940w,{%- endif -%}
+            {%- if section.settings.image2.width >= 1070 -%}{{ section.settings.image2 | img_url: '2000x' }} 2000w{%- endif -%}"
+            src="{{ section.settings.image2 | img_url: '533x' }}"
+            sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ section.settings.image2.alt | escape }}" loading="lazy" width="{{ section.settings.image2.width }}"
+            height="{{ section.settings.image2.height }}" class="box-collection3__item-img">
+          {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+          <div class="box-collection3__box">
+            <p class="box-collection3__header">{{ section.settings.header_text2 | escape}}</p>
+            <p class="box-collection3__sub-text">{{ section.settings.sub_text2 | escape}}</p>
+            <a {% if section.settings.button_link2 == blank %} role="link" aria-disabled="true" {% else %}
+              href="{{ section.settings.button_link2 }}" {% endif %} class="box-collection3__button">{{
+              section.settings.button_text2 | escape}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+	"name": "Big Columns",
+	"class": "spaced-section spaced-section--full-width",
+	"settings": [
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Left Image"
+    },
+    {
+      "type": "text",
+      "id": "header_text1",
+      "label": "Title",
+      "default": "Header Text"
+    },
+    {
+      "type": "text",
+      "id": "sub_text1",
+      "label": "Text",
+      "default": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text1",
+      "label": " Button Label",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link1",
+      "label": "Button link"
+    },    
+    {
+      "type": "color_background",
+      "id": "background1",
+      "label": "Background Color",
+      "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Left Image"
+    },
+    {
+      "type": "text",
+      "id": "header_text2",
+      "label": "Title",
+      "default": "Header Text"
+    },
+    {
+      "type": "text",
+      "id": "sub_text2",
+      "label": "Text",
+      "default": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text2",
+      "label": " Button Label",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link2",
+      "label": "Button link"
+    },    
+    {
+      "type": "color_background",
+      "id": "background2",
+      "label": "Background Color",
+      "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+    }
+	],
+	"presets": [{
+		"name": "Big Columns"
+	}]
+}
+{% endschema %}
