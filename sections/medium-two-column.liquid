@@ -1,0 +1,224 @@
+{{ 'BoxCollection2.css' | asset_url | stylesheet_tag }}
+
+<div class="box-collection2">
+  <div class="row">
+    <div class="col-md-6">
+      <div
+        class="box-collection2__collection box-collection2--img-{{ section.settings.image1_alignment }} box-collection2--aligned-{{ section.settings.info_alignment1 }} 
+          box-collection2--{{ section.settings.image1_fit }}"
+        style="background: {{ section.settings.background1 }}">
+        {%- if section.settings.image1 != blank -%}
+        <img
+          srcset="{%- if section.settings.image1.width >= 165 -%}{{ section.settings.image1 | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if section.settings.image1.width >= 360 -%}{{ section.settings.image1 | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if section.settings.image1.width >= 535 -%}{{ section.settings.image1 | img_url: '535x' }} 535w,{%- endif -%}
+            {%- if section.settings.image1.width >= 720 -%}{{ section.settings.image1 | img_url: '720x' }} 720w,{%- endif -%}
+            {%- if section.settings.image1.width >= 940 -%}{{ section.settings.image1 | img_url: '940x' }} 940w,{%- endif -%}
+            {%- if section.settings.image1.width >= 1070 -%}{{ section.settings.image1 | img_url: '2000x' }} 2000w{%- endif -%}"
+          src="{{ section.settings.image1 | img_url: '533x' }}"
+          sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+          alt="{{ section.settings.image1.alt | escape }}" loading="lazy" width="{{ section.settings.image1.width }}"
+          height="{{ section.settings.image1.height }}" class="box-collection2__img"
+          style=" width: {{ section.settings.img1_width }}%;">
+        {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+        <div class="box-collection2__box ">
+          <div class="text"><span>50% Off</span>
+            <p>Cases</p><button>Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div
+        class="box-collection2__collection box-collection2--img-{{ section.settings.image2_alignment }} box-collection2--aligned-{{ section.settings.info_alignment2 }} box-collection2--{{ section.settings.image2_fit }}"
+        style="background: {{ section.settings.background2 }}">
+        {%- if section.settings.image2 != blank -%}
+        <img
+          srcset="{%- if section.settings.image2.width >= 165 -%}{{ section.settings.image2 | img_url: '165x' }} 165w,{%- endif -%}
+      {%- if section.settings.image2.width >= 360 -%}{{ section.settings.image2 | img_url: '360x' }} 360w,{%- endif -%}
+      {%- if section.settings.image2.width >= 535 -%}{{ section.settings.image2 | img_url: '535x' }} 535w,{%- endif -%}
+      {%- if section.settings.image2.width >= 720 -%}{{ section.settings.image2 | img_url: '720x' }} 720w,{%- endif -%}
+      {%- if section.settings.image2.width >= 940 -%}{{ section.settings.image2 | img_url: '940x' }} 940w,{%- endif -%}
+      {%- if section.settings.image2.width >= 1070 -%}{{ section.settings.image2 | img_url: '2000x' }} 2000w{%- endif -%}"
+          src="{{ section.settings.image2 | img_url: '533x' }}"
+          sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+          alt="{{ section.settings.image2.alt | escape }}" loading="lazy" width="{{ section.settings.image2.width }}"
+          height="{{ section.settings.image2.height }}" class="box-collection2__img"
+          style=" width: {{ section.settings.img2_width }}%;">
+        {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+        <div class="box-collection2__box ">
+          <div class=".box-collection2__text"><span>50% Off</span>
+            <p>Cases</p><button>Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+	"name": "Medium Two Column",
+	"class": "spaced-section spaced-section--full-width",
+	"settings": [
+  {
+    "type": "image_picker",
+    "id": "image1",
+    "label": "Left Image"
+  },  
+		{
+			"type": "select",
+			"id": "image1_fit",
+			"options": [{
+					"value": "cover",
+					"label": "Cover"
+				},
+				{
+					"value": "contain",
+					"label": "Contain"
+				}
+			],
+			"default": "contain",
+			"label": "Image Fit"
+		},
+    {
+			"type": "select",
+			"id": "image1_alignment",
+			"options": [{
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      }
+    ],
+    "default": "center",
+    "label": "Image Alignment"
+		},
+    {
+      "type": "range",
+      "id": "img1_width",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image size",
+      "default": 70
+    },   
+    {
+      "type": "select",
+      "id": "info_alignment1",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Info Alignment"
+    },
+    {
+      "type": "color_background",
+      "id": "background1",
+      "label": "Background Color",
+      "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Right Image"
+    },  
+      {
+        "type": "select",
+        "id": "image2_fit",
+        "options": [{
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ],
+        "default": "contain",
+        "label": "Image Fit"
+      },
+      {
+        "type": "select",
+        "id": "image2_alignment",
+        "options": [{
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Image Alignment"
+      },
+      {
+        "type": "range",
+        "id": "img2_width",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Image size",
+        "default": 70
+      },   
+      {
+        "type": "select",
+        "id": "info_alignment2",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center",
+        "label": "Info Alignment"
+      },
+      {
+        "type": "color_background",
+        "id": "background2",
+        "label": "Background Color",
+        "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+      }
+	],
+	"presets": [{
+		"name": "Medium Two Column"
+	}]
+}
+{% endschema %}
