@@ -43,7 +43,7 @@
         "1654883857847b5a4d-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "adidas"
           }
         },
         "1654883857847b5a4d-1": {
@@ -79,7 +79,7 @@
         "73643eba-4bef-4d38-af10-d4cf465aa281": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "flex-fit"
           }
         }
       },
@@ -96,11 +96,11 @@
         "image_fit": "contain",
         "image_alignment": "center",
         "info_alignment": "center",
-        "xxl_col": "col-xxl-2",
-        "xl_col": "col-xl-2",
-        "lg_col": "col-lg-2",
-        "md_col": "col-md-2",
-        "sm_col": "col-sm-2",
+        "xxl_col": "col-xxl-6",
+        "xl_col": "col-xl-6",
+        "lg_col": "col-lg-6",
+        "md_col": "col-md-6",
+        "sm_col": "col-sm-6",
         "background": "#FFFFFF"
       }
     }
