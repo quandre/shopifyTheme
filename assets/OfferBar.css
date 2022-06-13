@@ -1,5 +1,5 @@
 .offer1 {
-  padding: 30px 0;
+  padding: 50px 0 50px 0;
 }
 .offer1__img--cover img {
   -o-object-fit: cover;
@@ -8,6 +8,10 @@
 .offer1__img--contain img {
   -o-object-fit: contain;
   object-fit: contain;
+}
+.offer1__img--none img {
+  -o-object-fit: none;
+  object-fit: none;
 }
 .offer1--img-left img {
   -o-object-position: left;
@@ -40,6 +44,7 @@
   background-color: #fff;
 }
 .offer1__img {
+  display: block;
   position: absolute;
   height: 100%;
   z-index: 1;

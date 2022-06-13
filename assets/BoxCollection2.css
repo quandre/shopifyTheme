@@ -63,21 +63,23 @@
   height: 100%;
   z-index: 2;
 }
-.box-collection2__collection .box-collection2__text {
+.box-collection2__collection .box-collection2__text-box {
   width: 300px;
 }
-.box-collection2__collection .box-collection2__box span {
+.box-collection2__collection .box-collection2__header {
   font-size: 20px;
 }
-.box-collection2__collection .box-collection2__box p {
+.box-collection2__collection .box-collection2__text {
   font-size: 30px;
   font-weight: 700;
 }
-.box-collection2__collection .box-collection2__box button {
+.box-collection2__collection .box-collection2__button {
   font-size: 13px;
   padding: 8px 20px;
   background: #fff;
   border-radius: 2px;
   color: #000;
+  text-decoration: none;
+  cursor: pointer;
   border: none;
 }

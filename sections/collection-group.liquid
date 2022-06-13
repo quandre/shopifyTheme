@@ -1,6 +1,6 @@
 {{ 'Collection1.css' | asset_url | stylesheet_tag }}
 
-<div class="collection collection1">
+<div class="collection collection1" style="background-color: {{ section.settings.background }}; padding: {{ section.settings.collection1_padding-top }}px 0 {{ section.settings.collection1_padding-bottom }}px 0;">
   <div class="container">
     <div class="row">
       {%- for block in section.blocks -%}
@@ -9,10 +9,10 @@
         <div class="collection1__collection-item">
           <div
             class="collection1__product-img collection1__product-img--{{section.settings.container_shape}} collection1__product-img--{{section.settings.image_fit}}"
-            style="background-color: {{ section.settings.background }}">
+            style="background: {{ block.settings.img_background }}">
 
             {%- if block.settings.collection.image != blank -%}
-            <a href="{{block.settings.collection.url}}" class="img-link" style=" width: {{ section.settings.img_width }}%;">
+            <a href="{{block.settings.collection.url}}" class="img-link">
               <img
                 srcset="{%- if block.settings.collection.image.width >= 165 -%}{{ block.settings.collection.image  | img_url: '165x' }} 165w,{%- endif -%}
 									{%- if block.settings.collection.image.width >= 360 -%}{{ block.settings.collection.image | img_url: '360x' }} 360w,{%- endif -%}
@@ -24,7 +24,7 @@
                 sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
                 alt="{{ block.settings.collection.image.alt | escape }}" loading="lazy"
                 width="{{ block.settings.collection.image.width }}"
-                height="{{ block.settings.collection.image.height }}" class="collection1__bg">
+                height="{{ block.settings.collection.image.height }}" class="collection1__bg" style=" width: {{ block.settings.img_width }}%;">
             </a>
             {%- else -%}
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -98,16 +98,6 @@
 			"default": "contain",
 			"label": "Product Image Fit"
 		},
-    {
-      "type": "range",
-      "id": "img_width",
-      "min": 10,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "Image size",
-      "default": 70
-    },    
 		{
 			"type": "select",
 			"id": "xxl_col",
@@ -227,14 +217,38 @@
       "type": "color_background",
       "id": "background",
       "label": "Background Color",
-      "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+      "default": "#F7F9FD"
     },
     {
 			"type": "checkbox",
 			"id": "show_title",
 			"label": "Show Title",
 			"default": true
-		}
+		},
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "collection1_padding-top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "collection1_padding-bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 50
+    }
 	],
   "blocks": [
     {
@@ -245,6 +259,22 @@
           "type": "collection",
           "id": "collection",
           "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        },
+        {
+          "type": "color_background",
+          "id": "img_background",
+          "label": "Image Background Color",
+          "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+        },
+        {
+          "type": "range",
+          "id": "img_width",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Image size",
+          "default": 70
         }
       ]
     }

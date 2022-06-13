@@ -1,10 +1,10 @@
 {{ 'BoxCollection3.css' | asset_url | stylesheet_tag }}
 
-<div class="box-collection3">
+<div class="box-collection3" style="padding: {{ section.settings.collection3_padding-top }}px 0 {{ section.settings.collection3_padding-bottom }}px 0;">
   <div class="box-collection3__container">
     <div class="row">
       <div class="col-md-6">
-        <div class="box-collection3__item" style="background: {{ section.settings.background1 }}">
+        <div class="box-collection3__item box-collection3__img--{{section.settings.image1_fit}}" style="background: {{ section.settings.background1 }};">
           {%- if section.settings.image1 != blank -%}
           <img
             srcset="{%- if section.settings.image1.width >= 165 -%}{{ section.settings.image1 | img_url: '165x' }} 165w,{%- endif -%}
@@ -16,21 +16,21 @@
             src="{{ section.settings.image1 | img_url: '533x' }}"
             sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
             alt="{{ section.settings.image1.alt | escape }}" loading="lazy" width="{{ section.settings.image1.width }}"
-            height="{{ section.settings.image1.height }}" class="box-collection3__item-img">
+            height="{{ section.settings.image1.height }}" class="box-collection3__item-img" style="width: {{ section.settings.img1_width }}%; object-position: {{ section.settings.img1_x-axis }}% {{ section.settings.img1_y-axis }}%; transform: scale( {{ section.settings.img1_scale }}%);">
           {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
           <div class="box-collection3__box">
-            <p class="box-collection3__header">{{ section.settings.header_text1 | escape}}</p>
-            <p class="box-collection3__sub-text">{{ section.settings.sub_text1 | escape}}</p>
+            <p class="box-collection3__header" style="color: {{ section.settings.header_color1 }}">{{ section.settings.header_text1 | escape}}</p>
+            <p class="box-collection3__sub-text" style="color: {{ section.settings.text_color1 }};">{{ section.settings.sub_text1 | escape}}</p>
             <a {% if section.settings.button_link1 == blank %} role="link" aria-disabled="true" {% else %}
-              href="{{ section.settings.button_link1 }}" {% endif %} class="box-collection3__button">{{
+              href="{{ section.settings.button_link1 }}" {% endif %} class="box-collection3__button" style="color: {{ section.settings.button_color1 }}; border-color: {{ section.settings.border_color1 }}; background: {{ section.settings.button-background1 }};">{{
               section.settings.button_text1 | escape}}</a>
           </div>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="box-collection3__item" style="background: {{ section.settings.background1 }}">
+        <div class="box-collection3__item box-collection3__img--{{section.settings.image2_fit}}" style="background: {{ section.settings.background1 }}">
           {%- if section.settings.image2 != blank -%}
           <img
             srcset="{%- if section.settings.image2.width >= 165 -%}{{ section.settings.image2 | img_url: '165x' }} 165w,{%- endif -%}
@@ -42,15 +42,15 @@
             src="{{ section.settings.image2 | img_url: '533x' }}"
             sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
             alt="{{ section.settings.image2.alt | escape }}" loading="lazy" width="{{ section.settings.image2.width }}"
-            height="{{ section.settings.image2.height }}" class="box-collection3__item-img">
+            height="{{ section.settings.image2.height }}" class="box-collection3__item-img" style="width: {{ section.settings.img2_width }}%; object-position: {{ section.settings.img2_x-axis }}% {{ section.settings.img2_y-axis }}%; transform: scale( {{ section.settings.img2_scale }}%);">
           {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
           <div class="box-collection3__box">
-            <p class="box-collection3__header">{{ section.settings.header_text2 | escape}}</p>
-            <p class="box-collection3__sub-text">{{ section.settings.sub_text2 | escape}}</p>
+            <p class="box-collection3__header" style="color: {{ section.settings.header_color2 }}">{{ section.settings.header_text2 | escape}}</p>
+            <p class="box-collection3__sub-text" style="color: {{ section.settings.text_color2 }}">{{ section.settings.sub_text2 | escape}}</p>
             <a {% if section.settings.button_link2 == blank %} role="link" aria-disabled="true" {% else %}
-              href="{{ section.settings.button_link2 }}" {% endif %} class="box-collection3__button">{{
+              href="{{ section.settings.button_link2 }}" {% endif %} class="box-collection3__button" style="color: {{ section.settings.button_color2 }}; border-color: {{ section.settings.border_color2 }}; background: {{ section.settings.button-background2 }};">{{
               section.settings.button_text2 | escape}}</a>
           </div>
         </div>
@@ -65,10 +65,72 @@
 	"name": "Big Columns",
 	"class": "spaced-section spaced-section--full-width",
 	"settings": [
+  {
+    "type": "header",
+    "content": "Left Box"
+  },
     {
       "type": "image_picker",
       "id": "image1",
       "label": "Left Image"
+    },
+    {
+			"type": "select",
+			"id": "image1_fit",
+			"options": [{
+					"value": "cover",
+					"label": "Cover"
+				},
+				{
+					"value": "contain",
+					"label": "Contain"
+				},
+        {
+					"value": "none",
+					"label": "None"
+				}
+			],
+			"default": "cover",
+			"label": "Image Fit"
+		},
+    {
+      "type": "range",
+      "id": "img1_width",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image size",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "img1_scale",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "label": "Zoom Image In and Out",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "img1_y-axis",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Top To Bottom",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "img1_x-axis",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Left To Right",
+      "default": 50
     },
     {
       "type": "text",
@@ -77,10 +139,22 @@
       "default": "Header Text"
     },
     {
+      "type": "color",
+      "id": "header_color1",
+      "label": "Header text color",
+      "default": "#e6989c"
+    },
+    {
       "type": "text",
       "id": "sub_text1",
       "label": "Text",
       "default": "Text"
+    },
+    {
+      "type": "color",
+      "id": "text_color1",
+      "label": "Text Color",
+      "default": "#e6989c"
     },
     {
       "type": "text",
@@ -89,10 +163,28 @@
       "default": "Button Text"
     },
     {
+      "type": "color",
+      "id": "border_color1",
+      "label": "Button Border Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color1",
+      "label": "Button text Color",
+      "default": "#e6989c"
+    },
+    {
+      "type": "color_background",
+      "id": "button-background1",
+      "label": "Button Background",
+      "default": "linear-gradient(90deg, rgba(45,130,141,0) 100%, rgba(45,130,141,0) 100%)"
+    },  
+    {
       "type": "url",
       "id": "button_link1",
       "label": "Button link"
-    },    
+    },
     {
       "type": "color_background",
       "id": "background1",
@@ -100,9 +192,71 @@
       "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
     },
     {
+      "type": "header",
+      "content": "Right Box"
+    },
+    {
       "type": "image_picker",
       "id": "image2",
       "label": "Left Image"
+    },
+    {
+			"type": "select",
+			"id": "image2_fit",
+			"options": [{
+					"value": "cover",
+					"label": "Cover"
+				},
+				{
+					"value": "contain",
+					"label": "Contain"
+				},
+        {
+					"value": "none",
+					"label": "None"
+				}
+			],
+			"default": "cover",
+			"label": "Image Fit"
+		},
+    {
+      "type": "range",
+      "id": "img2_width",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image size",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "img2_scale",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "label": "Zoom Image In and Out",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "img2_y-axis",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Top To Bottom",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "img2_x-axis",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Left To Right",
+      "default": 50
     },
     {
       "type": "text",
@@ -111,10 +265,22 @@
       "default": "Header Text"
     },
     {
+      "type": "color",
+      "id": "header_color2",
+      "label": "Header Text Color",
+      "default": "#e6989c"
+    },
+    {
       "type": "text",
       "id": "sub_text2",
       "label": "Text",
       "default": "Text"
+    },
+    {
+      "type": "color",
+      "id": "text_color2",
+      "label": "Text Color",
+      "default": "#e6989c"
     },
     {
       "type": "text",
@@ -123,15 +289,57 @@
       "default": "Button Text"
     },
     {
+      "type": "color",
+      "id": "button_color2",
+      "label": "Button Text Color",
+      "default": "#e6989c"
+    },
+    {
+      "type": "color",
+      "id": "border_color2",
+      "label": "Border Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "button-background2",
+      "label": "Button Background",
+      "default": "linear-gradient(90deg, rgba(45,130,141,0) 100%, rgba(45,130,141,0) 100%)"
+    },
+    {
       "type": "url",
       "id": "button_link2",
       "label": "Button link"
-    },    
+    },      
     {
       "type": "color_background",
       "id": "background2",
       "label": "Background Color",
       "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "collection3_padding-top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "collection3_padding-bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 50
     }
 	],
 	"presets": [{

@@ -24,8 +24,11 @@
         {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
         <div class="box-collection2__box ">
-          <div class="text"><span>50% Off</span>
-            <p>Cases</p><button>Shop Now</button>
+          <div class="text"><p class="box-collection2__header" style="color: {{ section.settings.header_color1 }}">{{ section.settings.header_text1 | escape}}</p>
+            <p class="box-collection2__text" style="color: {{ section.settings.text_color1 }};">{{ section.settings.sub_text1 | escape}}</p>
+            <a {% if section.settings.button_link1 == blank %} role="link" aria-disabled="true" {% else %}
+              href="{{ section.settings.button_link1 }}" {% endif %} class="box-collection2__button" style="color: {{ section.settings.button_color1 }}; border: 1px solid {{ section.settings.border_color1 }}; background: {{ section.settings.button-background1 }};">{{
+              section.settings.button_text1 | escape}}</a>
           </div>
         </div>
       </div>
@@ -51,8 +54,11 @@
         {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
         <div class="box-collection2__box ">
-          <div class=".box-collection2__text"><span>50% Off</span>
-            <p>Cases</p><button>Shop Now</button>
+          <div class=".box-collection2__text-box"><p class="box-collection3__header" style="color: {{ section.settings.header_color2 }}">{{ section.settings.header_text2 | escape}}</p>
+            <p class="box-collection2__text" style="color: {{ section.settings.text_color2 }}">{{ section.settings.sub_text2 }}</p>
+            <a {% if section.settings.button_link2 == blank %} role="link" aria-disabled="true" {% else %}
+            href="{{ section.settings.button_link2 }}" {% endif %} class="box-collection2__button" style="color: {{ section.settings.button_color2 }}; border: 1px solid {{ section.settings.border_color2 }}; background: {{ section.settings.button-background2 }};">{{
+            section.settings.button_text2 | escape}}</a>
           </div>
         </div>
       </div>
@@ -136,10 +142,67 @@
       "label": "Info Alignment"
     },
     {
+      "type": "text",
+      "id": "header_text1",
+      "label": "Title",
+      "default": "Header Text"
+    },
+    {
+      "type": "color",
+      "id": "header_color1",
+      "label": "Header text color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "sub_text1",
+      "label": "Text",
+      "default": "Text"
+    },
+    {
+      "type": "color",
+      "id": "text_color1",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "button_text1",
+      "label": " Button Label",
+      "default": "Button Text"
+    },
+    {
+      "type": "color",
+      "id": "button_color1",
+      "label": "Button text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "border_color1",
+      "label": "Button Border Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color_background",
+      "id": "button-background1",
+      "label": "Button Background",
+      "default": "linear-gradient(90deg, rgba(45,130,141,0) 100%, rgba(45,130,141,0) 100%)"
+    },  
+    {
+      "type": "url",
+      "id": "button_link1",
+      "label": "Button link"
+    },
+    {
       "type": "color_background",
       "id": "background1",
-      "label": "Background Color",
+      "label": "Left Box Background Color",
       "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+    },
+    {
+      "type": "header",
+      "content": "Right Box"
     },
     {
       "type": "image_picker",
@@ -211,8 +274,67 @@
         "label": "Info Alignment"
       },
       {
+        "type": "text",
+        "id": "header_text2",
+        "label": "Title",
+        "default": "Header Text"
+      },
+      {
+        "type": "color",
+        "id": "header_color2",
+        "label": "Header Text Color",
+        "default": "#000000"
+      },
+      {
+        "type": "text",
+        "id": "sub_text2",
+        "label": "Text",
+        "default": "Text"
+      },
+      {
+        "type": "color",
+        "id": "text_color2",
+        "label": "Text Color",
+        "default": "#000000"
+      },
+      {
+        "type": "text",
+        "id": "button_text2",
+        "label": " Button Label",
+        "default": "Button Text"
+      },
+      {
+        "type": "color",
+        "id": "button_color2",
+        "label": "Button Text Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "border_color2",
+        "label": "Button Border Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color_background",
+        "id": "button-background2",
+        "label": "Button Background",
+        "default": "linear-gradient(90deg, rgba(45,130,141,0) 100%, rgba(45,130,141,0) 100%)"
+      },
+      {
+        "type": "url",
+        "id": "button_link2",
+        "label": "Button link"
+      },      
+      {
         "type": "color_background",
         "id": "background2",
+        "label": "Right Box Background Color",
+        "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+      },
+      {
+        "type": "color_background",
+        "id": "background",
         "label": "Background Color",
         "default": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
       }
