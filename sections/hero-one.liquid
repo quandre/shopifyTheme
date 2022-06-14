@@ -1,7 +1,7 @@
 {{ 'Hero1.css' | asset_url | stylesheet_tag }}
 
 <div class="hero hero1 hero1--aligned-{{ section.settings.info_alignment }}
-hero1--{{ section.settings.hero_height }}">
+hero1--{{ section.settings.hero_height }}" style="padding: {{ section.settings.hero1_padding-top }}px 0 {{ section.settings.hero1_padding-bottom }}px 0;">
   {%- if section.settings.image != blank -%}
     <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
       {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -107,6 +107,30 @@ hero1--{{ section.settings.hero_height }}">
       "id": "background",
       "label": "Background Color",
       "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "hero1_padding-top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "hero1_padding-bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 50
     }
   ],
   "blocks": [

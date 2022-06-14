@@ -1,6 +1,6 @@
 {{ 'Hero2.css' | asset_url | stylesheet_tag }}
 
-<div class="hero hero2 hero2--{{ section.settings.hero_height }}">
+<div class="hero hero2 hero2--{{ section.settings.hero_height }}" style="padding: {{ section.settings.hero2_padding-top }}px 0 {{ section.settings.hero2_padding-bottom }}px 0;">
   <div class="hero2__collection1">
     {%- if section.settings.image1 != blank -%}
     <img
@@ -133,6 +133,30 @@
       "id": "background2",
       "label": "Right Background Color",
       "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "hero2_padding-top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "hero2_padding-bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 50
     }
   ],
   "presets": [

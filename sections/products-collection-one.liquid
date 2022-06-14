@@ -1,6 +1,6 @@
 {{ 'Collection1.css' | asset_url | stylesheet_tag }}
 
-{%- if section.setting.collection.all_product_count -%}
+
   <div class="collection collection1">
     <div class="container">
       <div class="row">
@@ -35,14 +35,6 @@
                 {%- if section.settings.show_price == true -%}
                   <span class="collection1__product-price">${{ product.price }}</span>
                 {% endif%}
-                <div>
-                  {%- for block in section.blocks -%}
-                    {%- case block.type -%}
-                      {%- when '@app' -%}]
-                        {%- render block -%}
-                    {%- endcase -%}
-                  {%- endfor -%}
-                </div>
               </div>
               <div class="collection1__colors">
                 <div class="collection1__color collection1__color--blue"></div>
@@ -55,62 +47,6 @@
       </div>
     </div>
   </div>
-{%- else -%}
-<div class="collection collection1">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="collection1__collection-item">
-          <div class="collection1__product-img collection1__product-img--rectangle ">
-            <div class="collection1__heart"><i class="far fa-heart"></i></div>
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          </div>
-          <div class="collection1__product-info">
-            <div class="collection1__product-details"><span class="collection1__product-title">Product</span><span
-                class="collection1__product-price">$250</span></div>
-            <div class="collection1__colors">
-              <div class="collection1__color collection1__color--blue"></div>
-              <div class="collection1__color collection1__color--black"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="collection1__collection-item">
-          <div class="collection1__product-img collection1__product-img--rectangle">
-            <div class="collection1__heart"><i class="far fa-heart"></i></div>
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          </div>
-          <div class="collection1__product-info">
-            <div class="collection1__product-details"><span class="collection1__product-title">Product</span><span
-                class="collection1__product-price">$250</span></div>
-            <div class="collection1__colors">
-              <div class="collection1__color collection1__color--blue"></div>
-              <div class="collection1__color collection1__color--white"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="collection1__collection-item">
-          <div class="collection1__product-img collection1__product-img--rectangle">
-            <div class="collection1__heart"><i class="far fa-heart"></i></div>
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          </div>
-          <div class="collection1__product-info">
-            <div class="collection1__product-details"><span class="collection1__product-title">Product</span><span
-                class="collection1__product-price">$250</span></div>
-            <div class="collection1__colors">
-              <div class="collection1__color collection1__color--blue"></div>
-              <div class="collection1__color collection1__color--white"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{%- endif -%}
 
 {% schema %}
   {
@@ -299,11 +235,6 @@
       "id": "show_price",
       "label": "Show Price",
       "default": true
-    }
-  ],
-  "blocks": [
-    {
-      "type": "@app"
     }
   ],
   "presets": [

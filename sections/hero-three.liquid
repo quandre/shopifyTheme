@@ -1,50 +1,37 @@
 {{ 'hero3.css' |  asset_url | stylesheet_tag}}
 
-<div class="hero hero3 hero3--100vh">
-  <div class="hero3__item"><img
-      src="https://i.etsystatic.com/33165178/r/il/933ef6/3658987591/il_1588xN.3658987591_kbxt.jpg"
-      class="hero3__item-img" alt="">
+<div class="hero hero3 hero3--{{ section.settings.hero_height }}" style="padding: {{ section.settings.hero3_padding-top }}px 0 {{ section.settings.hero3_padding-bottom }}px 0;">
+  {%- for block in section.blocks -%}
+  <div class="hero3__item">
+    {%- if block.settings.image != blank -%}
+    <img srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+      {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+      {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+      {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+      {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+      {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+      {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+      {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+      src="{{ block.settings.image | image_url: width: 1500 }}"
+      sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+      alt="{{ block.settings.image.alt | escape }}" loading="lazy" width="{{ block.settings.image.width }}"
+      height="{{ block.settings.image.height }}" class="hero3__item-img">
+
+    {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
     <div class="hero3__item-text">
       <div class="hero3__item-inner-text">
-        <h3>Specialty Candles</h3><a href="#">Shop Now
-          <!-- --><span>+</span>
-        </a>
+        <h3 class="hero3__item-h3" style="color: {{ block.settings.h3_color }}">{{ block.settings.h3_label }}</h3>
+        <a href="{{ block.settings.button_link }}" class="hero3__item-link" style="color: {{ block.settings.a_color }}; {%- if section.settings.enable_button -%} border: 1px solid {{ block.settings.border_color }}; background: {{ block.settings.button-background }}; padding: {{ block.settings.button_tb }}px {{ block.settings.button_lr }}px; border-radius: {{ block.settings.button_radius }}px; {%- endif -%}">{{ block.settings.a_label }} {%- if section.settings.show_plus-sign -%} <span class="hero3__item-span">+</span> {%- endif -%} </a>
       </div>
     </div>
   </div>
-  <div class="hero3__item"><img src="https://www.personalizationmall.com/cat_image/2000/18962-42784-220315144800.jpg"
-      class="hero3__item-img" alt="">
-    <div class="hero3__item-text">
-      <div class="hero3__item-inner-text">
-        <h3>Personalized Candles</h3><a href="#">Shop Now
-          <!-- --><span>+</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="hero3__item"><img
-      src="https://cdn.shopify.com/s/files/1/0379/0490/8421/products/4A4A3810_1800x1800.jpg?v=1595229691"
-      class="hero3__item-img" alt="">
-    <div class="hero3__item-text">
-      <div class="hero3__item-inner-text">
-        <h3>Mini Candles</h3><a href="#">Shop Now
-          <!-- --><span>+</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="hero3__item"><img
-      src="https://cdn.shopify.com/s/files/1/0250/0322/9287/products/konzuk-candles-diffusers-black-xl-orbis-3-wick-concrete-candle-design-milk-shop-15624258191463_2000x.jpg?v=1597376150"
-      class="hero3__item-img" alt="">
-    <div class="hero3__item-text">
-      <div class="hero3__item-inner-text">
-        <h3>Large Candles</h3><a href="#">Shop Now
-          <!-- --><span>+</span>
-        </a>
-      </div>
-    </div>
-  </div>
+  {%- endfor -%}
 </div>
+  
+
+
 
 {% schema %}
 {
@@ -55,10 +42,6 @@
       "type": "select",
       "id": "hero_height",
       "options": [
-        {
-          "value": "25vh",
-          "label": "25%"
-        },
         {
           "value": "50vh",
           "label": "50%"
@@ -76,55 +59,164 @@
       "label": "Height"
     },
     {
-      "type": "image_picker",
-      "id": "image1",
-      "label": "Left Image"
+      "type": "checkbox",
+      "id": "show_plus-sign",
+      "label": "Show Plus Sign",
+      "default": true
     },
     {
-			"type": "text",
-			"id": "button_label1",
-			"default": "Button label",
-			"label": "Left Label",
-			"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
-		},
+      "type": "checkbox",
+      "id": "enable_button",
+      "label": "Turn Link Into A button",
+      "default": false
+    },    
     {
-      "type": "url",
-      "id": "button_link1",
-      "label": "Left Button link"
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
     },
     {
-      "type": "color_background",
-      "id": "background1",
-      "label": "Left Background Color",
-      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+      "type": "range",
+      "id": "hero3_padding-top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 0
     },
     {
-      "type": "image_picker",
-      "id": "image2",
-      "label": "Right Image"
-    },
+      "type": "range",
+      "id": "hero3_padding-bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 50
+    }
+  ],
+  "blocks": [
     {
-			"type": "text",
-			"id": "button_label2",
-			"default": "Button label",
-			"label": "Right Label",
-			"info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
-		},
-    {
-      "type": "url",
-      "id": "button_link2",
-      "label": "Right Button link"
-    },
-    {
-      "type": "color_background",
-      "id": "background2",
-      "label": "Right Background Color",
-      "default": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)"
+      "name": "Hero",
+      "type": "Hero_block",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "header",
+          "content": "Header Section"
+        },
+        {
+          "type": "text",
+          "id": "h3_label",
+          "default": "Title",
+          "label": "Title",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "color",
+          "id": "h3_color",
+          "label": "Title Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": "Link Section"
+        },
+        {
+          "type": "text",
+          "id": "a_label",
+          "default": "Text",
+          "label": "Text",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "color",
+          "id": "a_color",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "span_color",
+          "label": "Plus Sign Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Link URL"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color_background",
+          "id": "button-background",
+          "label": "Button Background",
+          "default": "linear-gradient(90deg, rgba(45,130,141,0) 100%, rgba(45,130,141,0) 100%)"
+        },
+        {
+          "type": "header",
+          "content": "Button padding"
+        },
+        {
+          "type": "range",
+          "id": "button_tb",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "Top & Bottom Padding",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "button_lr",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "Left & Right Padding",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "button_radius",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "unit": "px",
+          "label": "Button radius",
+          "default": 5
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Hero three"
+      "name": "Hero three",
+      "blocks": [
+        {
+          "type": "Hero_block"
+        },
+        {
+          "type": "Hero_block"
+        },
+        {
+          "type": "Hero_block"
+        },
+        {
+          "type": "Hero_block"
+        }
+      ]
     }
   ]
 }
