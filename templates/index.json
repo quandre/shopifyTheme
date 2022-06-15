@@ -21,10 +21,10 @@
           "type": "button",
           "settings": {
             "button_label": "Button label",
+            "button_link": "",
             "button_text_color": "#4b0081",
             "border_color": "#ffffff",
-            "background": "linear-gradient(90deg, rgba(247, 249, 253, 0) 100%, rgba(45, 130, 141, 0) 100%)",
-            "button_link": ""
+            "button-background": "linear-gradient(90deg, rgba(45,130,141,0) 100%, rgba(45,130,141,0) 100%)"
           }
         }
       },
@@ -34,79 +34,19 @@
         "16548250370dd86ae4-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pic.jpg"
-      }
-    },
-    "1654883857e485bbd3": {
-      "type": "box-collection-one",
-      "blocks": {
-        "1654883857847b5a4d-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "adidas"
-          }
-        },
-        "1654883857847b5a4d-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "1654883857847b5a4d-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "42a5e8f9-4260-4bdf-86d0-9f2ef6a3c15f": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "e01629c4-b80a-403a-9ef0-4869edfadda2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "9e9cb0cc-5dce-42d4-ab11-417894725578": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "73643eba-4bef-4d38-af10-d4cf465aa281": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "flex-fit"
-          }
-        }
-      },
-      "block_order": [
-        "1654883857847b5a4d-0",
-        "1654883857847b5a4d-1",
-        "1654883857847b5a4d-2",
-        "42a5e8f9-4260-4bdf-86d0-9f2ef6a3c15f",
-        "e01629c4-b80a-403a-9ef0-4869edfadda2",
-        "9e9cb0cc-5dce-42d4-ab11-417894725578",
-        "73643eba-4bef-4d38-af10-d4cf465aa281"
-      ],
-      "settings": {
-        "image_fit": "contain",
-        "image_alignment": "center",
-        "info_alignment": "center",
-        "xxl_col": "col-xxl-6",
-        "xl_col": "col-xl-6",
-        "lg_col": "col-lg-6",
-        "md_col": "col-md-6",
-        "sm_col": "col-sm-6",
-        "background": "#FFFFFF"
+        "image": "shopify:\/\/shop_images\/pic.jpg",
+        "background": "linear-gradient(90deg, rgba(240, 183, 104,1) 100%, rgba(240, 183, 104,1) 100%)",
+        "image_fit": "cover",
+        "img_width": 100,
+        "img_scale": 100,
+        "img_y-axis": 50,
+        "img_x-axis": 50,
+        "offer1_padding-top": 50,
+        "offer1_padding-bottom": 50
       }
     }
   },
   "order": [
-    "16548250373f27fa3a",
-    "1654883857e485bbd3"
+    "16548250373f27fa3a"
   ]
 }
