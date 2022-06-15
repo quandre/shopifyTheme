@@ -1,52 +1,62 @@
 {
   "sections": {
-    "16548250373f27fa3a": {
-      "type": "offer-one",
+    "165527088272b7cb9f": {
+      "type": "hero-one",
       "blocks": {
-        "16548250370dd86ae4-0": {
+        "16552708829e9f5e8e-0": {
           "type": "heading",
           "settings": {
-            "title": "Special Offer",
-            "offer_header_color": "#4b0081"
+            "title": "Title",
+            "title__size": "md"
           }
         },
-        "16548250370dd86ae4-1": {
+        "16552708829e9f5e8e-1": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "Get The Perfect Gift",
-            "offer_text_color": "#ffffff"
+            "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
           }
         },
-        "16548250370dd86ae4-2": {
+        "16552708829e9f5e8e-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_text_color": "#4b0081",
-            "border_color": "#ffffff",
-            "button-background": "linear-gradient(90deg, rgba(45,130,141,0) 100%, rgba(45,130,141,0) 100%)"
+            "button_label": "View More",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "16548250370dd86ae4-0",
-        "16548250370dd86ae4-1",
-        "16548250370dd86ae4-2"
+        "16552708829e9f5e8e-0",
+        "16552708829e9f5e8e-1",
+        "16552708829e9f5e8e-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pic.jpg",
-        "background": "linear-gradient(90deg, rgba(240, 183, 104,1) 100%, rgba(240, 183, 104,1) 100%)",
-        "image_fit": "cover",
-        "img_width": 100,
-        "img_scale": 100,
-        "img_y-axis": 50,
-        "img_x-axis": 50,
-        "offer1_padding-top": 50,
-        "offer1_padding-bottom": 50
+        "hero_height": "100vh",
+        "info_alignment": "right",
+        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+        "hero1_padding-top": 0,
+        "hero1_padding-bottom": 50
+      }
+    },
+    "16552709476913350b": {
+      "type": "products-collection-one",
+      "settings": {
+        "collection": "",
+        "total_products": 16,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6",
+        "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
+        "show_title": true,
+        "show_price": true
       }
     }
   },
   "order": [
-    "16548250373f27fa3a"
+    "165527088272b7cb9f",
+    "16552709476913350b"
   ]
 }
