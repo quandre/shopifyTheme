@@ -115,38 +115,12 @@
       },
       "footer": {
         "type": "footer",
-        "blocks": {
-          "4cf35880-04c9-49cb-9df4-a62fd1da3e50": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
-            }
-          },
-          "9c5b1d90-fc76-464d-ba71-eb7e386ad952": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
-            }
-          },
-          "02d020fd-27e0-4e61-994d-efd528aff410": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
-            }
-          }
-        },
-        "block_order": [
-          "4cf35880-04c9-49cb-9df4-a62fd1da3e50",
-          "9c5b1d90-fc76-464d-ba71-eb7e386ad952",
-          "02d020fd-27e0-4e61-994d-efd528aff410"
-        ],
         "settings": {
+          "footer_type": "footer1",
           "footer_p": "I ' m baby viral XOXO jean shorts bushwick lyft. Pour-over man braid distillery, vegan vice meditation brunch cronut. Hella 3 wolf moon kogi, man braid quinoa tumeric umami meggings. Butcher church-key cray, synth vice listicle master cleanse tote bag disrupt semiotics chillwave typewriter post-ironic.",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
+          "show_footer-p": true,
           "show_social": true,
           "footer_bottom_menu": ""
         }
