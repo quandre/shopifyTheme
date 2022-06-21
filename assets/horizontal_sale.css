@@ -1,0 +1,40 @@
+.horizontal-sale-section .overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.horizontal-sale-section .overlay .percent-number {
+  font-family: "Bebas Neue", 'Avenir Next Condensed', 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 20rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.horizontal-sale-section .overlay .title {
+  font-family: "Bebas Neue", 'Avenir Next Condensed', 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 20px;
+  margin-bottom: 1rem;
+}
+.horizontal-sale-section .overlay a {
+  display: block;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 15px 60px;
+  border: 2px solid white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.horizontal-sale-section .overlay a:hover {
+  color: black;
+  background: #ffdf00;
+}
