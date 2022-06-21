@@ -1,7 +1,7 @@
 {{ 'Hero1.css' | asset_url | stylesheet_tag }}
 
-<div class="hero hero1 hero1--aligned-{{ section.settings.info_alignment }}
-hero1--{{ section.settings.hero_height }}" style="padding: {{ section.settings.hero1_padding-top }}px 0 {{ section.settings.hero1_padding-bottom }}px 0;">
+<div class="hero hero1 hero1--aligned-{{ section.settings.info_alignment }} hero1--aligned-{{ section.settings.info_alignment-2 }}
+hero1--{{ section.settings.hero_height }} hero1__img--{{section.settings.image_fit}}" style="padding: {{ section.settings.hero1_padding-top }}px 0 {{ section.settings.hero1_padding-bottom }}px 0;">
   {%- if section.settings.image != blank -%}
     <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
       {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -14,7 +14,7 @@ hero1--{{ section.settings.hero_height }}" style="padding: {{ section.settings.h
       src="{{ section.settings.image | image_url: width: 1500 }}"
       sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
       alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
-      height="{{ section.settings.image.height }}" class="hero1__bg">
+      height="{{ section.settings.image.height }}" class="hero1__img">
   {%- else -%}
     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
   {%- endif -%}
@@ -83,6 +83,25 @@ hero1--{{ section.settings.hero_height }}" style="padding: {{ section.settings.h
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
+			"type": "select",
+			"id": "image_fit",
+			"options": [{
+					"value": "cover",
+					"label": "Cover"
+				},
+				{
+					"value": "contain",
+					"label": "Contain"
+				},
+        {
+					"value": "none",
+					"label": "None"
+				}
+			],
+			"default": "cover",
+			"label": "Image Fit"
+		},
+    {
       "type": "select",
       "id": "info_alignment",
       "options": [
@@ -100,7 +119,27 @@ hero1--{{ section.settings.hero_height }}" style="padding: {{ section.settings.h
         }
       ],
       "default": "right",
-      "label": "Info Alignment"
+      "label": "Info Alignment Left or Right"
+    },
+    {
+      "type": "select",
+      "id": "info_alignment-2",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "center-two",
+          "label": "Center"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center-two",
+      "label": "Info Alignment Top or Bottom"
     },
     {
       "type": "color_background",

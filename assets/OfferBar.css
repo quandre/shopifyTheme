@@ -29,7 +29,18 @@
   border: 1px solid;
   border-color: #fff;
 }
-
+.offer1--10vh {
+  height: 10vh;
+}
+.offer1--15vh {
+  height: 15vh;
+}
+.offer1--20vh {
+  height: 20vh;
+}
+.offer1--25vh {
+  height: 25vh;
+}
 .offer1__container {
   display: flex;
   justify-content: center;

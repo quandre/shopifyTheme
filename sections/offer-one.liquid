@@ -1,7 +1,7 @@
 {{ 'OfferBar.css' | asset_url | stylesheet_tag }}
 
 
-<div class="offer1" style=" padding: {{ section.settings.offer1_padding-top }}px 0 {{ section.settings.offer1_padding-bottom }}px 0;">
+<div class="offer1 offer1--{{ section.settings.offer_height }}" style=" padding: {{ section.settings.offer1_padding-top }}px 0 {{ section.settings.offer1_padding-bottom }}px 0;">
   <div class="offer1__container offer1__img--{{section.settings.image_fit}} offer1--img-{{section.settings.info_alignment}}" style="background: {{ section.settings.background }};">
     {%- if section.settings.image != blank -%}
     <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -60,6 +60,30 @@
   "name": "Offer Banner",
   "class": "spaced-section spaced-section--full-width",
   "settings": [
+  {
+    "type": "select",
+    "id": "offer_height",
+    "options": [
+      {
+        "value": "10vh",
+        "label": "10%"
+      },
+      {
+        "value": "15vh",
+        "label": "15%"
+      },
+      {
+        "value": "20vh",
+        "label": "20%"
+      },
+      {
+        "value": "25vh",
+        "label": "25%"
+      }
+    ],
+    "default": "25vh",
+    "label": "Height"
+  },
     {
       "type": "image_picker",
       "id": "image",
