@@ -21,6 +21,7 @@
 .footer__extra {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .footer__input {
   margin-bottom: 1rem;
@@ -33,10 +34,13 @@
 }
 .footer__social-icons {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .footer__social-link {
   display: block;
-  padding: 20px;
+  padding: 20px 15px;
   color: #7e7e7e;
 }
 .footer__bottom {
