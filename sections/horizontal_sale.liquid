@@ -1,17 +1,25 @@
-{%- assign collection = collections[section.settings.collection] -%}
-{%- assign bgColor = section.settings.collection_bg_color -%}
-<section class="horizontal-sale-section"
-  style="background: url('{{ collection.image | img_url: '1200x'}}'); background-size: cover; height: 700px; width: 100%; background-position: center;">
-  <div class="overlay" style="background: {{ bgColor | color_modify: 'alpha', 0.5 }}">
-    <span class="percent-number">
-      {{ section.settings.percent}}%
+{{ 'horizontal-sale.css' | asset_url | stylesheet_tag }}
+
+{%- assign collection = section.settings.collection -%}
+<section class="horizontal-sale horizontal-sale--{{ section.settings.hero_height }}" 
+  style="background: url('{{ collection.image | img_url: '1200x'}}');  background-size: cover; height: 700px; width: 100%; background-position: center; padding: {{ section.settings.horizontal-sale_padding-top }}px 0 {{ section.settings.horizontal-sale_padding-bottom }}px 0;">
+  <div class="horizontal-sale_overlay" style="background: {{ section.settings.background }}">
+    {%- for block in section.blocks -%}
+    {% case block.type %}
+    {%- when 'percent' -%}
+    <span class="horizontal-sale_percent-number" style=" color: {{ block.settings.percent_color }}">
+      {{ block.settings.percent}}%
     </span>
-    <span class="title">
-      OFF SALE
+    {%- when 'text' -%}
+    <span class="horizontal-sale_title" style=" color: {{ block.settings.text_color }}">
+      {{ block.settings.text}}
     </span>
-    <a href="{{ collection.url }}">
-      View
+    {%- when 'button' -%}
+    <a class="horizontal-sale_button" href="{{ collection.url }}" style=" color: {{ block.settings.button_color }}">
+      {{ block.settings.button_text}}
     </a>
+    {%- endcase -%}
+    {%- endfor -%}
   </div>
 </section>
 
@@ -21,6 +29,30 @@
 {
   "name": "Horizontal Sale",
   "settings": [
+  {
+    "type": "select",
+    "id": "horizontal-sale_height",
+    "options": [
+      {
+        "value": "25vh",
+        "label": "25%"
+      },
+      {
+        "value": "50vh",
+        "label": "50%"
+      },
+      {
+        "value": "75vh",
+        "label": "75%"
+      },
+      {
+        "value": "100vh",
+        "label": "100%"
+      }
+    ],
+    "default": "100vh",
+    "label": "Height"
+  },
     {
       "type": "collection",
       "id": "collection",
@@ -28,22 +60,110 @@
       "info": "Choose a collection"
     },
     {
-      "type": "text",
-      "id": "percent",
-      "default": "50",
-      "label": "Percent Value of Sale"
+      "type": "color_background",
+      "id": "background",
+      "label": "Background",
+      "default": "linear-gradient(90deg, rgba(0,0,0,0.5) 100%, rgba(0,0,0,0.5) 100%)"
     },
     {
-      "type": "color",
-      "id": "collection_bg_color",
-      "label": "Background Color",
-      "default": "#000000"
-    }
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "horizontal-sale_padding-top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "horizontal-sale_padding-bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 50
+    }  
+  ],
+  "blocks": [
+  {
+    "type": "percent",
+    "name": "Percent",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "text",
+        "id": "percent",
+        "default": "50",
+        "label": "Percent Value of Sale"
+      },
+      {
+        "type": "color",
+        "id": "percent_color",
+        "label": "Percent Number Color",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "name": "Text",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "default": "OFF SALE"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "type": "button",
+    "name": "Button",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Text",
+        "default": "OFF SALE"
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "label": "Text Color",
+        "default": "#ffffff"
+      }
+    ]
+  }
   ],
   "presets": [
     {
       "name": "Horizonal Sale",
-      "category": "Collection"
+      "category": "Collection",
+      "blocks": [
+        {
+          "type": "percent"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button"
+        }
+      ]
     }
   ]
 }

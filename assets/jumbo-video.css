@@ -6,17 +6,19 @@
   margin-bottom: 25px;
   overflow: hidden;
 }
-.jumbo-video .bg-image {
-  background: url("jumbobg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
+.jumbo-video--25vh {
+  height: 25vh;
 }
+.jumbo-video--50vh {
+  height: 50vh;
+}
+.jumbo-video--75vh {
+  height: 75vh;
+}
+.jumbo-video--100vh {
+  height: 100vh;
+}
+
 .jumbo-video .bg-video {
   height: 100%;
   width: 100%;
@@ -54,43 +56,4 @@
   font-weight: 200;
   text-transform: uppercase;
   transform: translate3d(135px, 0, 0);
-}
-.jumbo-video .state {
-  background: white;
-  position: absolute;
-  height: 12%;
-  z-index: 3;
-  width: 100%;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-}
-.jumbo-video .state .number {
-  font-size: 5rem;
-  transform: translate3d(50px, 0, 0);
-}
-.jumbo-video .store-info {
-  background: #0cdbdd;
-  position: absolute;
-  height: 20%;
-  z-index: 3;
-  width: 75%;
-  bottom: 0;
-  right: 0;
-  display: flex;
-}
-.jumbo-video .store-info a {
-  width: 25%;
-  display: inline-block;
-}
-.jumbo-video .store-info img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  cursor: pointer;
-  filter: saturate(0);
-  transition: all 0.4s ease-in-out;
-}
-.jumbo-video .store-info img:hover {
-  filter: saturate(100%);
 }
