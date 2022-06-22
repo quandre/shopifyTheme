@@ -15,9 +15,9 @@
     {%- for block in section.blocks -%}
       {%- case block.type -%}
       {%- when 'text' -%}
-        <h1 style=" color: {{ block.settings.jumbo_h1_color }}">{{section.settings.jumbo_h1}}</h1>
+        <h1 style=" color: {{ block.settings.jumbo_h1_color }}">{{block.settings.jumbo_h1}}</h1>
       {%- when 'sub-text' -%}
-        <h2 style=" color: {{ block.settings.jumbo_h2_color }}">{{section.settings.jumbo_h2}}</h2>
+        <h2 style=" color: {{ block.settings.jumbo_h2_color }}">{{block.settings.jumbo_h2}}</h2>
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -139,10 +139,7 @@
           "default": "#ffffff"
         }
       ]
-    }
-  
-  
-    
+    }   
   ],
   "presets": [
     {
