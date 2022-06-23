@@ -1,27 +1,47 @@
 {{ 'horizontal-sale.css' | asset_url | stylesheet_tag }}
 
 {%- assign collection = section.settings.collection -%}
-<section class="horizontal-sale horizontal-sale--{{ section.settings.hero_height }}" 
-  style="background: url('{{ collection.image | img_url: '1200x'}}');  background-size: cover; height: 700px; width: 100%; background-position: center; padding: {{ section.settings.horizontal-sale_padding-top }}px 0 {{ section.settings.horizontal-sale_padding-bottom }}px 0;">
-  <div class="horizontal-sale_overlay" style="background: {{ section.settings.background }}">
-    {%- for block in section.blocks -%}
-    {% case block.type %}
-    {%- when 'percent' -%}
-    <span class="horizontal-sale_percent-number" style=" color: {{ block.settings.percent_color }}">
-      {{ block.settings.percent}}%
-    </span>
-    {%- when 'text' -%}
-    <span class="horizontal-sale_title" style=" color: {{ block.settings.text_color }}">
-      {{ block.settings.text}}
-    </span>
-    {%- when 'button' -%}
-    <a class="horizontal-sale_button" href="{{ collection.url }}" style=" color: {{ block.settings.button_color }}">
-      {{ block.settings.button_text}}
-    </a>
-    {%- endcase -%}
-    {%- endfor -%}
+<div
+  class="horizontal-sale horizontal-sale--{{ section.settings.horizontal-sale_height }} horizontal-sale--{{section.settings.image_fit}}"
+  style=" width: {{ section.settings.sale_width}}%; padding: {{ section.settings.horizontal-sale_padding-top }}px 0 {{ section.settings.horizontal-sale_padding-bottom }}px 0; background: {{ section.settings.background }}">
+    {%- if section.settings.collection != blank -%}
+    <img
+      srcset="{%- if section.settings.collection.width >= 165 -%}{{ section.settings.collection | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if section.settings.collection.width >= 360 -%}{{ section.settings.collection | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if section.settings.collection.width >= 535 -%}{{ section.settings.collection | img_url: '535x' }} 535w,{%- endif -%}
+            {%- if section.settings.collection.width >= 720 -%}{{ section.settings.collection | img_url: '720x' }} 720w,{%- endif -%}
+            {%- if section.settings.collection.width >= 940 -%}{{ section.settings.collection | img_url: '940x' }} 940w,{%- endif -%}
+            {%- if section.settings.collection.width >= 1070 -%}{{ section.settings.collection | img_url: '2000x' }} 2000w{%- endif -%}"
+      src="{{ section.settings.collection | img_url: '533x' }}"
+      sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+      alt="{{ section.settings.collection.alt | escape }}" loading="lazy"
+      width="{{ section.settings.collection.width }}" height="{{ section.settings.collection.height }}"
+      class="horizontal-sale-img"
+      style="width: {{ section.settings.img_width }}%; object-position: {{ section.settings.img_x-axis }}% {{ section.settings.img_y-axis }}%; transform: scale( {{ section.settings.img_scale }}%);">
+    {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+    <div class="horizontal-sale_overlay" style="background: {{ section.settings.overlay }}">
+      <div class="horizontal-sale_text-box">
+        {%- for block in section.blocks -%}
+        {% case block.type %}
+        {%- when 'percent' -%}
+        <span class="horizontal-sale_percent-number" style=" color: {{ block.settings.percent_color }}">
+          {{ block.settings.percent}}
+        </span>
+        {%- when 'text' -%}
+        <span class="horizontal-sale_title" style=" color: {{ block.settings.text_color }}">
+          {{ block.settings.text}}
+        </span>
+        {%- when 'button' -%}
+        <a class="horizontal-sale_button" href="{{ collection.url }}" style=" color: {{ block.settings.button_color }}">
+          {{ block.settings.button_text}}
+        </a>
+        {%- endcase -%}
+        {%- endfor -%}
+    </div>
   </div>
-</section>
+</div>
 
 
 
@@ -53,6 +73,16 @@
     "default": "100vh",
     "label": "Height"
   },
+  {
+    "type": "range",
+    "id": "sale_width",
+    "min": 10,
+    "max": 100,
+    "step": 5,
+    "unit": "%",
+    "label": "Sale Section Width",
+    "default": 100
+  },
     {
       "type": "collection",
       "id": "collection",
@@ -60,9 +90,73 @@
       "info": "Choose a collection"
     },
     {
+			"type": "select",
+			"id": "image_fit",
+			"options": [{
+					"value": "cover",
+					"label": "Cover"
+				},
+				{
+					"value": "contain",
+					"label": "Contain"
+				},
+        {
+					"value": "none",
+					"label": "None"
+				}
+			],
+			"default": "cover",
+			"label": "Image Fit"
+		},
+    {
+      "type": "range",
+      "id": "img_width",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image size",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "img_scale",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "label": "Zoom Image In and Out",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "img_y-axis",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Top To Bottom",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "img_x-axis",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Left To Right",
+      "default": 50
+    },
+    {
       "type": "color_background",
       "id": "background",
       "label": "Background",
+      "default": "linear-gradient(90deg, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%)"
+    },
+    {
+      "type": "color_background",
+      "id": "overlay",
+      "label": "Overlay",
       "default": "linear-gradient(90deg, rgba(0,0,0,0.5) 100%, rgba(0,0,0,0.5) 100%)"
     },
     {
@@ -99,7 +193,7 @@
       {
         "type": "text",
         "id": "percent",
-        "default": "50",
+        "default": "10% OFF",
         "label": "Percent Value of Sale"
       },
       {
@@ -119,7 +213,7 @@
         "type": "text",
         "id": "text",
         "label": "Text",
-        "default": "OFF SALE"
+        "default": "Sub Text"
       },
       {
         "type": "color",
@@ -138,7 +232,7 @@
         "type": "text",
         "id": "button_text",
         "label": "Text",
-        "default": "OFF SALE"
+        "default": "Shop Now"
       },
       {
         "type": "color",

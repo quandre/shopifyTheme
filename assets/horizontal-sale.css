@@ -1,6 +1,8 @@
 .horizontal-sale {
-  width: 100%;
-  height: 100vh;
+  position: relative;
+  margin: 0 auto 50px;
+  z-index: 1;
+  overflow: hidden;
 }
 .horizontal-sale--25vh {
   height: 25vh;
@@ -14,16 +16,44 @@
 .horizontal-sale--100vh {
   height: 100vh;
 }
-
+.horizontal-sale--cover img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.horizontal-sale--contain img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.horizontal-sale--none img {
+  -o-object-fit: none;
+  object-fit: none;
+}
 .horizontal-sale_overlay {
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, .5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 2;
 }
+.horizontal-sale-img {
+  width: 100%;
+  height: 100%;
+}
+.horizontal-sale_text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
 .horizontal-sale_percent-number {
   font-family: "Bebas Neue", 'Avenir Next Condensed', 'Source Sans Pro', Arial, Helvetica, sans-serif;
   color: white;

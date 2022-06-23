@@ -1,137 +1,92 @@
 {
   "sections": {
-    "1655271438a9a20e97": {
-      "type": "offer-one",
+    "16559352679017e832": {
+      "type": "hero-three",
       "blocks": {
-        "1655271438e9df7199-0": {
-          "type": "heading",
+        "165593526788f60a24-0": {
+          "type": "Hero_block",
           "settings": {
-            "title": "Special Offer",
-            "offer_header_color": "#4b0081"
-          }
-        },
-        "1655271438e9df7199-1": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "Get The Perfect Gift",
-            "offer_text_color": "#ffffff"
-          }
-        },
-        "1655271438e9df7199-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_text_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/4x5-Cropping_Guide_0013_D14A9364_470x_37eacc1f-2213-486e-8d08-76d9dab6298a.webp",
+            "h3_label": "AIR JORDAN 9 RETRO 'PARTICLE GREY'",
+            "h3_color": "#ffffff",
+            "a_label": "Shop Now",
+            "a_color": "#ffffff",
+            "span_color": "#ffffff",
+            "button_link": "shopify:\/\/products\/air-jordan-9-retro-particle-grey",
             "border_color": "#ffffff",
-            "button-background": "linear-gradient(90deg, rgba(45,130,141,0) 100%, rgba(45,130,141,0) 100%)"
+            "button-background": "linear-gradient(90deg, rgba(45, 130, 141, 0) 100%, rgba(45, 130, 141, 0) 100%)",
+            "button_tb": 12,
+            "button_lr": 24,
+            "button_radius": 5
           }
         }
       },
       "block_order": [
-        "1655271438e9df7199-0",
-        "1655271438e9df7199-1",
-        "1655271438e9df7199-2"
-      ],
-      "settings": {
-        "background": "linear-gradient(90deg, rgba(240, 183, 104, 1) 100%, rgba(240, 183, 104, 1) 100%)",
-        "image_fit": "cover",
-        "img_width": 100,
-        "img_scale": 100,
-        "img_y-axis": 50,
-        "img_x-axis": 50,
-        "offer1_padding-top": 20,
-        "offer1_padding-bottom": 10
-      }
-    },
-    "165527088272b7cb9f": {
-      "type": "hero-one",
-      "blocks": {
-        "16552708829e9f5e8e-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Title",
-            "title__size": "md"
-          }
-        },
-        "16552708829e9f5e8e-1": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
-          }
-        },
-        "16552708829e9f5e8e-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "View More",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16552708829e9f5e8e-0",
-        "16552708829e9f5e8e-1",
-        "16552708829e9f5e8e-2"
+        "165593526788f60a24-0"
       ],
       "settings": {
         "hero_height": "100vh",
-        "info_alignment": "right",
-        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
-        "hero1_padding-top": 10,
-        "hero1_padding-bottom": 10
+        "show_plus-sign": true,
+        "enable_button": false,
+        "hero3_padding-top": 0,
+        "hero3_padding-bottom": 0
       }
     },
     "16552709476913350b": {
       "type": "products-collection-one",
       "settings": {
-        "collection": "",
+        "collection": "trending",
         "total_products": 16,
         "container_shape": "rectangle",
         "image_fit": "contain",
         "xxl_col": "col-xxl-3",
         "xl_col": "col-xl-3",
         "lg_col": "col-lg-3",
-        "md_col": "col-md-3",
+        "md_col": "col-md-6",
         "sm_col": "col-sm-6",
         "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
         "show_title": true,
-        "show_price": true
+        "show_price": false
       }
     },
-    "165527131947c5add1": {
-      "type": "long-columns",
+    "1655935381304445f7": {
+      "type": "hero-one",
+      "blocks": {
+        "1655935381ad2dddd0-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Brand New Air",
+            "title__size": "md"
+          }
+        },
+        "7511e9d3-9d6e-4f51-aa66-ba25bea0d884": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "Air Jordan Sneakers"
+          }
+        },
+        "1655935381ad2dddd0-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/air-jordan"
+          }
+        }
+      },
+      "block_order": [
+        "1655935381ad2dddd0-0",
+        "7511e9d3-9d6e-4f51-aa66-ba25bea0d884",
+        "1655935381ad2dddd0-2"
+      ],
       "settings": {
-        "image1_fit": "contain",
-        "image1_alignment": "center",
-        "img1_width": 70,
-        "info_alignment1": "center",
-        "header_text1": "Header Text",
-        "header_color1": "#000000",
-        "sub_text1": "Text",
-        "text_color1": "#000000",
-        "button_text1": "Button Text",
-        "button_color1": "#000000",
-        "border_color1": "#000000",
-        "button-background1": "linear-gradient(90deg, rgba(45, 130, 141, 0) 100%, rgba(45, 130, 141, 0) 100%)",
-        "button_link1": "",
-        "background1": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-        "image2_fit": "contain",
-        "image2_alignment": "center",
-        "img2_width": 70,
-        "info_alignment2": "center",
-        "header_text2": "Header Text",
-        "header_color2": "#000000",
-        "sub_text2": "Text",
-        "text_color2": "#000000",
-        "button_text2": "Button Text",
-        "button_color2": "#000000",
-        "border_color2": "#000000",
-        "button-background2": "linear-gradient(90deg, rgba(45, 130, 141, 0) 100%, rgba(45, 130, 141, 0) 100%)",
-        "button_link2": "",
-        "background2": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-        "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-        "box1_padding-top": 10,
-        "box1_padding-bottom": 10
+        "hero_height": "75vh",
+        "image": "shopify:\/\/shop_images\/2R4A9959_1280x_0d3c2325-f3f2-4c8c-be70-752b8424712f.webp",
+        "image_fit": "cover",
+        "info_alignment": "left",
+        "info_alignment-2": "center-two",
+        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 100%)",
+        "hero1_padding-top": 0,
+        "hero1_padding-bottom": 0
       }
     },
     "1655271341e0a4fa41": {
@@ -140,21 +95,21 @@
         "16552713416aa2caf8-0": {
           "type": "heading",
           "settings": {
-            "title": "Title",
+            "title": "Full On Force",
             "title__size": "md"
           }
         },
         "16552713416aa2caf8-1": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
+            "paragraph": "Nike Collection"
           }
         },
         "16552713416aa2caf8-2": {
           "type": "button",
           "settings": {
-            "button_label": "View More",
-            "button_link": ""
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/nike"
           }
         }
       },
@@ -165,84 +120,101 @@
       ],
       "settings": {
         "hero_height": "75vh",
-        "info_alignment": "right",
-        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
-        "hero1_padding-top": 10,
-        "hero1_padding-bottom": 10
-      }
-    },
-    "1655271382c9a68690": {
-      "type": "collection-group",
-      "blocks": {
-        "1655271382568a73ac-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-            "img_width": 70
-          }
-        },
-        "1655271382568a73ac-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-            "img_width": 70
-          }
-        },
-        "1655271382568a73ac-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-            "img_width": 70
-          }
-        }
-      },
-      "block_order": [
-        "1655271382568a73ac-0",
-        "1655271382568a73ac-1",
-        "1655271382568a73ac-2"
-      ],
-      "settings": {
-        "container_shape": "square",
-        "image_fit": "contain",
-        "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-4",
-        "lg_col": "col-lg-4",
-        "md_col": "col-md-4",
-        "sm_col": "col-sm-2",
-        "background": "#FFFFFF",
-        "show_title": true,
-        "collection1_padding-top": 50,
-        "collection1_padding-bottom": 50
+        "image": "shopify:\/\/shop_images\/2R4A9904_1280x_2cf1b6e7-35fa-49cb-8271-3e9cfac4b4ab.webp",
+        "image_fit": "cover",
+        "info_alignment": "left",
+        "info_alignment-2": "top",
+        "background": "linear-gradient(0deg, rgba(51, 79, 180, 0), rgba(57, 64, 180, 0) 100%)",
+        "hero1_padding-top": 0,
+        "hero1_padding-bottom": 0
       }
     },
     "1655271424aaa2754f": {
       "type": "products-collection-one",
       "settings": {
-        "collection": "",
-        "total_products": 16,
+        "collection": "kid",
+        "total_products": 4,
         "container_shape": "rectangle",
         "image_fit": "contain",
         "xxl_col": "col-xxl-3",
         "xl_col": "col-xl-3",
         "lg_col": "col-lg-3",
-        "md_col": "col-md-3",
+        "md_col": "col-md-6",
         "sm_col": "col-sm-6",
         "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
         "show_title": true,
-        "show_price": true
+        "show_price": false
+      }
+    },
+    "165593581251442e0d": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "100vh",
+        "image1": "shopify:\/\/shop_images\/under.webp",
+        "button_label1": "$100 & Under",
+        "button_link1": "shopify:\/\/collections\/100-under",
+        "background1": "none",
+        "image2": "shopify:\/\/shop_images\/hats.webp",
+        "button_label2": "Hats",
+        "button_link2": "shopify:\/\/collections\/hats",
+        "background2": "none",
+        "hero2_padding-top": 0,
+        "hero2_padding-bottom": 50
+      }
+    },
+    "16559401117a953200": {
+      "type": "horizontal_sale",
+      "blocks": {
+        "1655940111f80eef5b-0": {
+          "type": "percent",
+          "settings": {
+            "percent": "Sale",
+            "percent_color": "#ffffff"
+          }
+        },
+        "1655940111f80eef5b-1": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_color": "#ffffff"
+          }
+        },
+        "1655940111f80eef5b-2": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop Now",
+            "button_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "1655940111f80eef5b-0",
+        "1655940111f80eef5b-1",
+        "1655940111f80eef5b-2"
+      ],
+      "settings": {
+        "horizontal-sale_height": "75vh",
+        "sale_width": 75,
+        "collection": "sale",
+        "image_fit": "cover",
+        "img_width": 100,
+        "img_scale": 100,
+        "img_y-axis": 50,
+        "img_x-axis": 50,
+        "background": "",
+        "overlay": "linear-gradient(90deg, rgba(18, 18, 18, 0.57) 100%, rgba(0, 0, 0, 0.5) 100%)",
+        "horizontal-sale_padding-top": 0,
+        "horizontal-sale_padding-bottom": 0
       }
     }
   },
   "order": [
-    "1655271438a9a20e97",
-    "165527088272b7cb9f",
+    "16559352679017e832",
     "16552709476913350b",
-    "165527131947c5add1",
+    "1655935381304445f7",
     "1655271341e0a4fa41",
-    "1655271382c9a68690",
-    "1655271424aaa2754f"
+    "1655271424aaa2754f",
+    "165593581251442e0d",
+    "16559401117a953200"
   ]
 }
