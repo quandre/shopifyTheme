@@ -24,11 +24,11 @@ hero1--{{ section.settings.hero_height }} hero1__img--{{section.settings.image_f
     {%- for block in section.blocks -%}
       {% case block.type %}
         {%- when 'heading' -%}
-          <h1 class="hero1__title hero1__title--{{- block.settings.title__size -}}">
+          <h1 class="hero1__title hero1__title--{{ block.settings.title__size }}" style="color: {{ block.settings.title_color }};">
             {{ block.settings.title | escape }}
           </h1>
         {%- when 'paragraph' -%}
-          <p class="hero1__paragraph">
+          <p class="hero1__paragraph" style="color: {{ block.settings.paragraph_color }};">
             {{ block.settings.paragraph }}
           </p>
         {%- when 'button' -%}
@@ -37,7 +37,7 @@ hero1--{{ section.settings.hero_height }} hero1__img--{{section.settings.image_f
               {% else %}
                 href="{{ block.settings.button_link }}" 
             {% endif %}
-            class="hero1__button"
+            class="hero1__button" style="color: {{ block.settings.button_color }};"
             {{ block.shopify_attributes }} >
               {{ block.settings.button_label | escape }}
             </a>
@@ -207,6 +207,12 @@ hero1--{{ section.settings.hero_height }} hero1__img--{{section.settings.image_f
           ],
           "default": "md",
           "label": "Font Size"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Text Color",
+          "default": "#ffffff"
         }
       ]
     },
@@ -220,6 +226,12 @@ hero1--{{ section.settings.hero_height }} hero1__img--{{section.settings.image_f
           "id": "paragraph",
           "label": "Paragraph",
           "default": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
+        },
+        {
+          "type": "color",
+          "id": "paragraph_color",
+          "label": "Text Color",
+          "default": "#ffffff"
         }
       ]
     },
@@ -239,6 +251,12 @@ hero1--{{ section.settings.hero_height }} hero1__img--{{section.settings.image_f
           "type": "url",
           "id": "button_link",
           "label": "Link"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "label": "Text Color",
+          "default": "#000000"
         }
       ]
     }

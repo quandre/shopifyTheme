@@ -1,3 +1,19 @@
+/* large phones */
+@media only screen and (max-width: 767px) {
+  .hero1__content-container {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+/* small phones */
+@media only screen and (max-width: 575px) {
+  .hero1__content-container {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
 .hero1 {
   width: 100%;
   height: 100vh;
@@ -75,7 +91,7 @@
   align-items: center;
 }
 .hero1__title {
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: "Bebas Neue", cursive;
   color: #fff;
 }
@@ -93,6 +109,10 @@
 }
 .hero1__paragraph {
   margin-bottom: 2rem;
+}
+.hero1__paragraph {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 .hero1__button {
   padding: 15px 30px;

@@ -1,3 +1,38 @@
+/* tablet */
+@media only screen and (max-width: 991px) {
+  .horizontal-sale {
+    width: 100% !important;
+    text-align: center;
+  }
+  .horizontal-sale_percent-number{
+    width: 100% !important;
+    font-size: 12rem !important;
+  }
+}
+
+/* large phones */
+@media only screen and (max-width: 767px) {
+  .horizontal-sale {
+    width: 100% !important;
+    text-align: center;
+  }
+  .horizontal-sale_percent-number{
+    width: 100% !important;
+    font-size: 12rem !important;
+  }
+}
+
+/* small phones */
+@media only screen and (max-width: 575px) {
+  .horizontal-sale {
+    width: 100% !important;
+  }
+  .horizontal-sale_percent-number{
+    font-size: 12rem !important;
+    text-align: center;
+  }
+}
+
 .horizontal-sale {
   position: relative;
   margin: 0 auto 50px;
@@ -83,5 +118,5 @@
 }
 .horizontal-sale_overlay a:hover {
   color: black;
-  background: #ffdf00;
+  background: .ffdf00;
 }

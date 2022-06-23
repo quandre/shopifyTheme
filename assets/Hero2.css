@@ -1,9 +1,9 @@
 .hero2 {
-  width: 100%;
-  overflow: hidden;
   position: relative;
   display: flex;
-  margin-bottom: 50px;
+  width: 100%;
+  margin: 0 auto 50px;
+  overflow: hidden;
 }
 .hero2--25vh {
   height: 25vh;
