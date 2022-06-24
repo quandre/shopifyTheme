@@ -35,6 +35,14 @@
                 {%- if section.settings.show_price == true -%}
                   <span class="collection1__product-price">${{ product.price }}</span>
                 {% endif%}
+                <div>
+                  {% for block in section.blocks %}
+                    {% case block.type %}
+                      {% when '@app' %}
+                        {% render block %}
+                    {% endcase %}
+                  {% endfor %}
+                </div>
               </div>
               <div class="collection1__colors">
                 <div class="collection1__color collection1__color--blue"></div>
@@ -237,6 +245,11 @@
       "default": true
     }
   ],
+  "blocks": [
+		{
+			"type": "@app"
+		}
+	],
   "presets": [
     {
       "name": "Products Collection"
