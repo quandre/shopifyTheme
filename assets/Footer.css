@@ -1,3 +1,19 @@
+@media only screen and (max-width: 1199px) {
+  .footer__extra-links {
+    margin:  0 auto;
+    padding-top: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer__social-icons {
+    justify-content: center !important;
+  }
+  .footer__extra-links a { 
+    font-size: 14px !important;
+  }
+}
+
 .footer {
   background-color: #000;
   padding: 50px 0;
@@ -20,8 +36,8 @@
 }
 .footer__extra {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 100%;
 }
 .footer__input {
   margin-bottom: 1rem;
@@ -34,9 +50,12 @@
 }
 .footer__social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
+}
+.fa-brands {
+  font-size: 20px;
 }
 .footer__social-link {
   display: block;
@@ -48,6 +67,8 @@
   padding: 20px 0 0 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .footer__copyright {
   color: #7e7e7e;
@@ -57,5 +78,5 @@
   color: #7e7e7e;
   font-size: 0.8rem;
   text-decoration: none;
-  padding: 0 20px;
+  padding: 0 15px;
 }

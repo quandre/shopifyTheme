@@ -1,3 +1,18 @@
+/* large phones */
+@media only screen and (max-width: 850px) {
+  .collection1__product-img--rectangle {
+    height: 400px !important;
+  }
+}
+
+/* small phones */
+@media only screen and (max-width: 575px) {
+  .collection1__product-img--rectangle {
+    height: 370px !important;
+  }
+}
+
+
 .collection1 {
   padding: 50px 0;
 }
@@ -39,7 +54,7 @@
   margin: 0 auto 1.5rem;
   border-radius: 50%;
 }
-.collection1__product-img rectangle {
+.collection1__product-img--rectangle {
   width: 100%;
   height: 550px;
   margin: 0 auto 1.5rem;

@@ -21,7 +21,7 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-8">
           <div class="row">
             {%- for block in section.blocks -%}
             <div class="col-md-3">
@@ -35,7 +35,7 @@
 
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="footer__extra">
             {% if section.settings.newsletter_enable != false %}
             <span class="footer__column-title">{{section.settings.newsletter_heading}}</span>
@@ -54,7 +54,7 @@
                 form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
               {%- endif -%}
             </div>
-            <button type="submit" name="commit"
+            <button type="submit" name="commit" class="footer_button"
               style="width: 100%; font-size: 1rem; padding: 10px 40px; text-align: center; margin-bottom: 1rem;">
               {{ 'newsletter.button_label' | t }}
             </button>
