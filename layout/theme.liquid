@@ -217,7 +217,7 @@
     {{ 'vendors.css' | asset_url | stylesheet_tag }}
 
     {% style %}
-      
+   
     :root {
       --body-bg: #f7f9fd;
       --announcement-bar-default: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%);
@@ -317,6 +317,10 @@
       playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
     }
   </script>
+
+  <script src="{{ 'gsap.min.js' | asset_url }}"></script>
+  <script src="{{ 'ScrollMagic.min.js' | asset_url }}"></script>
+  <script src="{{ 'animation.gsap.min.js' | asset_url }}"></script>
 
   {%- if settings.predictive_search_enabled -%}
   <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
