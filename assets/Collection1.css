@@ -19,6 +19,13 @@
 .collection1 div[class*="col-"] {
   margin-bottom: 1rem;
 }
+.collection1__header {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: "Bebas Neue", cursive;
+  color: #000000;
+  margin-bottom: 10px;
+}
 .collection1__product-img {
   display: flex;
   justify-content: center;

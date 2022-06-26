@@ -1,8 +1,16 @@
+@media screen and (max-width: 989px) {
+  header.header3 .nav-items
+  {
+    display: none;
+  }
+}
+
+
 .header3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px;
+  padding: 10px 20px;
   width: 100%;
   background: #fcfcfc;
   color: #1b1b1b;

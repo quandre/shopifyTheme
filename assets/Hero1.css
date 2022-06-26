@@ -13,6 +13,24 @@
     align-items: center !important;
   }
 }
+@media only screen and (max-width: 480px) {
+  .hero1__content-container {
+    padding: 0rem !important;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .hero1__title {
+    font-size: 4rem !important;
+  }
+  .hero1__paragraph {
+    font-size: 1.3rem !important;
+  }
+
+  .hero1__button {
+    font-size: 1rem !important;
+  }
+}
 
 .hero1 {
   width: 100%;
@@ -91,6 +109,7 @@
   align-items: center;
 }
 .hero1__title {
+  text-align: center;
   font-size: 5.3rem;
   font-family: "Bebas Neue", cursive;
   color: #fff;

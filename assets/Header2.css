@@ -1,16 +1,15 @@
-/* @media only screen and (max-width: px) {
-  .open_mobile-menu {
-    display: block !important;
+@media screen and (max-width: 989px) {
+  header.header2 .nav-items
+  {
+    display: none;
   }
 }
- */
-
 
 .header2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px;
+  padding: 10px 20px;
   background: #fcfcfc;
   color: #1b1b1b;
   transition: all 0.3s ease-in-out;
@@ -29,7 +28,8 @@
   padding-left: 0;
 }
 .header2__collections-nav a {
-  padding-right: 20px;
+  text-align: right;
+  padding-right: 10px;
   display: inline-block;
 }
 

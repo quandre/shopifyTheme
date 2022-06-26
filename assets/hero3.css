@@ -1,3 +1,46 @@
+@media only screen and (max-width: 689px) {
+  .hero3__item-text  {
+    padding: 5em 3em 10em !important;
+  }
+  .hero3__item-h3 {
+    font-size: 2.4rem !important;
+  }
+  .hero3__item-link {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media only screen and (max-width: 541px) {
+  .hero3__item:hover {
+    width: 300% !important;
+  }
+  .hero3__item-h3 {
+    font-size: 2rem !important;
+  }
+  .hero3__item-link {
+    font-size: 1.7rem !important;
+  }
+  .hero3__item-span {
+    font-size: 1.7rem !important;
+  }
+}
+
+@media only screen and (max-width: 391px) {
+  .hero3__item:hover {
+    width: 400% !important;
+  }
+  .hero3__item-h3 {
+    font-size: 1.4rem !important;
+  }
+  .hero3__item-link {
+    font-size: 1.2rem !important;
+  }
+  .hero3__item-span {
+    font-size: 1.3rem !important;
+  }
+}
+
+
 .hero3 {
   display: flex;
   flex-wrap: nowrap;

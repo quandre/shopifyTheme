@@ -4,6 +4,9 @@
   <div class="collection collection1">
     <div class="container">
       <div class="row">
+        <div class="collection1__header">
+          <p>{{ section.settings.product_heading }}</p>
+        </div>
         {%- for product in section.settings.collection.products limit: section.settings.total_products -%}
         <div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
           <div class="collection1__collection-item">
@@ -65,6 +68,12 @@
       "type": "collection",
       "id": "collection",
       "label": "Featured Collection"
+    },
+    {
+      "type": "text",
+      "id": "product_heading",
+      "label": "Heading",
+      "default": "heading"
     },
     {
 			"type": "range",

@@ -17,7 +17,8 @@
     text-align: center;
   }
   .horizontal-sale_percent-number{
-    width: 100% !important;
+  max-width: 100% !important;
+  width: 100%;
     font-size: 12rem !important;
   }
 }
@@ -28,9 +29,24 @@
     width: 100% !important;
   }
   .horizontal-sale_percent-number{
-    font-size: 12rem !important;
+    font-size: 10rem !important;
     text-align: center;
   }
+  .horizontal-sale_button {
+    font-size: 1rem !important;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .horizontal-sale_percent-number{
+    font-size: 6rem !important;
+    text-align: center;
+  }
+  .horizontal-sale_button {
+    font-size: 1rem !important;
+    padding: 13px 40px !important;
+  }
+  
 }
 
 .horizontal-sale {
