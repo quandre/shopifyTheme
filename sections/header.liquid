@@ -75,7 +75,7 @@
     <details id="Details-menu-drawer-container" class="menu-drawer-container">
       <summary class="header__icon header__icon--menu header__icon--summary link focus-inset"
         aria-label="{{ 'sections.header.menu' | t }}">
-        <span class="hep">
+        <span class="cross">
           {% render 'icon-hamburger' %}
           {% render 'icon-close' %}
         </span>
@@ -342,7 +342,7 @@
     <details id="Details-menu-drawer-container" class="menu-drawer-container">
       <summary class="header__icon header__icon--menu header__icon--summary link focus-inset"
         aria-label="{{ 'sections.header.menu' | t }}">
-        <span class="hep">
+        <span class="cross">
           {% render 'icon-hamburger' %}
           {% render 'icon-close' %}
         </span>
@@ -587,7 +587,7 @@
       <details id="Details-menu-drawer-container" class="menu-drawer-container">
         <summary class="header__icon header__icon--menu header__icon--summary link focus-inset"
           aria-label="{{ 'sections.header.menu' | t }}">
-          <span class="hep">
+          <span class="cross">
             {% render 'icon-hamburger' %}
             {% render 'icon-close' %}
           </span>
@@ -830,7 +830,7 @@
     const bodyTag = $('body');
     const headerWrapper = $('#shopify-section-header');
     const openMenu = $('#Details-menu-drawer-container');
-    const cross = $('.hep');
+    const cross = $('.cross');
 
     cross.on('click', () => { 
       openMenu.addClass('menu-opening')

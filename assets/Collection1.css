@@ -3,12 +3,18 @@
   .collection1__product-img--rectangle {
     height: 400px !important;
   }
+  .collection1__header {
+    font-size: 2.5rem !important;
+  }
 }
 
 /* small phones */
 @media only screen and (max-width: 575px) {
   .collection1__product-img--rectangle {
     height: 370px !important;
+  }
+  .collection1__header {
+    font-size: 2rem !important;
   }
 }
 
@@ -20,7 +26,7 @@
   margin-bottom: 1rem;
 }
 .collection1__header {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
   font-family: "Bebas Neue", cursive;
   color: #000000;
