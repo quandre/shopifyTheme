@@ -6,7 +6,7 @@
         "165593526788f60a24-0": {
           "type": "Hero_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/4x5-Cropping_Guide_0013_D14A9364_470x_37eacc1f-2213-486e-8d08-76d9dab6298a.webp",
+            "image": "shopify:\/\/shop_images\/d824868bdbd9-f4c8-ce11-561f-011a802e.jpg",
             "h3_label": "AIR JORDAN 9 RETRO 'PARTICLE GREY'",
             "h3_color": "#ffffff",
             "a_label": "Shop Now",
@@ -19,10 +19,28 @@
             "button_lr": 24,
             "button_radius": 5
           }
+        },
+        "e58d3dce-7c2e-4919-9cbb-fc64ac310bd7": {
+          "type": "Hero_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/42f08ef9bc35-ba09-ce11-794f-064fc0e7.jpg",
+            "h3_label": "AIR JORDAN 6 RETRO 'RED OREO'",
+            "h3_color": "#ffffff",
+            "a_label": "Shop Now",
+            "a_color": "#ffffff",
+            "span_color": "#ffffff",
+            "button_link": "shopify:\/\/products\/air-jordan-6-retro-red-oreo",
+            "border_color": "#ffffff",
+            "button-background": "linear-gradient(90deg, rgba(45, 130, 141, 0) 100%, rgba(45, 130, 141, 0) 100%)",
+            "button_tb": 12,
+            "button_lr": 24,
+            "button_radius": 5
+          }
         }
       },
       "block_order": [
-        "165593526788f60a24-0"
+        "165593526788f60a24-0",
+        "e58d3dce-7c2e-4919-9cbb-fc64ac310bd7"
       ],
       "settings": {
         "hero_height": "100vh",
@@ -36,7 +54,8 @@
       "type": "products-collection-one",
       "settings": {
         "collection": "trending",
-        "total_products": 16,
+        "product_heading": "Best Sellers",
+        "total_products": 4,
         "container_shape": "rectangle",
         "image_fit": "contain",
         "xxl_col": "col-xxl-3",
@@ -55,21 +74,24 @@
         "1655935381ad2dddd0-0": {
           "type": "heading",
           "settings": {
-            "title": "Brand New Air",
-            "title__size": "md"
+            "title": "Brand New",
+            "title__size": "md",
+            "title_color": "#ffffff"
           }
         },
         "7511e9d3-9d6e-4f51-aa66-ba25bea0d884": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "Air Jordan Sneakers"
+            "paragraph": "Air Jordan Sneakers",
+            "paragraph_color": "#ffffff"
           }
         },
         "1655935381ad2dddd0-2": {
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/air-jordan"
+            "button_link": "shopify:\/\/collections\/air-jordan",
+            "button_color": "#000000"
           }
         }
       },
@@ -96,20 +118,23 @@
           "type": "heading",
           "settings": {
             "title": "Full On Force",
-            "title__size": "md"
+            "title__size": "md",
+            "title_color": "#1a88ff"
           }
         },
         "16552713416aa2caf8-1": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "Nike Collection"
+            "paragraph": "Nike Collection",
+            "paragraph_color": "#fe6e00"
           }
         },
         "16552713416aa2caf8-2": {
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/nike"
+            "button_link": "shopify:\/\/collections\/nike",
+            "button_color": "#1a88ff"
           }
         }
       },
@@ -133,33 +158,34 @@
       "type": "products-collection-one",
       "settings": {
         "collection": "kid",
+        "product_heading": "Kids",
         "total_products": 4,
         "container_shape": "rectangle",
         "image_fit": "contain",
         "xxl_col": "col-xxl-3",
         "xl_col": "col-xl-3",
         "lg_col": "col-lg-3",
-        "md_col": "col-md-6",
-        "sm_col": "col-sm-6",
+        "md_col": "col-md-4",
+        "sm_col": "col-sm-4",
         "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
         "show_title": true,
         "show_price": false
       }
     },
-    "165593581251442e0d": {
+    "1656019089ae36222c": {
       "type": "hero-two",
       "settings": {
         "hero_height": "100vh",
         "image1": "shopify:\/\/shop_images\/under.webp",
-        "button_label1": "$100 & Under",
+        "button_label1": "%100 & Under",
         "button_link1": "shopify:\/\/collections\/100-under",
-        "background1": "none",
+        "background1": "",
         "image2": "shopify:\/\/shop_images\/hats.webp",
-        "button_label2": "Hats",
+        "button_label2": "Accessories",
         "button_link2": "shopify:\/\/collections\/hats",
-        "background2": "none",
+        "background2": "",
         "hero2_padding-top": 0,
-        "hero2_padding-bottom": 50
+        "hero2_padding-bottom": 0
       }
     },
     "16559401117a953200": {
@@ -168,7 +194,7 @@
         "1655940111f80eef5b-0": {
           "type": "percent",
           "settings": {
-            "percent": "Sale",
+            "percent": "Sales",
             "percent_color": "#ffffff"
           }
         },
@@ -214,7 +240,7 @@
     "1655935381304445f7",
     "1655271341e0a4fa41",
     "1655271424aaa2754f",
-    "165593581251442e0d",
+    "1656019089ae36222c",
     "16559401117a953200"
   ]
 }
