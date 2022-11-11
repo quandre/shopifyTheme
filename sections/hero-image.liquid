@@ -1,0 +1,104 @@
+{{ 'Hero-image.css' | asset_url | stylesheet_tag }}
+
+<div class="hero_image  hero_image__img--{{ section.settings.image_fit }}" style="height:{{ section.settings.image_height }}%; width:{{ section.settings.image_width }}%;  padding: {{ section.settings.hero_image_padding-top }}px 0 {{ section.settings.hero_image_padding-bottom }}px 0;">
+  <div class="hero_image__content-container">
+    {%- if section.settings.image != blank -%}
+      <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+        {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+        {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+        {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+        {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+        {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+        {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+        src="{{ section.settings.image | image_url: width: 1500 }}"
+        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}" class="hero_image__img" style="">
+    {%- else -%}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Image",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Height",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Image Width",
+      "default": 100
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+			"type": "select",
+			"id": "image_fit",
+			"options": [{
+					"value": "cover",
+					"label": "Cover"
+				},
+				{
+					"value": "contain",
+					"label": "Contain"
+				},
+        {
+					"value": "none",
+					"label": "None"
+				}
+			],
+			"default": "cover",
+			"label": "Image Fit"
+		},
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "hero_image_padding-top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "hero_image_padding-bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Image"
+    }
+  ]
+}
+{% endschema %}

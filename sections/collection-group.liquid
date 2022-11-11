@@ -1,6 +1,6 @@
 {{ 'Collection1.css' | asset_url | stylesheet_tag }}
 
-<div class="collection collection1" style="background-color: {{ section.settings.background }}; padding: {{ section.settings.collection1_padding-top }}px 0 {{ section.settings.collection1_padding-bottom }}px 0;">
+<div class="collection1" style="background-color: {{ section.settings.background }}; padding: {{ section.settings.collection1_padding-top }}px 0 {{ section.settings.collection1_padding-bottom }}px 0;">
   <div class="container">
     <div class="row">
       {%- for block in section.blocks -%}

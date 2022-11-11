@@ -51,6 +51,18 @@
 .hero1--100vh {
   height: 100vh;
 }
+.hero1--25vw {
+  width: 25%;
+}
+.hero1--50vw {
+  width: 50%;
+}
+.hero1--75vw {
+  width: 75%;
+}
+.hero1--100vw {
+  width: 100%;
+}
 .hero1__img--cover img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -90,6 +102,9 @@
   height: 100%;
 }
 .hero1__content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -97,8 +112,6 @@
   height: 100%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
 }
 .hero1__info {
   max-width: 400px;

@@ -14,7 +14,7 @@ hero1--{{ section.settings.hero_height }} hero1__img--{{section.settings.image_f
       src="{{ section.settings.image | image_url: width: 1500 }}"
       sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
       alt="{{ section.settings.image.alt | escape }}" loading="lazy" width="{{ section.settings.image.width }}"
-      height="{{ section.settings.image.height }}" class="hero1__img">
+      height="{{ section.settings.image.height }}" class="hero1__img hero1--{{ section.settings.hero_width }}">
   {%- else -%}
     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
   {%- endif -%}
@@ -77,6 +77,30 @@ hero1--{{ section.settings.hero_height }} hero1__img--{{section.settings.image_f
     "default": "100vh",
     "label": "Height"
   },
+  {
+      "type": "select",
+      "id": "hero_width",
+      "options": [
+        {
+          "value": "25vw",
+          "label": "25%"
+        },
+        {
+          "value": "50vw",
+          "label": "50%"
+        },
+        {
+          "value": "75vw",
+          "label": "75%"
+        },
+        {
+          "value": "100vw",
+          "label": "100%"
+        }
+      ],
+      "default": "100vw",
+      "label": "Width"
+    },
     {
       "type": "image_picker",
       "id": "image",

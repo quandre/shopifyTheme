@@ -1,246 +1,123 @@
 {
   "sections": {
-    "16559352679017e832": {
-      "type": "hero-three",
-      "blocks": {
-        "165593526788f60a24-0": {
-          "type": "Hero_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/d824868bdbd9-f4c8-ce11-561f-011a802e.jpg",
-            "h3_label": "AIR JORDAN 9 RETRO 'PARTICLE GREY'",
-            "h3_color": "#ffffff",
-            "a_label": "Shop Now",
-            "a_color": "#ffffff",
-            "span_color": "#ffffff",
-            "button_link": "shopify:\/\/products\/air-jordan-9-retro-particle-grey",
-            "border_color": "#ffffff",
-            "button-background": "linear-gradient(90deg, rgba(45, 130, 141, 0) 100%, rgba(45, 130, 141, 0) 100%)",
-            "button_tb": 12,
-            "button_lr": 24,
-            "button_radius": 5
-          }
-        },
-        "e58d3dce-7c2e-4919-9cbb-fc64ac310bd7": {
-          "type": "Hero_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/42f08ef9bc35-ba09-ce11-794f-064fc0e7.jpg",
-            "h3_label": "AIR JORDAN 6 RETRO 'RED OREO'",
-            "h3_color": "#ffffff",
-            "a_label": "Shop Now",
-            "a_color": "#ffffff",
-            "span_color": "#ffffff",
-            "button_link": "shopify:\/\/products\/air-jordan-6-retro-red-oreo",
-            "border_color": "#ffffff",
-            "button-background": "linear-gradient(90deg, rgba(45, 130, 141, 0) 100%, rgba(45, 130, 141, 0) 100%)",
-            "button_tb": 12,
-            "button_lr": 24,
-            "button_radius": 5
-          }
-        }
-      },
-      "block_order": [
-        "165593526788f60a24-0",
-        "e58d3dce-7c2e-4919-9cbb-fc64ac310bd7"
-      ],
+    "5c63fcc0-f76e-420a-bcdb-9c36c260464d": {
+      "type": "hero-image",
       "settings": {
-        "hero_height": "100vh",
-        "show_plus-sign": true,
-        "enable_button": false,
-        "hero3_padding-top": 0,
-        "hero3_padding-bottom": 0
-      }
-    },
-    "16552709476913350b": {
-      "type": "products-collection-one",
-      "settings": {
-        "collection": "trending",
-        "product_heading": "Best Sellers",
-        "total_products": 4,
-        "container_shape": "rectangle",
+        "image_height": 68,
+        "image_width": 63,
+        "image": "shopify:\/\/shop_images\/black-friday.jpg",
         "image_fit": "contain",
-        "xxl_col": "col-xxl-3",
-        "xl_col": "col-xl-3",
-        "lg_col": "col-lg-3",
-        "md_col": "col-md-6",
-        "sm_col": "col-sm-6",
-        "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-        "show_title": true,
-        "show_price": false
+        "hero_image_padding-top": 0,
+        "hero_image_padding-bottom": 0
       }
     },
-    "1655935381304445f7": {
-      "type": "hero-one",
-      "blocks": {
-        "1655935381ad2dddd0-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Brand New",
-            "title__size": "md",
-            "title_color": "#ffffff"
-          }
-        },
-        "7511e9d3-9d6e-4f51-aa66-ba25bea0d884": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "Air Jordan Sneakers",
-            "paragraph_color": "#ffffff"
-          }
-        },
-        "1655935381ad2dddd0-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/air-jordan",
-            "button_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "1655935381ad2dddd0-0",
-        "7511e9d3-9d6e-4f51-aa66-ba25bea0d884",
-        "1655935381ad2dddd0-2"
-      ],
+    "831254f0-9ffb-4aa1-a875-876bec5d5e15": {
+      "type": "hero-image",
       "settings": {
-        "hero_height": "75vh",
-        "image": "shopify:\/\/shop_images\/2R4A9959_1280x_0d3c2325-f3f2-4c8c-be70-752b8424712f.webp",
+        "image_height": 68,
+        "image_width": 63,
+        "image": "shopify:\/\/shop_images\/latest.jpg",
         "image_fit": "cover",
-        "info_alignment": "left",
-        "info_alignment-2": "center-two",
-        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 100%)",
-        "hero1_padding-top": 0,
-        "hero1_padding-bottom": 0
+        "hero_image_padding-top": 0,
+        "hero_image_padding-bottom": 50
       }
     },
-    "1655271341e0a4fa41": {
-      "type": "hero-one",
-      "blocks": {
-        "16552713416aa2caf8-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Full On Force",
-            "title__size": "md",
-            "title_color": "#1a88ff"
-          }
-        },
-        "16552713416aa2caf8-1": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "Nike Collection",
-            "paragraph_color": "#fe6e00"
-          }
-        },
-        "16552713416aa2caf8-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/nike",
-            "button_color": "#1a88ff"
-          }
-        }
-      },
-      "block_order": [
-        "16552713416aa2caf8-0",
-        "16552713416aa2caf8-1",
-        "16552713416aa2caf8-2"
-      ],
+    "d4deb721-c292-4510-a3bf-122fa6afca88": {
+      "type": "hero-image",
       "settings": {
-        "hero_height": "75vh",
-        "image": "shopify:\/\/shop_images\/2R4A9904_1280x_2cf1b6e7-35fa-49cb-8271-3e9cfac4b4ab.webp",
-        "image_fit": "cover",
-        "info_alignment": "left",
-        "info_alignment-2": "top",
-        "background": "linear-gradient(0deg, rgba(51, 79, 180, 0), rgba(57, 64, 180, 0) 100%)",
-        "hero1_padding-top": 0,
-        "hero1_padding-bottom": 0
-      }
-    },
-    "1655271424aaa2754f": {
-      "type": "products-collection-one",
-      "settings": {
-        "collection": "kid",
-        "product_heading": "Kids",
-        "total_products": 4,
-        "container_shape": "rectangle",
+        "image_height": 68,
+        "image_width": 63,
+        "image": "shopify:\/\/shop_images\/fresh-items.jpg",
         "image_fit": "contain",
-        "xxl_col": "col-xxl-3",
-        "xl_col": "col-xl-3",
-        "lg_col": "col-lg-3",
+        "hero_image_padding-top": 0,
+        "hero_image_padding-bottom": 0
+      }
+    },
+    "3acb57af-8a8e-4d91-b1e5-f8185550281c": {
+      "type": "collection-group",
+      "blocks": {
+        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "graphic-tees",
+            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
+            "img_width": 85
+          }
+        },
+        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "stay-cozy",
+            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
+            "img_width": 85
+          }
+        },
+        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "classic-kicks",
+            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
+            "img_width": 85
+          }
+        },
+        "6ad574f7-e7a5-4750-a45d-754f953b98f2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "denim",
+            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
+            "img_width": 85
+          }
+        }
+      },
+      "block_order": [
+        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-0",
+        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-1",
+        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-2",
+        "6ad574f7-e7a5-4750-a45d-754f953b98f2"
+      ],
+      "settings": {
+        "container_shape": "rectangle",
+        "image_fit": "cover",
+        "xxl_col": "col-xxl-6",
+        "xl_col": "col-xl-6",
+        "lg_col": "col-lg-6",
         "md_col": "col-md-4",
-        "sm_col": "col-sm-4",
-        "background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-        "show_title": true,
-        "show_price": false
+        "sm_col": "col-sm-6",
+        "background": "#FFFFFF",
+        "show_title": false,
+        "collection1_padding-top": 0,
+        "collection1_padding-bottom": 0
       }
     },
-    "1656019089ae36222c": {
-      "type": "hero-two",
+    "3db21e96-8a29-4088-82a0-deb9f255ee7d": {
+      "type": "hero-image",
       "settings": {
-        "hero_height": "100vh",
-        "image1": "shopify:\/\/shop_images\/under.webp",
-        "button_label1": "%100 & Under",
-        "button_link1": "shopify:\/\/collections\/100-under",
-        "background1": "",
-        "image2": "shopify:\/\/shop_images\/hats.webp",
-        "button_label2": "Accessories",
-        "button_link2": "shopify:\/\/collections\/hats",
-        "background2": "",
-        "hero2_padding-top": 0,
-        "hero2_padding-bottom": 0
-      }
-    },
-    "16559401117a953200": {
-      "type": "horizontal_sale",
-      "blocks": {
-        "1655940111f80eef5b-0": {
-          "type": "percent",
-          "settings": {
-            "percent": "Sales",
-            "percent_color": "#ffffff"
-          }
-        },
-        "1655940111f80eef5b-1": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_color": "#ffffff"
-          }
-        },
-        "1655940111f80eef5b-2": {
-          "type": "button",
-          "settings": {
-            "button_text": "Shop Now",
-            "button_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "1655940111f80eef5b-0",
-        "1655940111f80eef5b-1",
-        "1655940111f80eef5b-2"
-      ],
-      "settings": {
-        "horizontal-sale_height": "75vh",
-        "sale_width": 75,
-        "collection": "sale",
+        "image_height": 68,
+        "image_width": 63,
+        "image": "shopify:\/\/shop_images\/exclusive.jpg",
         "image_fit": "cover",
-        "img_width": 100,
-        "img_scale": 100,
-        "img_y-axis": 50,
-        "img_x-axis": 50,
-        "background": "",
-        "overlay": "linear-gradient(90deg, rgba(18, 18, 18, 0.57) 100%, rgba(0, 0, 0, 0.5) 100%)",
-        "horizontal-sale_padding-top": 0,
-        "horizontal-sale_padding-bottom": 0
+        "hero_image_padding-top": 0,
+        "hero_image_padding-bottom": 0
+      }
+    },
+    "772031b6-4df7-41ca-bd37-6821a531bd6f": {
+      "type": "hero-image",
+      "settings": {
+        "image_height": 68,
+        "image_width": 63,
+        "image": "shopify:\/\/shop_images\/site-steals.jpg",
+        "image_fit": "cover",
+        "hero_image_padding-top": 0,
+        "hero_image_padding-bottom": 0
       }
     }
   },
   "order": [
-    "16559352679017e832",
-    "16552709476913350b",
-    "1655935381304445f7",
-    "1655271341e0a4fa41",
-    "1655271424aaa2754f",
-    "1656019089ae36222c",
-    "16559401117a953200"
+    "5c63fcc0-f76e-420a-bcdb-9c36c260464d",
+    "831254f0-9ffb-4aa1-a875-876bec5d5e15",
+    "d4deb721-c292-4510-a3bf-122fa6afca88",
+    "3acb57af-8a8e-4d91-b1e5-f8185550281c",
+    "3db21e96-8a29-4088-82a0-deb9f255ee7d",
+    "772031b6-4df7-41ca-bd37-6821a531bd6f"
   ]
 }
