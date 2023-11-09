@@ -19,7 +19,7 @@
     "10b2c255-9d27-436a-8fa2-fcedbe22c029": {
       "type": "hero-two",
       "settings": {
-        "hero_height": "75vh",
+        "hero_height": "100vh",
         "image1": "shopify:\/\/shop_images\/h1.jpg",
         "button_label1": "Men",
         "button_link1": "shopify:\/\/collections\/men",
@@ -56,13 +56,57 @@
         "template--15596995117216__c070e4cf-9df6-42cf-8923-3163c67eaaac-button-1"
       ],
       "settings": {
-        "hero_height": "50vh",
+        "hero_height": "75vh",
         "hero_width": "100vw",
         "image": "shopify:\/\/shop_images\/2R4A9904_1280x_2cf1b6e7-35fa-49cb-8271-3e9cfac4b4ab.webp",
         "image_fit": "cover",
         "info_alignment": "left",
         "info_alignment-2": "top",
         "background": "",
+        "hero1_padding-top": 0,
+        "hero1_padding-bottom": 0
+      }
+    },
+    "9850fb38-0295-4fe4-a7a2-e6af1a2bf359": {
+      "type": "hero-one",
+      "blocks": {
+        "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Title",
+            "title__size": "md",
+            "title_color": "#ffffff"
+          }
+        },
+        "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents.",
+            "paragraph_color": "#ffffff"
+          }
+        },
+        "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "View More",
+            "button_link": "",
+            "button_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-heading-1",
+        "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-paragraph-1",
+        "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-button-1"
+      ],
+      "settings": {
+        "hero_height": "75vh",
+        "hero_width": "100vw",
+        "image": "shopify:\/\/shop_images\/2R4A9959_1280x_0d3c2325-f3f2-4c8c-be70-752b8424712f.webp",
+        "image_fit": "cover",
+        "info_alignment": "right",
+        "info_alignment-2": "center-two",
+        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
         "hero1_padding-top": 0,
         "hero1_padding-bottom": 0
       }
@@ -105,6 +149,7 @@
     "0b673b6e-927a-4089-b561-e12881d6337c",
     "10b2c255-9d27-436a-8fa2-fcedbe22c029",
     "c070e4cf-9df6-42cf-8923-3163c67eaaac",
+    "9850fb38-0295-4fe4-a7a2-e6af1a2bf359",
     "6b3a86f6-6bf9-4191-83e0-b1ac632a7a9e"
   ]
 }
