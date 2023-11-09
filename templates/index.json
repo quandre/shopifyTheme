@@ -13,7 +13,7 @@
         "button_link2": "shopify:\/\/products\/air-jordan-9-retro-particle-grey",
         "background2": "",
         "hero2_padding-top": 0,
-        "hero2_padding-bottom": 0
+        "hero2_padding-bottom": 75
       }
     },
     "10b2c255-9d27-436a-8fa2-fcedbe22c029": {
@@ -28,7 +28,7 @@
         "button_label2": "Women",
         "button_link2": "shopify:\/\/collections\/women",
         "background2": "",
-        "hero2_padding-top": 10,
+        "hero2_padding-top": 0,
         "hero2_padding-bottom": 0
       }
     },
