@@ -28,7 +28,7 @@
         "button_label2": "Women",
         "button_link2": "shopify:\/\/collections\/women",
         "background2": "",
-        "hero2_padding-top": 20,
+        "hero2_padding-top": 10,
         "hero2_padding-bottom": 0
       }
     },
@@ -92,7 +92,7 @@
         "info_alignment-2": "top",
         "background": "",
         "hero1_padding-top": 0,
-        "hero1_padding-bottom": 20
+        "hero1_padding-bottom": 10
       }
     },
     "9850fb38-0295-4fe4-a7a2-e6af1a2bf359": {
@@ -187,7 +187,7 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 20,
+        "padding_top": 0,
         "padding_bottom": 20
       }
     }
