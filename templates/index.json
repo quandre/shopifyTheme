@@ -136,6 +136,60 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "e62404cd-628f-435f-be14-97d110715248": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "vans",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "eec16555-9936-4dc6-b092-77ceb900cb59": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "kid",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -143,6 +197,8 @@
     "10b2c255-9d27-436a-8fa2-fcedbe22c029",
     "c070e4cf-9df6-42cf-8923-3163c67eaaac",
     "9850fb38-0295-4fe4-a7a2-e6af1a2bf359",
-    "6b3a86f6-6bf9-4191-83e0-b1ac632a7a9e"
+    "6b3a86f6-6bf9-4191-83e0-b1ac632a7a9e",
+    "e62404cd-628f-435f-be14-97d110715248",
+    "eec16555-9936-4dc6-b092-77ceb900cb59"
   ]
 }
