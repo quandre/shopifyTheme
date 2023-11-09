@@ -29,7 +29,7 @@
         "button_link2": "shopify:\/\/collections\/women",
         "background2": "",
         "hero2_padding-top": 20,
-        "hero2_padding-bottom": 20
+        "hero2_padding-bottom": 0
       }
     },
     "eec16555-9936-4dc6-b092-77ceb900cb59": {
@@ -91,7 +91,7 @@
         "info_alignment": "left",
         "info_alignment-2": "top",
         "background": "",
-        "hero1_padding-top": 20,
+        "hero1_padding-top": 0,
         "hero1_padding-bottom": 20
       }
     },
@@ -128,7 +128,7 @@
         "info_alignment-2": "center-two",
         "background": "",
         "hero1_padding-top": 0,
-        "hero1_padding-bottom": 20
+        "hero1_padding-bottom": 0
       }
     },
     "e62404cd-628f-435f-be14-97d110715248": {
@@ -187,8 +187,8 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 32,
-        "padding_bottom": 0
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     }
   },
