@@ -1,123 +1,110 @@
 {
   "sections": {
-    "5c63fcc0-f76e-420a-bcdb-9c36c260464d": {
-      "type": "hero-image",
+    "0b673b6e-927a-4089-b561-e12881d6337c": {
+      "type": "hero-two",
       "settings": {
-        "image_height": 68,
-        "image_width": 63,
-        "image": "shopify:\/\/shop_images\/black-friday.jpg",
-        "image_fit": "contain",
-        "hero_image_padding-top": 0,
-        "hero_image_padding-bottom": 0
+        "hero_height": "100vh",
+        "image1": "shopify:\/\/shop_images\/42f08ef9bc35-ba09-ce11-794f-064fc0e7.jpg",
+        "button_label1": "Air Jordan 6 Retro GS",
+        "button_link1": "shopify:\/\/products\/air-jordan-6-retro-red-oreo",
+        "background1": "",
+        "image2": "shopify:\/\/shop_images\/4x5-Cropping_Guide_0013_D14A9364_470x_37eacc1f-2213-486e-8d08-76d9dab6298a.webp",
+        "button_label2": "Air Jordan 9 Retro",
+        "button_link2": "shopify:\/\/products\/air-jordan-9-retro-particle-grey",
+        "background2": "",
+        "hero2_padding-top": 0,
+        "hero2_padding-bottom": 0
       }
     },
-    "831254f0-9ffb-4aa1-a875-876bec5d5e15": {
-      "type": "hero-image",
+    "10b2c255-9d27-436a-8fa2-fcedbe22c029": {
+      "type": "hero-two",
       "settings": {
-        "image_height": 68,
-        "image_width": 63,
-        "image": "shopify:\/\/shop_images\/latest.jpg",
-        "image_fit": "cover",
-        "hero_image_padding-top": 0,
-        "hero_image_padding-bottom": 50
+        "hero_height": "75vh",
+        "image1": "shopify:\/\/shop_images\/h1.jpg",
+        "button_label1": "Button label",
+        "button_link1": "",
+        "background1": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+        "image2": "shopify:\/\/shop_images\/under.webp",
+        "button_label2": "Button label",
+        "button_link2": "",
+        "background2": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+        "hero2_padding-top": 0,
+        "hero2_padding-bottom": 50
       }
     },
-    "d4deb721-c292-4510-a3bf-122fa6afca88": {
-      "type": "hero-image",
-      "settings": {
-        "image_height": 68,
-        "image_width": 63,
-        "image": "shopify:\/\/shop_images\/fresh-items.jpg",
-        "image_fit": "contain",
-        "hero_image_padding-top": 0,
-        "hero_image_padding-bottom": 0
-      }
-    },
-    "3acb57af-8a8e-4d91-b1e5-f8185550281c": {
-      "type": "collection-group",
+    "6b3a86f6-6bf9-4191-83e0-b1ac632a7a9e": {
+      "type": "collection-list",
       "blocks": {
-        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-0": {
+        "template--15596995117216__6b3a86f6-6bf9-4191-83e0-b1ac632a7a9e-featured_collection-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "graphic-tees",
-            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-            "img_width": 85
+            "collection": "backpack"
           }
         },
-        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-1": {
+        "template--15596995117216__6b3a86f6-6bf9-4191-83e0-b1ac632a7a9e-featured_collection-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "stay-cozy",
-            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-            "img_width": 85
-          }
-        },
-        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "classic-kicks",
-            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-            "img_width": 85
-          }
-        },
-        "6ad574f7-e7a5-4750-a45d-754f953b98f2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "denim",
-            "img_background": "linear-gradient(0deg, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
-            "img_width": 85
+            "collection": "hats"
           }
         }
       },
       "block_order": [
-        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-0",
-        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-1",
-        "template--14890909892687__3acb57af-8a8e-4d91-b1e5-f8185550281c-1668164367059cf104-2",
-        "6ad574f7-e7a5-4750-a45d-754f953b98f2"
+        "template--15596995117216__6b3a86f6-6bf9-4191-83e0-b1ac632a7a9e-featured_collection-1",
+        "template--15596995117216__6b3a86f6-6bf9-4191-83e0-b1ac632a7a9e-featured_collection-2"
       ],
       "settings": {
-        "container_shape": "rectangle",
-        "image_fit": "cover",
-        "xxl_col": "col-xxl-6",
-        "xl_col": "col-xl-6",
-        "lg_col": "col-lg-6",
-        "md_col": "col-md-4",
-        "sm_col": "col-sm-6",
-        "background": "#FFFFFF",
-        "show_title": false,
-        "collection1_padding-top": 0,
-        "collection1_padding-bottom": 0
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
-    "3db21e96-8a29-4088-82a0-deb9f255ee7d": {
-      "type": "hero-image",
+    "c070e4cf-9df6-42cf-8923-3163c67eaaac": {
+      "type": "hero-one",
+      "blocks": {
+        "template--15596995117216__c070e4cf-9df6-42cf-8923-3163c67eaaac-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "Nike Air  Force",
+            "paragraph_color": "#ffffff"
+          }
+        },
+        "template--15596995117216__c070e4cf-9df6-42cf-8923-3163c67eaaac-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/air-jordan",
+            "button_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--15596995117216__c070e4cf-9df6-42cf-8923-3163c67eaaac-paragraph-1",
+        "template--15596995117216__c070e4cf-9df6-42cf-8923-3163c67eaaac-button-1"
+      ],
       "settings": {
-        "image_height": 68,
-        "image_width": 63,
-        "image": "shopify:\/\/shop_images\/exclusive.jpg",
+        "hero_height": "50vh",
+        "hero_width": "100vw",
+        "image": "shopify:\/\/shop_images\/2R4A9904_1280x_2cf1b6e7-35fa-49cb-8271-3e9cfac4b4ab.webp",
         "image_fit": "cover",
-        "hero_image_padding-top": 0,
-        "hero_image_padding-bottom": 0
-      }
-    },
-    "772031b6-4df7-41ca-bd37-6821a531bd6f": {
-      "type": "hero-image",
-      "settings": {
-        "image_height": 68,
-        "image_width": 63,
-        "image": "shopify:\/\/shop_images\/site-steals.jpg",
-        "image_fit": "cover",
-        "hero_image_padding-top": 0,
-        "hero_image_padding-bottom": 0
+        "info_alignment": "left",
+        "info_alignment-2": "top",
+        "background": "",
+        "hero1_padding-top": 0,
+        "hero1_padding-bottom": 0
       }
     }
   },
   "order": [
-    "5c63fcc0-f76e-420a-bcdb-9c36c260464d",
-    "831254f0-9ffb-4aa1-a875-876bec5d5e15",
-    "d4deb721-c292-4510-a3bf-122fa6afca88",
-    "3acb57af-8a8e-4d91-b1e5-f8185550281c",
-    "3db21e96-8a29-4088-82a0-deb9f255ee7d",
-    "772031b6-4df7-41ca-bd37-6821a531bd6f"
+    "0b673b6e-927a-4089-b561-e12881d6337c",
+    "10b2c255-9d27-436a-8fa2-fcedbe22c029",
+    "6b3a86f6-6bf9-4191-83e0-b1ac632a7a9e",
+    "c070e4cf-9df6-42cf-8923-3163c67eaaac"
   ]
 }
