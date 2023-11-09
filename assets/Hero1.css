@@ -37,6 +37,7 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
+  background: #fff;
 }
 .hero1--25vh {
   height: 25vh;
