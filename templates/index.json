@@ -8,7 +8,7 @@
         "button_label1": "Air Jordan 6 Retro GS",
         "button_link1": "shopify:\/\/products\/air-jordan-6-retro-red-oreo",
         "background1": "",
-        "image2": "shopify:\/\/shop_images\/4x5-Cropping_Guide_0013_D14A9364_470x_37eacc1f-2213-486e-8d08-76d9dab6298a.webp",
+        "image2": "shopify:\/\/shop_images\/d824868bdbd9-f4c8-ce11-561f-011a802e.jpg",
         "button_label2": "Air Jordan 9 Retro",
         "button_link2": "shopify:\/\/products\/air-jordan-9-retro-particle-grey",
         "background2": "",
@@ -23,11 +23,11 @@
         "image1": "shopify:\/\/shop_images\/h1.jpg",
         "button_label1": "Men",
         "button_link1": "shopify:\/\/collections\/men",
-        "background1": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+        "background1": "",
         "image2": "shopify:\/\/shop_images\/under.webp",
         "button_label2": "Women",
         "button_link2": "shopify:\/\/collections\/women",
-        "background2": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+        "background2": "",
         "hero2_padding-top": 0,
         "hero2_padding-bottom": 0
       }
@@ -35,14 +35,15 @@
     "c070e4cf-9df6-42cf-8923-3163c67eaaac": {
       "type": "hero-one",
       "blocks": {
-        "template--15596995117216__c070e4cf-9df6-42cf-8923-3163c67eaaac-paragraph-1": {
-          "type": "paragraph",
+        "5a70da77-d6b1-47d3-8d77-946903d500e7": {
+          "type": "heading",
           "settings": {
-            "paragraph": "Nike Air  Force",
-            "paragraph_color": "#ffffff"
+            "title": "Air Force",
+            "title__size": "md",
+            "title_color": "#ffffff"
           }
         },
-        "template--15596995117216__c070e4cf-9df6-42cf-8923-3163c67eaaac-button-1": {
+        "f5d178af-bcd8-4c63-abcf-0d5c6eabb9f8": {
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
@@ -52,8 +53,8 @@
         }
       },
       "block_order": [
-        "template--15596995117216__c070e4cf-9df6-42cf-8923-3163c67eaaac-paragraph-1",
-        "template--15596995117216__c070e4cf-9df6-42cf-8923-3163c67eaaac-button-1"
+        "5a70da77-d6b1-47d3-8d77-946903d500e7",
+        "f5d178af-bcd8-4c63-abcf-0d5c6eabb9f8"
       ],
       "settings": {
         "hero_height": "75vh",
@@ -73,40 +74,32 @@
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-heading-1": {
           "type": "heading",
           "settings": {
-            "title": "Title",
-            "title__size": "md",
+            "title": "Latest Looks",
+            "title__size": "lg",
             "title_color": "#ffffff"
-          }
-        },
-        "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-paragraph-1": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents.",
-            "paragraph_color": "#ffffff"
           }
         },
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "View More",
-            "button_link": "",
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/trending",
             "button_color": "#000000"
           }
         }
       },
       "block_order": [
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-heading-1",
-        "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-paragraph-1",
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-button-1"
       ],
       "settings": {
         "hero_height": "75vh",
         "hero_width": "100vw",
-        "image": "shopify:\/\/shop_images\/2R4A9959_1280x_0d3c2325-f3f2-4c8c-be70-752b8424712f.webp",
+        "image": "shopify:\/\/shop_images\/a476aac9a086414c830fac28011193ff_9366.webp",
         "image_fit": "cover",
-        "info_alignment": "right",
+        "info_alignment": "left",
         "info_alignment-2": "center-two",
-        "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 100%)",
+        "background": "",
         "hero1_padding-top": 0,
         "hero1_padding-bottom": 0
       }
