@@ -20,11 +20,11 @@
       "type": "hero-two",
       "settings": {
         "hero_height": "100vh",
-        "image1": "shopify:\/\/shop_images\/h1.jpg",
+        "image1": "shopify:\/\/shop_images\/track-pants.webp",
         "button_label1": "Men",
         "button_link1": "shopify:\/\/collections\/men",
         "background1": "",
-        "image2": "shopify:\/\/shop_images\/under.webp",
+        "image2": "shopify:\/\/shop_images\/shopify-w.webp",
         "button_label2": "Women",
         "button_link2": "shopify:\/\/collections\/women",
         "background2": "",
@@ -129,7 +129,7 @@
       ],
       "settings": {
         "hero_height": "75vh",
-        "hero_width": "100vw",
+        "hero_width": "50vw",
         "image": "shopify:\/\/shop_images\/track-pants.webp",
         "image_fit": "cover",
         "info_alignment": "left",
