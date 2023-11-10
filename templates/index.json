@@ -106,6 +106,13 @@
             "title_color": "#ffffff"
           }
         },
+        "cc7f31f4-8df6-40b5-820d-0ac13124df44": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "Tops, Bottoms, and more.",
+            "paragraph_color": "#ffffff"
+          }
+        },
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-button-1": {
           "type": "button",
           "settings": {
@@ -117,12 +124,13 @@
       },
       "block_order": [
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-heading-1",
+        "cc7f31f4-8df6-40b5-820d-0ac13124df44",
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-button-1"
       ],
       "settings": {
         "hero_height": "75vh",
         "hero_width": "100vw",
-        "image": "shopify:\/\/shop_images\/a476aac9a086414c830fac28011193ff_9366.webp",
+        "image": "shopify:\/\/shop_images\/track-pants.webp",
         "image_fit": "cover",
         "info_alignment": "left",
         "info_alignment-2": "center-two",
