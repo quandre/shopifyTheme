@@ -84,7 +84,7 @@
         "f5d178af-bcd8-4c63-abcf-0d5c6eabb9f8"
       ],
       "settings": {
-        "hero_height": "50vh",
+        "hero_height": "75vh",
         "hero_width": "100vw",
         "image": "shopify:\/\/shop_images\/2R4A9904_1280x_2cf1b6e7-35fa-49cb-8271-3e9cfac4b4ab.webp",
         "image_fit": "cover",
@@ -120,7 +120,7 @@
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-button-1"
       ],
       "settings": {
-        "hero_height": "50vh",
+        "hero_height": "75vh",
         "hero_width": "50vw",
         "image": "shopify:\/\/shop_images\/nike-dunks.webp",
         "image_fit": "cover",
