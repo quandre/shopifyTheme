@@ -84,7 +84,7 @@
         "f5d178af-bcd8-4c63-abcf-0d5c6eabb9f8"
       ],
       "settings": {
-        "hero_height": "75vh",
+        "hero_height": "50vh",
         "hero_width": "100vw",
         "image": "shopify:\/\/shop_images\/2R4A9904_1280x_2cf1b6e7-35fa-49cb-8271-3e9cfac4b4ab.webp",
         "image_fit": "cover",
@@ -101,39 +101,31 @@
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-heading-1": {
           "type": "heading",
           "settings": {
-            "title": "Latest Looks",
+            "title": "Nike Dunks",
             "title__size": "lg",
             "title_color": "#ffffff"
-          }
-        },
-        "cc7f31f4-8df6-40b5-820d-0ac13124df44": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "Tops, Bottoms, and more.",
-            "paragraph_color": "#ffffff"
           }
         },
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-button-1": {
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/trending",
+            "button_link": "shopify:\/\/collections\/nike",
             "button_color": "#000000"
           }
         }
       },
       "block_order": [
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-heading-1",
-        "cc7f31f4-8df6-40b5-820d-0ac13124df44",
         "template--15596995117216__9850fb38-0295-4fe4-a7a2-e6af1a2bf359-button-1"
       ],
       "settings": {
-        "hero_height": "75vh",
+        "hero_height": "50vh",
         "hero_width": "50vw",
-        "image": "shopify:\/\/shop_images\/track-pants.webp",
+        "image": "shopify:\/\/shop_images\/nike-dunks.webp",
         "image_fit": "cover",
-        "info_alignment": "left",
-        "info_alignment-2": "center-two",
+        "info_alignment": "right",
+        "info_alignment-2": "top",
         "background": "",
         "hero1_padding-top": 0,
         "hero1_padding-bottom": 0
