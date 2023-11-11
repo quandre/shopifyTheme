@@ -2,9 +2,10 @@
   "sections": {
     "0b673b6e-927a-4089-b561-e12881d6337c": {
       "type": "hero-two",
+      "disabled": true,
       "settings": {
         "hero_height": "100vh",
-        "image1": "shopify:\/\/shop_images\/42f08ef9bc35-ba09-ce11-794f-064fc0e7.jpg",
+        "image1": "shopify:\/\/shop_images\/AIR_JORDAN_6.jpg",
         "button_label1": "Air Jordan 6 Retro GS",
         "button_link1": "shopify:\/\/products\/air-jordan-6-retro-red-oreo",
         "background1": "",
@@ -14,6 +15,41 @@
         "background2": "",
         "hero2_padding-top": 0,
         "hero2_padding-bottom": 10
+      }
+    },
+    "e399cd08-b0b6-464a-9be6-c0ad70e9c372": {
+      "type": "hero-one",
+      "blocks": {
+        "template--15596995117216__e399cd08-b0b6-464a-9be6-c0ad70e9c372-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "Air Jordan 6 Retro 'Red Oreo'",
+            "paragraph_color": "#ffffff"
+          }
+        },
+        "template--15596995117216__e399cd08-b0b6-464a-9be6-c0ad70e9c372-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "View More",
+            "button_link": "",
+            "button_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--15596995117216__e399cd08-b0b6-464a-9be6-c0ad70e9c372-paragraph-1",
+        "template--15596995117216__e399cd08-b0b6-464a-9be6-c0ad70e9c372-button-1"
+      ],
+      "settings": {
+        "hero_height": "75vh",
+        "hero_width": "100vw",
+        "image": "shopify:\/\/shop_images\/AIR_JORDAN_6.jpg",
+        "image_fit": "cover",
+        "info_alignment": "left",
+        "info_alignment-2": "bottom",
+        "background": "",
+        "hero1_padding-top": 0,
+        "hero1_padding-bottom": 0
       }
     },
     "10b2c255-9d27-436a-8fa2-fcedbe22c029": {
@@ -28,7 +64,7 @@
         "button_label2": "Women",
         "button_link2": "shopify:\/\/collections\/women",
         "background2": "",
-        "hero2_padding-top": 0,
+        "hero2_padding-top": 10,
         "hero2_padding-bottom": 0
       }
     },
@@ -194,6 +230,7 @@
   },
   "order": [
     "0b673b6e-927a-4089-b561-e12881d6337c",
+    "e399cd08-b0b6-464a-9be6-c0ad70e9c372",
     "10b2c255-9d27-436a-8fa2-fcedbe22c029",
     "eec16555-9936-4dc6-b092-77ceb900cb59",
     "c070e4cf-9df6-42cf-8923-3163c67eaaac",
